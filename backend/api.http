@@ -1,0 +1,9 @@
+GET http://127.0.0.1:8000/api/log
+
+Content-Type: application/json
+
+{
+  "text": "Hello, world!"
+}
+
+

@@ -13,10 +13,16 @@ class LogRequest(BaseModel):
     text: str
 
 @router.post('/log', summary='Create a new log entry')
-def create_log(log_request: LogRequest, db: Session = Depends(get_db)):
+async def create_log(log_request: LogRequest, db: Session = Depends(get_db)):
     # Create a new log instance with the provided text
     new_log = Log(text=log_request.text)
     db.add(new_log) 
     db.commit()
     db.refresh(new_log)
     return {'message': "Log saved", 'id':new_log.id}
+
+@router.get('/log', summary='Get all log entries')
+async def get_logs(db: Session = Depends(get_db)):
+    logs = db.query(Log).all()
+    return logs
+
