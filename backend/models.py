@@ -4,7 +4,7 @@
 
 from sqlalchemy import Column, Integer, String, DateTime
 import datetime
-from backend.database import Base
+from backend.database import Base, engine
 
 class Log(Base):
     # Defie the name of table in the database
@@ -16,3 +16,5 @@ class Log(Base):
     # timestamp is a column in the logs table that stores the timestamp
     timestamp = Column(DateTime, default=datetime.datetime.utcnow)
 
+Log.metadata.create_all(bind=engine)
+print('Tables created')
