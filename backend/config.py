@@ -1,4 +1,4 @@
-DATABASE_URL = 'change your database url here'
+DATABASE_URL = 'postgresql://cet:Nvbk%400359408336@localhost:5432/personal_ai_logger'
 
 
 import psycopg2
@@ -40,6 +40,5 @@ def check_permissions():
             cursor.close()
         if 'connection' in locals():
             connection.close()
-            print("Database connection closed.")
 
 check_permissions()

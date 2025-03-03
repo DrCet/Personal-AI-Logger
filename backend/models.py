@@ -15,6 +15,3 @@ class Log(Base):
     text = Column(String)
     # timestamp is a column in the logs table that stores the timestamp
     timestamp = Column(DateTime, default=datetime.datetime.utcnow)
-
-Log.metadata.create_all(bind=engine)
-print('Tables created')

@@ -1,5 +1,11 @@
-from database import Base, engine
+# this file is not working
+
+from database import Base
+from sqlalchemy import create_engine
 import argparse
+from config import DATABASE_URL
+
+engine = create_engine(DATABASE_URL)
 
 def main():
     parser = argparse.ArgumentParser()

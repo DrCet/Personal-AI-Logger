@@ -1,6 +1,5 @@
-POST http://127.0.0.1:8000/api/log
-Content-Type: application/json
+POST http://127.0.0.1:8000/log/audio
 
-{
-  "text": "Hello, world!"
-}
+Content-Type: multipart/form-data
+
+C:\CetLocal\1_Artificial intelligence\Projects\Personal-AI-Logger\tests\Mar 3, 11.44 PM_.wav
