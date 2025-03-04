@@ -1,4 +1,4 @@
-from backend.intergrations.vosk_integration import transcribe_audio
+from backend.integrations.vosk_integration import transcribe_audio
 from backend.models import Log
 from sqlalchemy.orm import Session
 
@@ -9,8 +9,8 @@ async def process_audio_log(file, db: Session):
     with open(file_path, 'wb') as f:
         f.write(file.file.read())  # Save the file
     
-    text = await transcribe_audio(file_path) 
-    print(f'Transcription: {text}') # Call without await
+    text = transcribe_audio(file_path) 
+    print(f'Transcription: {text}') 
     db_log = Log(text=text)
 
     db.add(db_log)
