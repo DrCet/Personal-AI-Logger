@@ -13,5 +13,7 @@ class Log(Base):
     id = Column(Integer, primary_key=True, index=True)
     # 'text' is a column in the logs table that stores the text of the log
     text = Column(String)
+    # aduio_file is a column in the logs table that stores the audio file name
+    audio_file = Column(String)
     # timestamp is a column in the logs table that stores the timestamp
     timestamp = Column(DateTime, default=datetime.datetime.utcnow)

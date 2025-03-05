@@ -11,6 +11,7 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 def get_db():
     db = SessionLocal()
+    print(f"Connected to: {db.bind.url.database}")
     try:
         yield db
     finally:

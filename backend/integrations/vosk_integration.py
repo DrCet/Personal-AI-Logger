@@ -77,5 +77,5 @@ with wave.open(output_path, "rb") as wf:
     print(f"Sample Rate: {wf.getframerate()}")  # Should match your -ar setting (e.g., 16000)
 
 
-convert_wav_to_mono_16bit_pcm(input_path, output_path)
-transcribe_audio(output_path)
+# convert_wav_to_mono_16bit_pcm(input_path, output_path)
+# transcribe_audio(output_path)
