@@ -5,3 +5,5 @@ __pycache__/
 *.pyd
 
 .venv/
+
+vosk_model/
