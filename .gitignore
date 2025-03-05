@@ -1,3 +1,7 @@
-vosk_model
+# Python-specific caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
 
-distil*
+.venv/
