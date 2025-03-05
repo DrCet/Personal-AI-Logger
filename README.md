@@ -36,3 +36,5 @@ Built entirely with **free, open-source tools**.
 
 ---
 
+Remember to activate venv and install all dependencies
+Remember to install vosk model and unzip it in vosk_model directory
