@@ -68,13 +68,13 @@ def transcribe_live_audio():
         p.terminate()
 
 
-input_path = 'audio_logs/test_audio.wav'
-output_path = 'audio_logs/test_audio_mono.wav'
-with wave.open(output_path, "rb") as wf:
-    print(f"Channels: {wf.getnchannels()}")  # Should be 1
-    print(f"Sample Width: {wf.getsampwidth()}")  # Should be 2 (bytes)
-    print(f"Compression Type: {wf.getcomptype()}")  # Should be NONE
-    print(f"Sample Rate: {wf.getframerate()}")  # Should match your -ar setting (e.g., 16000)
+# input_path = 'audio_logs/test_audio.wav'
+# output_path = 'audio_logs/test_audio_mono.wav'
+# with wave.open(output_path, "rb") as wf:
+#     print(f"Channels: {wf.getnchannels()}")  # Should be 1
+#     print(f"Sample Width: {wf.getsampwidth()}")  # Should be 2 (bytes)
+#     print(f"Compression Type: {wf.getcomptype()}")  # Should be NONE
+#     print(f"Sample Rate: {wf.getframerate()}")  # Should match your -ar setting (e.g., 16000)
 
 
 # convert_wav_to_mono_16bit_pcm(input_path, output_path)

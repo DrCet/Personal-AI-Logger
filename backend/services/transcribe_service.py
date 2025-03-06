@@ -7,7 +7,6 @@ import soundfile as sf
 model = WhisperModel('distil-small.en', device='cpu', compute_type='int8')
 async def transcribe_stream(websocket):
     buffer = b""
-
     while True:
         try:
             data = await websocket.receive_bytes()
@@ -22,6 +21,6 @@ async def transcribe_stream(websocket):
                 await websocket.send_text(text)
                 buffer = b"" # Reset buffer
         except Exception as e:
-            await websocket.send_send_text(str(e))
+            await websocket.send_text(str(e))
             break
         

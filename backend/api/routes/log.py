@@ -1,8 +1,7 @@
 #backnend/api/routes/log.py
 #this module defines the API endpoints for the logs table
-from backend.integrations.vosk_integration import transcribe_audio
 from backend.services.transcribe_service import transcribe_stream
-from fastapi import APIRouter, Depends, UploadFile, File, WebSocket
+from fastapi import APIRouter, Depends, UploadFile, File, WebSocket, WebSocketDisconnect
 from sqlalchemy.orm import Session
 from pydantic import BaseModel
 import os
@@ -42,8 +41,3 @@ async def upload_audio(file: UploadFile = File(...), db: Session = Depends(get_d
     transcript = await process_audio_log(file, db) # from backend/services/log_service.py
     return {"message": "Audio saved", "file_name": file.filename}  
 
-
-@router.websocket('/log/transcribe')
-async def websocket_transcribe(websocket: WebSocket):
-    await websocket.accept()
-    transcribe_stream(websocket)

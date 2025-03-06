@@ -42,47 +42,6 @@
     <h1>Real-Time Transcription</h1>
     <button id="startButton">Start Transcription</button>
     <div id="transcription">Waiting for transcription...</div>
-
-    <script>
-        const button = document.getElementById("startButton");
-        const transcriptionDiv = document.getElementById("transcription");
-        let socket;
-        let recorder;
-        let stream;
-
-        button.addEventListener("click", async () => {
-            if (socket) {
-                socket.close();
-                stream.getTracks().forEach(track => track.stop());
-                socket = null;
-                button.innerText = "Start Transcription";
-                transcriptionDiv.innerText = "Waiting for transcription...";
-                return;
-            }
-            
-            socket = new WebSocket("ws://127.0.0.1:8000/ws/transcribe");
-            stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-            recorder = new MediaRecorder(stream);
-            recorder.start(1000);
-
-            recorder.ondataavailable = event => {
-                if (socket.readyState === WebSocket.OPEN) {
-                    socket.send(event.data);
-                }
-            };
-
-            socket.onmessage = event => {
-                const data = JSON.parse(event.data);
-                transcriptionDiv.innerText = data.transcription;
-            };
-
-            socket.onclose = () => {
-                button.innerText = "Start Transcription";
-                transcriptionDiv.innerText = "Waiting for transcription...";
-            };
-
-            button.innerText = "Stop Transcription";
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
