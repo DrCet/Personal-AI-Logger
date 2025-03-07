@@ -1,6 +1,9 @@
 from sys import prefix
 from fastapi import FastAPI, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
+
 from pydantic import BaseModel
 import shutil
 import os
@@ -28,11 +31,22 @@ async def startup_event():
     for route in app.routes:
         logger.debug(f"{route.path} [{route.name}]")
 
-#Directory to store audio logs
-os.makedirs("audio_logs", exist_ok=True)
-@app.get("/")
+# Mount the static files directory
+frontend_path = os.path.join(os.path.dirname(__file__), "..", "frontend")
+app.mount("/static", StaticFiles(directory=frontend_path), name="static")
+
+@app.get("/", response_class=HTMLResponse)
 def read_root():
-    return {"message": "Personal AI Logger API new"}
+    html_file_path = os.path.join(os.path.dirname(__file__), "..", "frontend", "index.html")
+    try:
+        with open(html_file_path, "r") as f:
+            html_content = f.read()
+        # Replace the direct scripts.js reference with the static path
+        html_content = html_content.replace('src="scripts.js"', 'src="/static/scripts.js"')
+        return html_content
+    except Exception as e:
+        logger.error(f"Error reading index.html: {e}")
+        return HTMLResponse(content="Error loading page", status_code=500)
 
 app.include_router(log.router, prefix='/api')
 app.include_router(search.router, prefix='/api')
