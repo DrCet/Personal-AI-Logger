@@ -41,8 +41,7 @@ class TranscriptionHandler {
                     });
                     
                     this.recorder = new MediaRecorder(this.stream, {
-                        mimeType: 'audio/webm;codecs=opus',
-                        audioBitsPerSecond: 16000
+                        mimeType: 'audio/wav',
                     });
                     
                     this.setupEventListeners();
