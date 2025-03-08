@@ -5,6 +5,9 @@ import io
 import soundfile as sf
 import logging
 from backend.integrations.fast_whisper_integration import transcribe_audio
+from pydub import AudioSegment
+import tempfile
+import os
 
 logger = logging.getLogger(__name__)
 
@@ -17,6 +20,8 @@ OVERLAP_SIZE = SAMPLE_RATE // 2  # 0.5 second overlap
 async def transcribe_stream(websocket):
     buffer = b""
     previous_audio = None
+    temp_dir = tempfile.mkdtemp()
+    temp_file = os.path.join(temp_dir, 'temp.webm')
     
     try:
         while True:
@@ -24,22 +29,27 @@ async def transcribe_stream(websocket):
                 # Receive audio chunk
                 data = await websocket.receive_bytes()
                 buffer += data
-
+                print('Gate 1')
                 # Process when we have enough data
                 if len(buffer) >= CHUNK_SIZE:
+                    with open(temp_file, 'wb') as f:
+                        f.write(buffer)
                     # Convert audio bytes to numpy array
-                    audio_chunk, _ = sf.read(
+                    audio_segment = AudioSegment.from_file(
                         io.BytesIO(buffer), 
-                        dtype='float32',
-                        samplerate=SAMPLE_RATE
+                        format='webm',
+                        codec='opus'
                     )
-
+                    audio_segment = audio_segment.set_frame_rate(SAMPLE_RATE).set_channels(1)
+                    audio = np.array(audio_segment.get_array_of_samples())  # Convert to numpy array
+                    audio = audio.astype(np.float32) / 32768.0
                     # Combine with previous overlap if exists
                     if previous_audio is not None:
-                        audio_chunk = np.concatenate([previous_audio, audio_chunk])
-
+                        audio = np.concatenate([previous_audio, audio])
+                    print('Gate 2')
                     # Transcribe
-                    text = transcribe_audio(audio_chunk)
+                    text = transcribe_audio(audio)
+                    print('Gate 3')
 
                     if text.strip():  # Only send if we have text
                         await websocket.send_json({
@@ -48,10 +58,11 @@ async def transcribe_stream(websocket):
                         })
 
                     # Save overlap for next chunk
-                    previous_audio = audio_chunk[-OVERLAP_SIZE:]
+                    previous_audio = audio[-OVERLAP_SIZE:]
                     
                     # Reset buffer, keeping any excess data
                     buffer = buffer[CHUNK_SIZE:]
+                    print('Gate 4')
 
             except Exception as e:
                 logger.error(f"Error processing audio chunk: {e}")
