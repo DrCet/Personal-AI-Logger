@@ -38,6 +38,6 @@ def get_logs(db: Session = Depends(get_db)):
 # The transcription is saved in the database along with the audio file name
 @router.post('/log/audio', summary='Create a new log entry with an audio file')
 async def upload_audio(file: UploadFile = File(...), db: Session = Depends(get_db)):
-    transcript = await process_audio_log(file, db) # from backend/services/log_service.py
-    return {"message": "Audio saved", "file_name": file.filename}  
+    transcript = await process_audio_log(file, db, Log)  # Pass Log model
+    return {"message": "Audio saved", "file_name": file.filename}
 

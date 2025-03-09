@@ -1,41 +1,29 @@
 from faster_whisper import WhisperModel
 import numpy as np
-import soundfile as sf
 import io
 import logging
-from typing import List, Optional
+from pydub import AudioSegment
+from typing import Optional
 
 logger = logging.getLogger(__name__)
-
-# Initialize model once with better settings
-model = WhisperModel('tiny', 
-                     device='cpu', 
-                     compute_type='int8',
-                     cpu_threads=4,
-                     num_workers=2)
 
 class AudioProcessor:
     def __init__(self):
         self.sample_rate = 16000
         self.previous_text = ""
+        self.model = WhisperModel('tiny', device='cpu', compute_type='int8', cpu_threads=4, num_workers=2)
 
     async def process_audio(self, audio_chunk: bytes) -> str:
         try:
-            # Convert WAV bytes to numpy array
-            audio_data, sample_rate = sf.read(io.BytesIO(audio_chunk), dtype='float32')
-            
+            # Convert raw bytes to AudioSegment (assuming 16kHz mono PCM)
+            audio_segment = AudioSegment.from_file(io.BytesIO(audio_chunk), format="raw", frame_rate=16000, channels=1, sample_width=2)
+            audio_data = np.array(audio_segment.get_array_of_samples(), dtype='float32') / 32768.0  # Normalize to [-1, 1]
+
             if len(audio_data) == 0:
                 return ''
 
-            # Ensure mono audio
-            if len(audio_data.shape) > 1:
-                audio_data = np.mean(audio_data, axis=1)
-
-            # Normalize audio
-            audio_data = np.clip(audio_data, -1, 1)
-
-            # Transcribe with better settings
-            segments, info = model.transcribe(
+            # Transcribe
+            segments, info = self.model.transcribe(
                 audio_data,
                 language='en',
                 beam_size=5,
@@ -43,12 +31,15 @@ class AudioProcessor:
                 vad_parameters=dict(min_silence_duration_ms=500),
                 word_timestamps=True
             )
-
-            # Join segments and update context
             text = ' '.join(segment.text for segment in segments)
             self.previous_text = text
             return text.strip()
-
         except Exception as e:
             logger.error(f"Error processing audio: {e}")
             return ''
+
+    def reinitialize_model(self):
+        """Reinitialize model if needed (e.g., memory issues)."""
+        self.model = WhisperModel('tiny', device='cpu', compute_type='int8', cpu_threads=4, num_workers=2)
+
+audio_processor = AudioProcessor()
