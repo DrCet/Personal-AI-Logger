@@ -31,39 +31,47 @@ class TranscriptionHandler {
             this.socket.onopen = async () => {
                 console.log("WebSocket connected successfully");
                 try {
+                    // Request microphone access with specific settings
                     this.stream = await navigator.mediaDevices.getUserMedia({ 
                         audio: {
                             echoCancellation: true,
                             noiseSuppression: true,
-                            sampleRate: 16000,
-                            channelCount: 1 // Ensure mono audio
+                            sampleRate: 16000,  // Match backend sample rate
+                            channelCount: 1,    // Mono audio
+                            sampleSize: 16      // 16-bit audio
                         }
                     });
                     
+                    // Use WAV format
                     this.recorder = new MediaRecorder(this.stream, {
                         mimeType: 'audio/wav',
+                        audioBitsPerSecond: 256000
                     });
                     
                     this.setupEventListeners();
-                    this.recorder.start(1000); // Send chunks every second
-                    console.log("Recording started with settings:", this.recorder.state);
+                    this.recorder.start(1000); // 1-second chunks
+                    console.log("Recording started:", this.recorder.state);
                     
                     this.button.innerText = "Stop Transcription";
+                    this.transcriptionDiv.innerText = "Listening...";
                 } catch (err) {
                     console.error("Microphone error:", err);
                     this.transcriptionDiv.innerText = "Microphone access denied";
-                    this.stopTranscription();
+                    await this.stopTranscription();
                 }
             };
 
+            // Handle incoming transcriptions
             this.socket.onmessage = (event) => {
                 try {
                     const response = JSON.parse(event.data);
-                    if (response.status === "success") {
-                        if (response.transcription.trim()) {
-                            this.transcriptionDiv.innerText = response.transcription;
-                        }
-                    } else {
+                    if (response.status === "success" && response.transcription?.trim()) {
+                        // Append new transcription
+                        const currentText = this.transcriptionDiv.innerText;
+                        this.transcriptionDiv.innerText = currentText === "Listening..." ? 
+                            response.transcription : 
+                            `${currentText} ${response.transcription}`;
+                    } else if (response.status === "error") {
                         console.error("Transcription error:", response.message);
                     }
                 } catch (e) {
@@ -71,11 +79,17 @@ class TranscriptionHandler {
                 }
             };
 
-            // ...existing error handlers...
+            // Handle WebSocket errors
+            this.socket.onerror = (error) => {
+                console.error("WebSocket error:", error);
+                this.transcriptionDiv.innerText = "Connection error";
+                this.stopTranscription();
+            };
+
         } catch (error) {
             console.error("Connection error:", error);
             this.transcriptionDiv.innerText = "Failed to connect";
-            this.stopTranscription();
+            await this.stopTranscription();
         }
     }
 
