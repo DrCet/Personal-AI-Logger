@@ -1,5 +1,7 @@
 import logging
 from backend.integrations.fast_whisper_integration import AudioProcessor
+from fastapi import WebSocketDisconnect
+
 
 logger = logging.getLogger(__name__)
 

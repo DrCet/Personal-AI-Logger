@@ -2,7 +2,7 @@ class TranscriptionHandler {
     constructor() {
         this.button = document.getElementById("startButton");
         this.transcriptionDiv = document.getElementById("transcription");
-        this.debugDiv = document.getElementById("debug") || document.createElement("div");
+        // this.debugDiv = document.getElementById("debug") || document.createElement("div");
         document.body.appendChild(this.debugDiv);
         this.socket = null;
         this.recorder = null;
@@ -48,7 +48,7 @@ class TranscriptionHandler {
             this.socket.onmessage = (event) => {
                 const data = JSON.parse(event.data);
                 this.transcriptionDiv.innerText = data.transcription || `Error: ${data.error}`;
-                this.log("Received:", data);
+                // this.log("Received:", data);
             };
             this.socket.onerror = (error) => {
                 this.log("WebSocket error:", error);
@@ -80,7 +80,7 @@ class TranscriptionHandler {
         const wavData = this.encodeWav(buffer, sampleRate);
         if (this.socket?.readyState === WebSocket.OPEN) {
             this.socket.send(wavData);
-            this.log("WAV chunk sent:", wavData.byteLength, "bytes");
+            // this.log("WAV chunk sent:", wavData.byteLength, "bytes");
         }
     }
 
@@ -122,11 +122,11 @@ class TranscriptionHandler {
     initializeRecorder() {
         try {
             if (!this.stream || !this.stream.active) throw new Error("Audio stream inactive");
-            this.log("Initializing MediaRecorder with stream:", this.stream);
+            // this.log("Initializing MediaRecorder with stream:", this.stream);
             this.recorder = new MediaRecorder(this.stream, { mimeType: 'audio/webm;codecs=opus' });
             this.setupEventListeners();
             this.recorder.start(1000); // 1s chunks for consistency with WAV
-            this.log("Recording started, state:", this.recorder.state);
+            // this.log("Recording started, state:", this.recorder.state);
             this.button.innerText = "Stop Transcription";
         } catch (error) {
             this.log("Recorder error:", error.message);
@@ -135,25 +135,26 @@ class TranscriptionHandler {
         }
     }
 
-    log(...args) {
-        const message = args.map(arg => typeof arg === 'object' ? JSON.stringify(arg) : arg).join(' ');
-        console.log(message);
-        try {
-            if (this.debugDiv) {
-                this.debugDiv.innerHTML += `<div>${new Date().toISOString()} - ${message}</div>`;
-            }
-        } catch (e) {
-            console.error("Debug div update failed:", e);
-        }
-    }
+    // Create logs for debug. Uncomment this and the debug div in index.html file
+    // log(...args) {
+    //     const message = args.map(arg => typeof arg === 'object' ? JSON.stringify(arg) : arg).join(' ');
+    //     console.log(message);
+    //     try {
+    //         if (this.debugDiv) {
+    //             this.debugDiv.innerHTML += `<div>${new Date().toISOString()} - ${message}</div>`;
+    //         }
+    //     } catch (e) {
+    //         console.error("Debug div update failed:", e);
+    //     }
+    // }
 
     setupEventListeners() {
         if (!this.recorder) return;
         this.recorder.ondataavailable = (event) => {
-            this.log("Data available, size:", event.data.size);
+            // this.log("Data available, size:", event.data.size);
             if (this.socket?.readyState === WebSocket.OPEN && event.data.size > 0) {
                 this.socket.send(event.data); // Fallback to WebM if WAV fails
-                this.log("Audio chunk sent:", event.data.size, "bytes");
+                // this.log("Audio chunk sent:", event.data.size, "bytes");
             }
         };
         this.recorder.onerror = (error) => {

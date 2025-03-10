@@ -28,7 +28,7 @@ class AudioProcessor:
                 language='en',
                 beam_size=5,
                 vad_filter=True,
-                vad_parameters=dict(min_silence_duration_ms=500),
+                vad_parameters=dict(min_silence_duration_ms=1000),
                 word_timestamps=True
             )
             text = ' '.join(segment.text for segment in segments)
