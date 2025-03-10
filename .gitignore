@@ -7,3 +7,5 @@ __pycache__/
 .venv/
 
 vosk_model/
+
+audio_logs/

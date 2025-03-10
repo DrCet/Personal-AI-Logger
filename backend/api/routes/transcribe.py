@@ -50,28 +50,48 @@ async def websocket_transcribe(websocket: WebSocket, db: AsyncSession = Depends(
             audio_buffer = b""
             chunk_count = 0
             while True:
-                transcription, audio_chunk = await transcribe_stream(websocket)
-                logger.info(f"Transcription: {transcription}")
-                audio_buffer += audio_chunk
-                await websocket.send_json({"transcription": transcription})
-                chunk_count += 1
-                if chunk_count % 10 == 0:  # Save every 10 seconds (~10 chunks)
+                try:
+                    transcription, audio_chunk = await transcribe_stream(websocket)
+                    if not transcription and not audio_chunk:
+                        # Clean disconnection
+                        break
+                    
+                    logger.info(f"Transcription: {transcription}")
+                    audio_buffer += audio_chunk
+                    
+                    if websocket.client_state.CONNECTED:
+                        await websocket.send_json({"transcription": transcription})
+                    
+                    chunk_count += 1
+                    if chunk_count % 10 == 0:  # Save every 10 seconds
+                        file_path = f"audio_logs/{int(time.time())}.wav"
+                        async with aiofiles.open(file_path, 'wb') as f:
+                            await f.write(audio_buffer)
+                        await save_audio_file(file_path, transcription, db, Log)
+                        audio_buffer = b""
+                except WebSocketDisconnect:
+                    logger.info("Client disconnected cleanly")
+                    break
+                except Exception as e:
+                    logger.error(f"Error in transcription loop: {e}")
+                    if websocket.client_state.CONNECTED:
+                        await websocket.send_json({"error": str(e)})
+                    break
+                    
+        except Exception as e:
+            logger.error(f"WebSocket error: {e}")
+        finally:
+            # Save any remaining audio
+            if audio_buffer:
+                try:
                     file_path = f"audio_logs/{int(time.time())}.wav"
                     async with aiofiles.open(file_path, 'wb') as f:
                         await f.write(audio_buffer)
-                    # Assuming save_audio_file is async-compatible
                     await save_audio_file(file_path, transcription, db, Log)
-                    audio_buffer = b""  # Reset buffer
-        except Exception as e:
-            logger.error(f"WebSocket error: {e}")
-            await websocket.send_json({"error": str(e), "transcription": "Error processing audio"})
-        finally:
-            if audio_buffer:
-                file_path = f"audio_logs/{int(time.time())}.wav"
-                async with aiofiles.open(file_path, 'wb') as f:
-                    await f.write(audio_buffer)
-                await save_audio_file(file_path, transcription, db, Log)
+                except Exception as e:
+                    logger.error(f"Error saving final audio: {e}")
 
+                    
 # Assuming save_audio_file is defined elsewhere (e.g., database.py)
 async def save_audio_file(file_path: str, transcription: str, db: AsyncSession, model):
     db_log = model(text=transcription, audio_file=file_path)
