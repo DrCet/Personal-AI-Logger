@@ -179,22 +179,34 @@ class TranscriptionHandler {
 
     async saveTranscript() {
         try {
-            const response = await fetch('/api/log', {
+            // Create WAV blob from accumulated audio data
+            const wavBlob = new Blob([this.encodeWav(new Float32Array(this.audioData), 16000)], 
+                { type: 'audio/wav' });
+            
+            // Create unique filename with timestamp
+            const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+            const filename = `recording_${timestamp}.wav`;
+    
+            // Create FormData with both audio and text
+            const formData = new FormData();
+            formData.append('file', wavBlob, filename);
+            formData.append('text', this.fullTranscript.trim());
+    
+            const response = await fetch('/api/log/audio', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ 
-                    text: this.fullTranscript.trim() 
-                })
+                body: formData
             });
             
-            if (!response.ok) throw new Error('Failed to save transcript');
+            if (!response.ok) {
+                throw new Error('Failed to save transcript and audio');
+            }
             
-            this.updateStatus("Transcript saved successfully");
+            const result = await response.json();
+            this.updateStatus(`Saved: ${result.file_name}`);
+            
         } catch (error) {
-            console.error("Error saving transcript:", error);
-            this.updateStatus("Error saving transcript");
+            console.error("Error saving:", error);
+            this.updateStatus("Error saving transcript and audio");
         }
     }
 

@@ -17,17 +17,35 @@ logging.basicConfig(level=logging.INFO)
 router = APIRouter()
 
 # WebSocketManager class for handling connections
+
 class WebSocketManager:
     def __init__(self):
+        # active_connections ensures that each WebSocket connection is tracked
         self.active_connections: set[WebSocket] = set()
 
     async def connect(self, websocket: WebSocket):
         await websocket.accept()
         self.active_connections.add(websocket)
+        logger.info(f'WebSocket connected: {id(websocket)}')
 
-    def disconnect(self, websocket: WebSocket):
-        self.active_connections.remove(websocket)
+    async def disconnect(self, websocket: WebSocket):
+        if websocket in self.active_connections:
+            self.active_connections.remove(websocket)
+            try: 
+                # Explicitly close the connection if still open
+                if websocket.client_state.CONNECTED:
+                    await websocket.close(code=1000, reason="Normal closure")
+                logger.info(f"WebSocket disconnected: {id(websocket)}")
+            except Exception as e:
+                logger.error(f"Error closing Websocket {id(websocket)}: {e}")
+        else:
+            logger.warning(f"Attempted to disconnect WebSocket {id(websocket)}")
 
+
+# Handle the lifecycle of a WebSocket connection in a clean, structured way
+# The manage_connection is reuable, ensures cleanup happens even if an exception occurs via finally
+# The decorator turns an async generator function into an asynchronous context manager
+# that can be used with the async with statement
     @asynccontextmanager
     async def manage_connection(self, websocket: WebSocket):
         try:
@@ -36,7 +54,7 @@ class WebSocketManager:
         except WebSocketDisconnect:
             pass
         finally:
-            self.disconnect(websocket)
+            await self.disconnect(websocket)
 
 # Initialize WebSocket manager
 ws_manager = WebSocketManager()
@@ -44,6 +62,7 @@ ws_manager = WebSocketManager()
 @router.websocket('/transcribe')
 async def websocket_transcribe(websocket: WebSocket, db: AsyncSession = Depends(get_db)):
     logger.info("WebSocket connection attempt")
+    # this block use mange_connection to wrap the Websocket handling, ensuring setup and teardown happedn automatically 
     async with ws_manager.manage_connection(websocket):
         logger.info("WebSocket connected")
         try:

@@ -10,6 +10,7 @@ from backend.models import Log
 from backend.database import get_db
 from backend.services.log_service import process_audio_log
 
+os.makedirs("audio_logs", exist_ok=True)
 
 router = APIRouter()
 
@@ -38,6 +39,6 @@ def get_logs(db: Session = Depends(get_db)):
 # The transcription is saved in the database along with the audio file name
 @router.post('/log/audio', summary='Create a new log entry with an audio file')
 async def upload_audio(file: UploadFile = File(...), db: Session = Depends(get_db)):
-    transcript = await process_audio_log(file, db, Log)  # Pass Log model
-    return {"message": "Audio saved", "file_name": file.filename}
+    logs = await process_audio_log(file, db, Log)  # Pass Log model
+    return logs
 
