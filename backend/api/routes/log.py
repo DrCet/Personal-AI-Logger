@@ -1,7 +1,7 @@
 #backnend/api/routes/log.py
 #this module defines the API endpoints for the logs table
 from backend.services.transcribe_service import transcribe_stream
-from fastapi import APIRouter, Depends, UploadFile, File, WebSocket, WebSocketDisconnect
+from fastapi import APIRouter, Depends, UploadFile, File, Form
 from sqlalchemy.orm import Session
 from pydantic import BaseModel
 import os
@@ -38,7 +38,7 @@ def get_logs(db: Session = Depends(get_db)):
 # The process_audio_log function processes the audio file and returns the transcription
 # The transcription is saved in the database along with the audio file name
 @router.post('/log/audio', summary='Create a new log entry with an audio file')
-async def upload_audio(file: UploadFile = File(...), db: Session = Depends(get_db)):
-    logs = await process_audio_log(file, db, Log)  # Pass Log model
+async def upload_audio(file: UploadFile = File(...), text: str = Form(...), db: Session = Depends(get_db)):
+    logs = await process_audio_log(file, db, Log, text)  # Pass Log model
     return logs
 

@@ -14,6 +14,7 @@ class TranscriptionHandler {
         this.stream = null;
         this.audioContext = null;
         this.audioData = [];
+        this.fullAudioData = [];
         this.isPaused = false;
         this.fullTranscript = "";
         
@@ -85,7 +86,10 @@ class TranscriptionHandler {
             processor.onaudioprocess = (e) => {
                 if (!this.isPaused) {
                     this.audioData.push(...e.inputBuffer.getChannelData(0));
-                    if (this.audioData.length >= 16000) this.sendWavChunk();
+                    this.fullAudioData.push(...e.inputBuffer.getChannelData(0));
+                    // sendWavChunk when the buffer size is > 24000. With sampling_rate = 16000
+                    // this sends audio every 1.5
+                    if (this.audioData.length >= 24000) this.sendWavChunk();
                 }
             };
 
@@ -102,7 +106,7 @@ class TranscriptionHandler {
         if (!this.audioContext || this.audioData.length === 0 || 
             this.socket?.readyState !== WebSocket.OPEN || this.isPaused) return;
         
-        const buffer = new Float32Array(this.audioData.splice(0, 16000));
+        const buffer = new Float32Array(this.audioData.splice(0, 24000));
         this.socket.send(this.encodeWav(buffer, 16000));
     }
 
@@ -180,16 +184,17 @@ class TranscriptionHandler {
     async saveTranscript() {
         try {
             // Create WAV blob from accumulated audio data
-            const wavBlob = new Blob([this.encodeWav(new Float32Array(this.audioData), 16000)], 
+            const wavBlob = new Blob([this.encodeWav(new Float32Array(this.fullAudioData), 16000)], 
                 { type: 'audio/wav' });
             
             // Create unique filename with timestamp
             const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-            const filename = `recording_${timestamp}.wav`;
+            // this frontend filename is just a recommended name, and isn't required for the backend to save the file
+            const filename = `recording_${timestamp}.wav`;  
     
             // Create FormData with both audio and text
             const formData = new FormData();
-            formData.append('file', wavBlob, filename);
+            formData.append('file', wavBlob, filename);       //the third argument tis optional
             formData.append('text', this.fullTranscript.trim());
     
             const response = await fetch('/api/log/audio', {
@@ -203,6 +208,10 @@ class TranscriptionHandler {
             
             const result = await response.json();
             this.updateStatus(`Saved: ${result.file_name}`);
+            // This is new!!
+            this.fullAudioData = []
+            this.fullTranscript = ""
+            this.audioData = []
             
         } catch (error) {
             console.error("Error saving:", error);

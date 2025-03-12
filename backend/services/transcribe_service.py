@@ -7,6 +7,8 @@ logger = logging.getLogger(__name__)
 
 audio_processor = AudioProcessor()
 
+
+# Process 1.5s-chunk each (see scripts.js at line 88 and 05)
 async def transcribe_stream(websocket):
     try:
         while True:
