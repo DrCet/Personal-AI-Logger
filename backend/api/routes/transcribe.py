@@ -18,9 +18,10 @@ router = APIRouter()
 
 # WebSocketManager class for handling connections
 
+from fastapi.websockets import WebSocketState
+
 class WebSocketManager:
     def __init__(self):
-        # active_connections ensures that each WebSocket connection is tracked
         self.active_connections: set[WebSocket] = set()
 
     async def connect(self, websocket: WebSocket):
@@ -28,33 +29,40 @@ class WebSocketManager:
         self.active_connections.add(websocket)
         logger.info(f'WebSocket connected: {id(websocket)}')
 
-    async def disconnect(self, websocket: WebSocket):
+    async def disconnect(self, websocket: WebSocket, client_initiated: bool = False):
         if websocket in self.active_connections:
             self.active_connections.remove(websocket)
-            try: 
-                # Explicitly close the connection if still open
-                if websocket.client_state.CONNECTED:
-                    await websocket.close(code=1000, reason="Normal closure")
-                logger.info(f"WebSocket disconnected: {id(websocket)}")
+            try:
+                # Only close if server-initiated and still connected
+                if not client_initiated and websocket.client_state == WebSocketState.CONNECTED:
+                    await websocket.close(code=1000, reason="Server-initiated closure")
+                    logger.info(f"WebSocket disconnected by server: {id(websocket)}")
+                else:
+                    logger.debug(f"WebSocket {id(websocket)} closed by client, no action")
             except Exception as e:
-                logger.error(f"Error closing Websocket {id(websocket)}: {e}")
+                logger.warning(f"WebSocket {id(websocket)} close attempt failed: {e}")
         else:
-            logger.warning(f"Attempted to disconnect WebSocket {id(websocket)}")
-
+            logger.warning(f"Attempted to disconnect WebSocket {id(websocket)} not in active connections")
 
 # Handle the lifecycle of a WebSocket connection in a clean, structured way
 # The manage_connection is reuable, ensures cleanup happens even if an exception occurs via finally
 # The decorator turns an async generator function into an asynchronous context manager
 # that can be used with the async with statement
+
     @asynccontextmanager
     async def manage_connection(self, websocket: WebSocket):
         try:
             await self.connect(websocket)
             yield
         except WebSocketDisconnect:
-            pass
+            logger.info(f"Client disconnected from WebSocket {id(websocket)}")
+            await self.disconnect(websocket, client_initiated=True)  # Mark as client-initiated
+        except Exception as e:
+            logger.error(f"Error managing WebSocket {id(websocket)}: {e}")
         finally:
-            await self.disconnect(websocket)
+            if websocket.client_state == WebSocketState.CONNECTED:  # Avoid redundant call if already handled
+                await self.disconnect(websocket)
+
 
 # Initialize WebSocket manager
 ws_manager = WebSocketManager()
@@ -62,58 +70,19 @@ ws_manager = WebSocketManager()
 @router.websocket('/transcribe')
 async def websocket_transcribe(websocket: WebSocket, db: AsyncSession = Depends(get_db)):
     logger.info("WebSocket connection attempt")
-    # this block use mange_connection to wrap the Websocket handling, ensuring setup and teardown happedn automatically 
     async with ws_manager.manage_connection(websocket):
         logger.info("WebSocket connected")
         try:
-            audio_buffer = b""
-            chunk_count = 0
-            while True:
-                try:
-                    transcription, audio_chunk = await transcribe_stream(websocket)
-                    if not transcription and not audio_chunk:
-                        # Clean disconnection
-                        break
-                    
-                    logger.info(f"Transcription: {transcription}")
-                    audio_buffer += audio_chunk
-                    
-                    if websocket.client_state.CONNECTED:
-                        await websocket.send_json({"transcription": transcription})
-                    
-                    chunk_count += 1
-                    if chunk_count % 10 == 0:  # Save every 10 seconds
-                        file_path = f"audio_logs/{int(time.time())}.wav"
-                        async with aiofiles.open(file_path, 'wb') as f:
-                            await f.write(audio_buffer)
-                        await save_audio_file(file_path, transcription, db, Log)
-                        audio_buffer = b""
-                except WebSocketDisconnect:
-                    logger.info("Client disconnected cleanly")
+            while websocket.client_state.CONNECTED:
+                transcription, audio_chunk = await transcribe_stream(websocket)
+                if not transcription and not audio_chunk:
                     break
-                except Exception as e:
-                    logger.error(f"Error in transcription loop: {e}")
-                    if websocket.client_state.CONNECTED:
-                        await websocket.send_json({"error": str(e)})
-                    break
-                    
+                await websocket.send_json({"transcription": transcription})
+        except WebSocketDisconnect:
+            logger.info("Client disconnected")
         except Exception as e:
             logger.error(f"WebSocket error: {e}")
-        finally:
-            # Save any remaining audio
-            if audio_buffer:
-                try:
-                    file_path = f"audio_logs/{int(time.time())}.wav"
-                    async with aiofiles.open(file_path, 'wb') as f:
-                        await f.write(audio_buffer)
-                    await save_audio_file(file_path, transcription, db, Log)
-                except Exception as e:
-                    logger.error(f"Error saving final audio: {e}")
+            if websocket.client_state.CONNECTED:
+                await websocket.send_json({"error": str(e)})
 
                     
-# Assuming save_audio_file is defined elsewhere (e.g., database.py)
-async def save_audio_file(file_path: str, transcription: str, db: AsyncSession, model):
-    db_log = model(text=transcription, audio_file=file_path)
-    db.add(db_log)
-    await db.commit()
-    await db.refresh(db_log)

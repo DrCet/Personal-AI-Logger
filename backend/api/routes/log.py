@@ -1,16 +1,21 @@
 #backnend/api/routes/log.py
 #this module defines the API endpoints for the logs table
 from backend.services.transcribe_service import transcribe_stream
-from fastapi import APIRouter, Depends, UploadFile, File, Form
+from fastapi import APIRouter, Depends, UploadFile, File, Form, HTTPException
 from sqlalchemy.orm import Session
 from pydantic import BaseModel
 import os
+import logging
+from datetime import datetime, timezone, timedelta
+import aiofiles
+
 
 from backend.models import Log
 from backend.database import get_db
-from backend.services.log_service import process_audio_log
+
 
 os.makedirs("audio_logs", exist_ok=True)
+logger = logging.getLogger(__name__)
 
 router = APIRouter()
 
@@ -37,8 +42,29 @@ def get_logs(db: Session = Depends(get_db)):
 # The file parameter is an UploadFile object that represents the uploaded file
 # The process_audio_log function processes the audio file and returns the transcription
 # The transcription is saved in the database along with the audio file name
-@router.post('/log/audio', summary='Create a new log entry with an audio file')
+@router.post('/log/audio')
 async def upload_audio(file: UploadFile = File(...), text: str = Form(...), db: Session = Depends(get_db)):
-    logs = await process_audio_log(file, db, Log, text)  # Pass Log model
-    return logs
-
+    logger.debug(f"Received db object: {db}")
+    logger.info(f"Processing audio: {file.filename}")
+    try:
+        gmt_plus_7 = timezone(timedelta(hours=7))
+        # Simpler timestamp format: YYYY-MM-DD HH:MM:SS
+        timestamp = datetime.now(gmt_plus_7).strftime("%H:%M:%S-%d-%m-%Y")
+        filename = f"{timestamp}.wav"  
+        file_path = os.path.join("audio_logs", filename)
+        
+        async with aiofiles.open(file_path, 'wb') as f:
+            content = await file.read()
+            await f.write(content)
+        
+        new_log = Log(audio_file=file_path, text=text, timestamp=timestamp)
+        db.add(new_log)
+        await db.commit()
+        await db.refresh(new_log)
+        
+        return {"message": "Audio and transcript saved", "file_name": filename, "id": new_log.id}
+    except Exception as e:
+        if db is not None:
+            db.rollback()       # AsyncSession tomorrow
+        logger.error(f"Error saving audio: {e}")
+        raise HTTPException(status_code=500, detail=f"Error saving audio: {e}")

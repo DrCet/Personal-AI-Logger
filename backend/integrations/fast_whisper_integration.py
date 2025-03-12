@@ -15,14 +15,12 @@ class AudioProcessor:
 
     async def process_audio(self, audio_chunk: bytes) -> str:
         try:
-            # Convert raw bytes to AudioSegment (assuming 16kHz mono PCM)
-            audio_segment = AudioSegment.from_file(io.BytesIO(audio_chunk), format="raw", frame_rate=16000, channels=1, sample_width=2)
-            audio_data = np.array(audio_segment.get_array_of_samples(), dtype='float32') / 32768.0  # Normalize to [-1, 1]
-
+            # Convert raw bytes to numpy array of float32 (assuming client sends Float32Array)
+            audio_data = np.frombuffer(audio_chunk, dtype=np.float32)
             if len(audio_data) == 0:
                 return ''
 
-            # Transcribe
+            # Transcribe with faster_whisper
             segments, info = self.model.transcribe(
                 audio_data,
                 language='en',

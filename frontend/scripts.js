@@ -98,16 +98,14 @@ class TranscriptionHandler {
         } catch (error) {
             console.error("Error:", error);
             this.updateStatus(`Error: ${error.message}`);
-            await this.stopTranscription();
+            // await this.stopTranscription();
         }
     }
 
     sendWavChunk() {
-        if (!this.audioContext || this.audioData.length === 0 || 
-            this.socket?.readyState !== WebSocket.OPEN || this.isPaused) return;
-        
+        if (this.audioData.length < 24000 || this.socket.readyState !== WebSocket.OPEN) return;
         const buffer = new Float32Array(this.audioData.splice(0, 24000));
-        this.socket.send(this.encodeWav(buffer, 16000));
+        this.socket.send(buffer.buffer); // Send ArrayBuffer (raw float32 bytes)
     }
 
     encodeWav(samples, sampleRate) {
@@ -221,6 +219,8 @@ class TranscriptionHandler {
 
     clearTranscript() {
         this.fullTranscript = "";
+        this.audioData = []
+        this.fullAudioData = []
         this.transcriptionDiv.innerText = "Waiting for transcription...";
         this.updateStatus("Transcript cleared");
         this.updateButtonStates(this.recorder?.state === "recording");
@@ -228,41 +228,24 @@ class TranscriptionHandler {
 
     async stopTranscription() {
         try {
-            // Stop recorder first
-            if (this.recorder && this.recorder.state === "recording") {
-                this.recorder.stop();
+            console.log("Stopping transcription, audioContext state:", this.audioContext?.state);
+            if (this.socket && this.socket.readyState === WebSocket.OPEN) {
+                this.socket.close(1000, "Manual stop by client"); // Explicitly close
             }
-            
-            // Stop audio tracks
-            if (this.stream) {
-                this.stream.getTracks().forEach(track => track.stop());
-            }
-            
-            // Close audio context
-            if (this.audioContext?.state !== 'closed') {
+            if (this.audioContext && this.audioContext.state !== 'closed') {
                 await this.audioContext.close();
             }
-            
-            // Close WebSocket last
-            if (this.socket?.readyState === WebSocket.OPEN) {
-                this.socket.close();
+            if (this.stream) {
+                this.stream.getTracks().forEach(track => track.stop());
+                this.stream = null;
             }
 
             // Reset all properties
-            this.recorder = null;
-            this.stream = null;
-            this.audioContext = null;
-            this.socket = null;
-            this.audioData = [];
-            this.isPaused = false;
-            
-            this.startButton.innerText = "Start Transcription";
             this.updateButtonStates(false);
-            this.updateStatus("Stopped");
-            
+            this.updateStatus("Transcription stopped");
         } catch (error) {
-            console.error("Error stopping transcription:", error);
-            this.updateStatus("Error stopping transcription");
+            console.error("Stop error:", error);
+            this.updateStatus(`Stop error: ${error.message}`);
         }
     }
 
