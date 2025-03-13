@@ -48,9 +48,9 @@ async def upload_audio(file: UploadFile = File(...), text: str = Form(...), db: 
     logger.info(f"Processing audio: {file.filename}")
     try:
         gmt_plus_7 = timezone(timedelta(hours=7))
-        # Simpler timestamp format: YYYY-MM-DD HH:MM:SS
-        timestamp = datetime.now(gmt_plus_7).strftime("%H:%M:%S-%d-%m-%Y")
-        filename = f"{timestamp}.wav"  
+        # Simpler timestamp format: HH-MM-SS-DD-MM-YYYY 
+        timestamp = datetime.now(gmt_plus_7)
+        filename = f"{timestamp.strftime("%H-%M-%S-%d-%m-%Y")}.wav"  
         file_path = os.path.join("audio_logs", filename)
         
         async with aiofiles.open(file_path, 'wb') as f:
@@ -58,13 +58,17 @@ async def upload_audio(file: UploadFile = File(...), text: str = Form(...), db: 
             await f.write(content)
         
         new_log = Log(audio_file=file_path, text=text, timestamp=timestamp)
+        logger.info(f'Try to add {new_log} to the logs table')
         db.add(new_log)
-        await db.commit()
-        await db.refresh(new_log)
+        db.commit()
+        db.refresh(new_log)
         
         return {"message": "Audio and transcript saved", "file_name": filename, "id": new_log.id}
     except Exception as e:
         if db is not None:
-            db.rollback()       # AsyncSession tomorrow
+            logger.debug(f"Rolling back with db: {db}")  # Debug before rollback
+            db.rollback()
+        else:
+            logger.error(f"db is None during rollback attempt")
         logger.error(f"Error saving audio: {e}")
         raise HTTPException(status_code=500, detail=f"Error saving audio: {e}")
