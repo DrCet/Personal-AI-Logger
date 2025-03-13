@@ -2,7 +2,7 @@
 #this module defines the API endpoints for the logs table
 from backend.services.transcribe_service import transcribe_stream
 from fastapi import APIRouter, Depends, UploadFile, File, Form, HTTPException
-from sqlalchemy.orm import Session
+from sqlalchemy.ext.asyncio import AsyncSession
 from pydantic import BaseModel
 import os
 import logging
@@ -23,16 +23,16 @@ class LogRequest(BaseModel):
     text: str
 
 @router.post('/log', summary='Create a new log entry')
-async def create_log(log_request: LogRequest, db: Session = Depends(get_db)):
+async def create_log(log_request: LogRequest, db: AsyncSession = Depends(get_db)):
     # Create a new log instance with the provided text
     new_log = Log(text=log_request.text)
     db.add(new_log) 
-    db.commit()
-    db.refresh(new_log)
+    await db.commit()
+    await db.refresh(new_log)
     return {'message': "Log saved", 'id':new_log.id}
 
 @router.get('/log', summary='Get all log entries')
-def get_logs(db: Session = Depends(get_db)):
+def get_logs(db: AsyncSession = Depends(get_db)):
     logs = db.query(Log).all()
     return logs
 
@@ -43,7 +43,7 @@ def get_logs(db: Session = Depends(get_db)):
 # The process_audio_log function processes the audio file and returns the transcription
 # The transcription is saved in the database along with the audio file name
 @router.post('/log/audio')
-async def upload_audio(file: UploadFile = File(...), text: str = Form(...), db: Session = Depends(get_db)):
+async def upload_audio(file: UploadFile = File(...), text: str = Form(...), db: AsyncSession = Depends(get_db)):
     logger.debug(f"Received db object: {db}")
     logger.info(f"Processing audio: {file.filename}")
     try:
@@ -60,14 +60,14 @@ async def upload_audio(file: UploadFile = File(...), text: str = Form(...), db: 
         new_log = Log(audio_file=file_path, text=text, timestamp=timestamp)
         logger.info(f'Try to add {new_log} to the logs table')
         db.add(new_log)
-        db.commit()
-        db.refresh(new_log)
+        await db.commit()
+        await db.refresh(new_log)
         
         return {"message": "Audio and transcript saved", "file_name": filename, "id": new_log.id}
     except Exception as e:
         if db is not None:
             logger.debug(f"Rolling back with db: {db}")  # Debug before rollback
-            db.rollback()
+            await db.rollback()
         else:
             logger.error(f"db is None during rollback attempt")
         logger.error(f"Error saving audio: {e}")

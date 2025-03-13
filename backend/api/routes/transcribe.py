@@ -1,17 +1,11 @@
 import logging
-from fastapi import WebSocket, Depends, APIRouter, WebSocketDisconnect
-from sqlalchemy.ext.asyncio import AsyncSession
-from backend.database import get_db
-from backend.models import Log
+from fastapi import WebSocket, APIRouter, WebSocketDisconnect
 from backend.services.transcribe_service import transcribe_stream
-import aiofiles
-import time
 from contextlib import asynccontextmanager
 
 
 # Configure logging
 logger = logging.getLogger(__name__)
-logging.basicConfig(level=logging.INFO)
 
 # Create router instance
 router = APIRouter()
@@ -68,7 +62,7 @@ class WebSocketManager:
 ws_manager = WebSocketManager()
 
 @router.websocket('/transcribe')
-async def websocket_transcribe(websocket: WebSocket, db: AsyncSession = Depends(get_db)):
+async def websocket_transcribe(websocket: WebSocket):
     logger.info("WebSocket connection attempt")
     async with ws_manager.manage_connection(websocket):
         logger.info("WebSocket connected")

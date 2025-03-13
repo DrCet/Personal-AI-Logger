@@ -1,9 +1,7 @@
 from faster_whisper import WhisperModel
 import numpy as np
-import io
 import logging
-from pydub import AudioSegment
-from typing import Optional
+
 
 logger = logging.getLogger(__name__)
 
@@ -21,7 +19,7 @@ class AudioProcessor:
                 return ''
 
             # Transcribe with faster_whisper
-            segments, info = self.model.transcribe(
+            segments, _ = self.model.transcribe(
                 audio_data,
                 language='en',
                 beam_size=5,

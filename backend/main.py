@@ -1,15 +1,15 @@
 from sys import prefix
-from fastapi import FastAPI, UploadFile, File, Form
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
+from backend.database import AsyncSessionLocal
 
-from pydantic import BaseModel
-import shutil
 import os
 from backend.api.routes import log, search, transcribe
 import uvicorn
 import logging
+from backend.database import check_permissions
 
 # Create app
 app = FastAPI()
@@ -22,14 +22,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
 @app.on_event("startup")
 async def startup_event():
     logger.debug("Registered routes:")
+    async with AsyncSessionLocal() as session:
+        await check_permissions(db=session)
     for route in app.routes:
         logger.debug(f"{route.path} [{route.name}]")
+        logger.info(f"{route.path} [{route.name}]")
 
 # Mount the static files directory
 frontend_path = os.path.join(os.path.dirname(__file__), "..", "frontend")
