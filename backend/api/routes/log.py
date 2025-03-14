@@ -48,16 +48,17 @@ async def upload_audio(file: UploadFile = File(...), text: str = Form(...), db: 
     logger.info(f"Processing audio: {file.filename}")
     try:
         gmt_plus_7 = timezone(timedelta(hours=7))
-        # Simpler timestamp format: HH-MM-SS-DD-MM-YYYY 
+        # Timezone-aware object
         timestamp = datetime.now(gmt_plus_7)
+        # Simpler timestamp format: HH-MM-SS-DD-MM-YYYY 
         filename = f"{timestamp.strftime("%H-%M-%S-%d-%m-%Y")}.wav"  
         file_path = os.path.join("audio_logs", filename)
         
         async with aiofiles.open(file_path, 'wb') as f:
             content = await file.read()
             await f.write(content)
-        
-        new_log = Log(audio_file=file_path, text=text, timestamp=timestamp)
+        # Need to convert the timestamp to timezone-naive to match the table datatype
+        new_log = Log(audio_file=file_path, text=text, timestamp=timestamp.replace(tzinfo=None))
         logger.info(f'Try to add {new_log} to the logs table')
         db.add(new_log)
         await db.commit()
