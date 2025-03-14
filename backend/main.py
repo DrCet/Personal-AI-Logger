@@ -36,6 +36,8 @@ async def startup_event():
 frontend_path = os.path.join(os.path.dirname(__file__), "..", "frontend")
 app.mount("/static", StaticFiles(directory=frontend_path), name="static")
 
+
+
 @app.get("/", response_class=HTMLResponse)
 def read_root():
     html_file_path = os.path.join(os.path.dirname(__file__), "..", "frontend", "index.html")

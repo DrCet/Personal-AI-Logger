@@ -7,6 +7,9 @@ class TranscriptionHandler {
         this.clearButton = document.getElementById("clearButton");
         this.transcriptionDiv = document.getElementById("transcription");
         this.statusDiv = document.getElementById("status");
+        this.logsTableContainer = document.getElementById("logsTableContainer");
+        this.logsTableBody = document.getElementById("logsTableBody");
+        this.showLogsButton = document.getElementById("showLogsButton");
         
         // Initialize state
         this.socket = null;
@@ -17,16 +20,63 @@ class TranscriptionHandler {
         this.fullAudioData = [];
         this.isPaused = false;
         this.fullTranscript = "";
+
         
         // Bind event listeners
         this.startButton.addEventListener("click", () => this.toggleTranscription());
         this.pauseButton.addEventListener("click", () => this.togglePause());
         this.saveButton.addEventListener("click", () => this.saveTranscript());
         this.clearButton.addEventListener("click", () => this.clearTranscript());
+        this.showLogsButton.addEventListener("click", () => this.showLogs());
         
+        this.showLogs();
         this.updateStatus("Ready");
         this.updateButtonStates(false);
     }
+
+    async showLogs() {
+        try {
+            this.updateStatus("Fetching logs...");
+            const limit = 10;
+            const response = await fetch(`/api/logs/data?limit=${limit}`, {
+                method: 'GET'
+            });
+    
+            if (!response.ok) {
+                throw new Error('Failed to fetch logs');
+            }
+    
+            const logs = await response.json();
+            console.log("Fetched logs:", logs);
+    
+            this.logsTableBody.innerHTML = '';
+            if (logs.length === 0) {
+                const row = document.createElement('tr');
+                row.innerHTML = `<td colspan="4">No logs found</td>`;
+                this.logsTableBody.appendChild(row);
+            } else {
+                logs.forEach(log => {
+                    const filename = log.audio_file;
+                    const audioUrl = `/api/audio/${filename}`; // Here is where audioUrl is specified
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${log.id}</td>
+                        <td>${log.text}</td>
+                        <td><audio controls src="${audioUrl}"></audio></td>
+                        <td>${new Date(log.timestamp).toLocaleString()}</td>
+                    `;
+                    this.logsTableBody.appendChild(row);
+                });
+            }
+    
+            this.updateStatus("Logs loaded successfully");
+        } catch (error) {
+            console.error("Error fetching logs:", error);
+            this.updateStatus(`Error fetching logs: ${error.message}`);
+            this.logsTableBody.innerHTML = `<tr><td colspan="4">Error loading logs</td></tr>`;
+        }
+    }
+
 
     async toggleTranscription() {
         // Check if we're currently recording (based on recorder state or WebSocket connection)
@@ -200,7 +250,7 @@ class TranscriptionHandler {
             formData.append('file', wavBlob, filename);       //the third argument tis optional
             formData.append('text', this.fullTranscript.trim());
     
-            const response = await fetch('/api/log/audio', {
+            const response = await fetch('/api/logs/audio', {
                 method: 'POST',
                 body: formData
             });
@@ -212,6 +262,7 @@ class TranscriptionHandler {
             const result = await response.json();
             // This is new!!
             this.clearTranscript();
+            this.showLogs();
             this.updateStatus(`Saved: ${result.file_name} - Transcript cleared`);
 
         } catch (error) {
