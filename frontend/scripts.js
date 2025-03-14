@@ -29,7 +29,12 @@ class TranscriptionHandler {
     }
 
     async toggleTranscription() {
-        this.socket ? await this.stopTranscription() : await this.startTranscription();
+        // Check if we're currently recording (based on recorder state or WebSocket connection)
+        if (this.recorder?.state === "recording" || (this.socket && this.socket.readyState === WebSocket.OPEN)) {
+            await this.stopTranscription();
+        } else {
+            await this.startTranscription();
+        }
     }
 
     async startTranscription() {
@@ -205,12 +210,10 @@ class TranscriptionHandler {
             }
             
             const result = await response.json();
-            this.updateStatus(`Saved: ${result.file_name}`);
             // This is new!!
-            this.fullAudioData = []
-            this.fullTranscript = ""
-            this.audioData = []
-            
+            this.clearTranscript();
+            this.updateStatus(`Saved: ${result.file_name} - Transcript cleared`);
+
         } catch (error) {
             console.error("Error saving:", error);
             this.updateStatus("Error saving transcript and audio");
@@ -222,7 +225,6 @@ class TranscriptionHandler {
         this.audioData = []
         this.fullAudioData = []
         this.transcriptionDiv.innerText = "Waiting for transcription...";
-        this.updateStatus("Transcript cleared");
         this.updateButtonStates(this.recorder?.state === "recording");
     }
 
@@ -241,6 +243,7 @@ class TranscriptionHandler {
             }
 
             // Reset all properties
+            this.socket = null;
             this.updateButtonStates(false);
             this.updateStatus("Transcription stopped");
         } catch (error) {
