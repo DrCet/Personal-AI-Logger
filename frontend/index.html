@@ -5,42 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real-Time Transcription</title>
     <style>
+        /* Base styles */
         #debugOutput {
-        margin-top: 20px;
-        padding: 10px;
-        background: #f0f0f0;
-        border: 1px solid #ccc;
-        font-family: monospace;
-        max-height: 200px;
-        overflow-y: auto;
+            margin-top: 2vh;
+            padding: 1.5vw;
+            background: #f0f0f0;
+            border: 0.1rem solid #ccc;
+            font-family: monospace;
+            max-height: 20vh;
+            overflow-y: auto;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
         }
         body {
             background-color: #121212;
             color: #ffffff;
             font-family: Arial, sans-serif;
             text-align: center;
-            padding: 20px;
+            padding: 2vw;
+            margin: 0; /* Remove default margin */
         }
         #transcription {
-            margin-top: 20px;
-            font-size: 20px;
-            padding: 10px;
-            border: 2px solid #ffffff;
-            border-radius: 10px;
+            margin-top: 2vh;
+            font-size: 1.5rem;
+            padding: 1.5vw;
+            border: 0.2rem solid #ffffff;
+            border-radius: 1rem;
             background-color: #1e1e1e;
-            min-height: 100px;
-            width: 80%;
+            min-height: 15vh;
+            width: 85%;
             display: inline-block;
+            box-sizing: border-box;
         }
         button {
             background-color: #ff9800;
             color: white;
             border: none;
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 1.5vw 3vw;
+            font-size: 1.2rem;
             cursor: pointer;
-            border-radius: 5px;
-            margin-top: 20px;
+            border-radius: 0.5rem;
+            margin-top: 2vh;
         }
         button:disabled {
             background-color: #555;
@@ -49,18 +55,19 @@
         .button-container {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            margin: 20px 0;
+            gap: 1vw;
+            margin: 2vh 0;
+            flex-wrap: wrap; /* Allow wrapping on small screens */
         }
         
         .control-button {
             background-color: #ff9800;
             color: white;
             border: none;
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 1.5vw 3vw;
+            font-size: 1.2rem;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 0.5rem;
             transition: background-color 0.3s;
         }
 
@@ -82,12 +89,99 @@
         }
 
         .status-indicator {
-            font-size: 14px;
-            margin-top: 10px;
+            font-size: 1rem;
+            margin-top: 1vh;
             color: #888;
         }
-        
-        
+        #logsTableContainer {
+            margin-top: 2vh;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1vh;
+            background: linear-gradient(to bottom, #1e1e1e, #2c2c2c);
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+        th {
+            background: linear-gradient(to bottom, #ff9800, #ffb74d);
+            color: #ffffff;
+            padding: 1.5vw;
+            text-align: left;
+            border-bottom: 0.2rem solid #ffffff;
+            font-size: 1.2rem;
+        }
+        td {
+            padding: 1.2vw;
+            text-align: left;
+            border-bottom: 0.1rem solid #444;
+            color: #e0e0e0;
+            font-size: 1rem;
+        }
+        audio {
+            width: 100%;
+            background: #1e1e1e;
+            border-radius: 0.5rem;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) { /* Tablet and smaller */
+            #transcription {
+                width: 95%;
+                font-size: 1.2rem;
+                padding: 2vw;
+            }
+            button, .control-button {
+                font-size: 1rem;
+                padding: 2vw 4vw;
+            }
+            th {
+                font-size: 1rem;
+                padding: 2vw;
+            }
+            td {
+                font-size: 0.9rem;
+                padding: 1.5vw;
+            }
+            .button-container {
+                flex-direction: column;
+                gap: 1vh;
+            }
+            #logsTableContainer {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) { /* Mobile */
+            #transcription {
+                width: 100%;
+                font-size: 1rem;
+                padding: 2.5vw;
+            }
+            button, .control-button {
+                font-size: 0.9rem;
+                padding: 2.5vw 5vw;
+            }
+            th {
+                font-size: 0.9rem;
+                padding: 2.5vw;
+            }
+            td {
+                font-size: 0.8rem;
+                padding: 2vw;
+            }
+            .status-indicator {
+                font-size: 0.9rem;
+            }
+            #debugOutput {
+                font-size: 0.8rem;
+                max-height: 15vh;
+            }
+        }
     </style>
 </head>
 <body>
@@ -97,10 +191,25 @@
         <button id="pauseButton" class="control-button pause" disabled>Pause</button>
         <button id="saveButton" class="control-button save" disabled>Save Transcript</button>
         <button id="clearButton" class="control-button clear" disabled>Clear</button>
+        <button id="showLogsButton">Show Logs</button>
     </div>
     <div id="transcription">Waiting for transcription...</div>
     <div id="status" class="status-indicator"></div>
     <div id="debugOutput"></div>
+    <div id="logsTableContainer">
+        <h3>Transcription Logs</h3>
+        <table id="logsTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Text</th>
+                    <th>Audio File</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody id="logsTableBody"></tbody>
+        </table>
+    </div>
     <script src="/static/scripts.js"></script>
 </body>
 </html>
