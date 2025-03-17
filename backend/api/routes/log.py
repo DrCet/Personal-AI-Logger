@@ -63,12 +63,12 @@ async def get_logs(db: AsyncSession = Depends(get_db), limit: int = Query(10, ge
         logger.error(f"Error retrieving logs: {e}")
         raise HTTPException(status_code=500, detail=f"Error retrieving logs: {e}")
 
-@router.get('/api/audio/{filename}', summary='Retrieve an audio file by filename')
+@router.get('/audio/{filename}', summary='Retrieve an audio file by filename')
 async def get_audio(filename: str):
     logger.debug(f"Entered get_audio endpoint for filename: {filename}")
     try:
         # Construct the full file path
-        audio_logs_path = os.path.join(os.path.dirname(__file__), "..", "..", "audio_logs")
+        audio_logs_path = os.path.join(os.path.dirname(__file__), "..", "..", '..', "audio_logs")
         file_path = os.path.join(audio_logs_path, filename)
 
         # Ensure the resolved path is within audio_logs directory
