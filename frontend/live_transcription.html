@@ -2,25 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
     <title>Real-Time Transcription</title>
     <style>
-        /* Import Orbitron font from Google Fonts (optional, add to <head> if desired) */
+        /* Import Orbitron font from Google Fonts (optional) */
         @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
         body {
             margin: 0;
             padding: 0;
-            min-height: 100vh; /* Allow content to extend beyond viewport */
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             font-family: 'Orbitron', 'Arial', sans-serif;
             color: #ffffff;
-            background: linear-gradient(135deg, #0a0e2a, #1e3a8a, #2a4494, #00d4ff, #00ffcc);
-            /* Reduced background size to improve performance */
+            background: linear-gradient(135deg, #050818, #0f1a4d, #1a2a5a, #00a3cc, #00d9a9);
             background-size: 150% 150%;
-            animation: sciFiGradient 15s ease infinite; /* Slower animation for less strain */
+            animation: sciFiGradient 20s ease infinite;
+            position: relative;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+            overflow-y: auto; /* Allow vertical scrolling */
         }
 
         @keyframes sciFiGradient {
@@ -29,23 +31,111 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* Optimized particle effect with smaller scope */
         body::before {
             content: '';
-            position: fixed; /* Fixed positioning to avoid reflow */
+            position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: radial-gradient(circle at 20% 30%, rgba(0, 212, 255, 0.05) 0%, transparent 60%);
-            animation: float 20s infinite linear; /* Slower animation */
+            background: radial-gradient(circle at 20% 30%, rgba(0, 163, 204, 0.03) 0%, transparent 60%);
+            animation: float 25s infinite linear;
             z-index: -1;
-            pointer-events: none; /* Prevent interaction lag */
+            pointer-events: none;
         }
 
         @keyframes float {
             0% { transform: translate(0, 0); }
-            100% { transform: translate(30px, 30px); } /* Reduced movement */
+            100% { transform: translate(15px, 15px); }
+        }
+
+        .sci-fi-object {
+            position: absolute;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .planet1 {
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, #1a2a5a 0%, #00a3cc 70%, transparent 100%);
+            top: 25%;
+            left: 75%;
+            animation: rotate 30s infinite linear;
+            box-shadow: 0 0 10px rgba(0, 163, 204, 0.3);
+        }
+
+        .planet2 {
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, #2a4494 0%, #00d9a9 70%, transparent 100%);
+            top: 65%;
+            left: 20%;
+            animation: rotate 40s infinite linear reverse;
+        }
+
+        .planet2::before {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 20px;
+            background: rgba(0, 217, 169, 0.2);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(30deg);
+            border-radius: 50%;
+            box-shadow: 0 0 8px rgba(0, 217, 169, 0.3);
+        }
+
+        .spaceship {
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 40px solid rgba(0, 163, 204, 0.5);
+            top: 45%;
+            left: 80%;
+            animation: fly 15s infinite ease-in-out;
+            box-shadow: 0 0 10px rgba(0, 163, 204, 0.5);
+        }
+
+        .alien {
+            width: 60px;
+            height: 80px;
+            background: radial-gradient(ellipse at center, rgba(0, 217, 169, 0.3) 0%, transparent 70%);
+            top: 75%;
+            left: 55%;
+            border-radius: 50% 50% 30% 30%;
+            animation: hover 10s infinite ease-in-out;
+        }
+
+        .alien::before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #00d9a9;
+            top: 20%;
+            left: 25%;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #00d9a9, 20px 0 0 #00d9a9, 20px 0 8px #00d9a9;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fly {
+            0% { transform: translate(0, 0) rotate(45deg); }
+            50% { transform: translate(-300px, 50px) rotate(45deg); }
+            100% { transform: translate(0, 0) rotate(45deg); }
+        }
+
+        @keyframes hover {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
         }
 
         h1 {
@@ -54,13 +144,15 @@
             margin-bottom: 1rem;
             text-transform: uppercase;
             letter-spacing: 0.2rem;
-            text-shadow: 0 0 8px #00d4ff, 0 0 15px #00ffcc, 0 0 20px #2a4494; /* Reduced shadow intensity */
+            text-shadow: 0 0 6px #00a3cc, 0 0 10px #00d9a9, 0 0 15px #1a2a5a;
             animation: pulse 2s infinite alternate;
+            will-change: text-shadow;
+            text-align: center;
         }
 
         @keyframes pulse {
-            from { text-shadow: 0 0 8px #00d4ff, 0 0 15px #00ffcc, 0 0 20px #2a4494; }
-            to { text-shadow: 0 0 12px #00d4ff, 0 0 20px #00ffcc, 0 0 25px #2a4494; }
+            from { text-shadow: 0 0 6px #00a3cc, 0 0 10px #00d9a9, 0 0 15px #1a2a5a; }
+            to { text-shadow: 0 0 8px #00a3cc, 0 0 12px #00d9a9, 0 0 18px #1a2a5a; }
         }
 
         .button-container {
@@ -69,10 +161,11 @@
             gap: 1vw;
             margin: 1vh 0;
             flex-wrap: wrap;
+            padding-bottom: 1rem; /* Ensure space at bottom for scrolling */
         }
 
         .control-button {
-            background: linear-gradient(45deg, #1e3a8a, #00d4ff);
+            background: linear-gradient(45deg, #0f1a4d, #00a3cc);
             border: none;
             padding: 1.2rem 2.5rem;
             font-size: 1.2rem;
@@ -80,11 +173,12 @@
             border-radius: 0.5rem;
             cursor: pointer;
             transition: transform 0.2s, box-shadow 0.3s;
-            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4), inset 0 0 8px rgba(0, 255, 204, 0.3); /* Reduced shadow */
+            box-shadow: 0 5px 15px rgba(0, 163, 204, 0.4), inset 0 0 8px rgba(0, 217, 169, 0.3);
             text-transform: uppercase;
             letter-spacing: 0.1rem;
             position: relative;
             overflow: hidden;
+            will-change: transform, box-shadow;
         }
 
         .control-button::before {
@@ -94,21 +188,21 @@
             left: 50%;
             width: 0;
             height: 0;
-            background: rgba(0, 255, 204, 0.15); /* Lower opacity for performance */
+            background: rgba(0, 217, 169, 0.15);
             border-radius: 50%;
             transform: translate(-50%, -50%);
-            transition: width 0.5s, height 0.5s; /* Slower transition */
+            transition: width 0.5s, height 0.5s;
             z-index: 0;
         }
 
         .control-button:hover::before {
-            width: 200px; /* Reduced ripple size */
+            width: 200px;
             height: 200px;
         }
 
         .control-button:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(0, 212, 255, 0.5), inset 0 0 10px rgba(0, 255, 204, 0.4);
+            box-shadow: 0 8px 20px rgba(0, 163, 204, 0.5), inset 0 0 10px rgba(0, 217, 169, 0.4);
         }
 
         .control-button:active {
@@ -122,50 +216,50 @@
         }
 
         .control-button.pause {
-            background: linear-gradient(45deg, #a00, #ff4d4d);
+            background: linear-gradient(45deg, #800000, #cc0000);
         }
 
         .control-button.save {
-            background: linear-gradient(45deg, #2e7d32, #66bb6a);
+            background: linear-gradient(45deg, #1b5e20, #4caf50);
         }
 
         .control-button.clear {
-            background: linear-gradient(45deg, #616161, #9e9e9e);
+            background: linear-gradient(45deg, #424242, #757575);
         }
 
         #transcription {
             margin-top: 2vh;
             font-size: 1.5rem;
             padding: 1.5vw;
-            border: 0.2rem solid #00d4ff;
+            border: 0.2rem solid #00a3cc;
             border-radius: 1rem;
-            background-color: rgba(10, 14, 42, 0.8);
+            background-color: rgba(5, 8, 24, 0.9);
             min-height: 15vh;
             width: 85%;
             display: inline-block;
             box-sizing: border-box;
-            box-shadow: 0 0 12px rgba(0, 212, 255, 0.3), inset 0 0 8px rgba(0, 255, 204, 0.2);
+            box-shadow: 0 0 12px rgba(0, 163, 204, 0.3), inset 0 0 8px rgba(0, 217, 169, 0.2);
         }
 
         #debugOutput {
             margin-top: 2vh;
             padding: 1.5vw;
-            background: rgba(10, 14, 42, 0.8);
-            border: 0.1rem solid #00d4ff;
+            background: rgba(5, 8, 24, 0.9);
+            border: 0.1rem solid #00a3cc;
             font-family: monospace;
             max-height: 20vh;
-            overflow-y: auto; /* Enable scrolling for debug output */
+            overflow-y: auto;
             width: 90%;
             margin-left: auto;
             margin-right: auto;
-            box-shadow: 0 0 8px rgba(0, 212, 255, 0.3);
+            box-shadow: 0 0 8px rgba(0, 163, 204, 0.3);
         }
 
         .status-indicator {
             font-size: 1rem;
             margin-top: 1vh;
-            color: #00ffcc;
-            text-shadow: 0 0 4px #00ffcc;
+            color: #00d9a9;
+            text-shadow: 0 0 4px #00d9a9;
         }
 
         #logsTableContainer {
@@ -173,26 +267,27 @@
             width: 90%;
             margin-left: auto;
             margin-right: auto;
-            overflow-y: auto; /* Enable scrolling for logs table if needed */
-            max-height: 40vh; /* Limit height to prevent excessive growth */
+            overflow-y: auto;
+            max-height: 40vh;
+            padding-bottom: 1rem; /* Ensure space for scrolling */
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 1vh;
-            background: linear-gradient(to bottom, rgba(10, 14, 42, 0.9), rgba(26, 58, 138, 0.9));
+            background: linear-gradient(to bottom, rgba(5, 8, 24, 0.9), rgba(15, 26, 77, 0.9));
             border-radius: 1rem;
             overflow: hidden;
-            box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+            box-shadow: 0 0 15px rgba(0, 163, 204, 0.2);
         }
 
         th {
-            background: linear-gradient(to bottom, #00d4ff, #2a4494);
+            background: linear-gradient(to bottom, #00a3cc, #1a2a5a);
             color: #ffffff;
             padding: 1.5vw;
             text-align: left;
-            border-bottom: 0.2rem solid #00ffcc;
+            border-bottom: 0.2rem solid #00d9a9;
             font-size: 1.2rem;
             text-transform: uppercase;
             letter-spacing: 0.1rem;
@@ -201,19 +296,132 @@
         td {
             padding: 1.2vw;
             text-align: left;
-            border-bottom: 0.1rem solid #2a4494;
-            color: #e0e0e0;
+            border-bottom: 0.1rem solid #1a2a5a;
+            color: #d0d0d0;
             font-size: 1rem;
         }
 
         audio {
             width: 100%;
-            background: rgba(10, 14, 42, 0.8);
+            background: rgba(5, 8, 24, 0.9);
             border-radius: 0.5rem;
-            box-shadow: inset 0 0 4px #00d4ff;
+            box-shadow: inset 0 0 4px #00a3cc;
         }
 
-        /* Media Queries for Responsiveness */
+        .delete-button {
+            background: linear-gradient(45deg, #800000, #cc0000);
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            color: #ffffff;
+            border-radius: 0.3rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.3s;
+            box-shadow: 0 3px 8px rgba(204, 0, 0, 0.4), inset 0 0 5px rgba(204, 0, 0, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.05rem;
+            position: relative;
+            overflow: hidden;
+            will-change: transform, box-shadow;
+        }
+
+        .delete-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(204, 0, 0, 0.15);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.5s, height 0.5s;
+            z-index: 0;
+        }
+
+        .delete-button:hover::before {
+            width: 150px;
+            height: 150px;
+        }
+
+        .delete-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 12px rgba(204, 0, 0, 0.5), inset 0 0 7px rgba(204, 0, 0, 0.4);
+        }
+
+        .delete-button:active {
+            transform: scale(0.95);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(5, 8, 24, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            overflow-y: auto; /* Allow scrolling in modal if needed */
+        }
+
+        .modal-content {
+            background: linear-gradient(to bottom, rgba(15, 26, 77, 0.9), rgba(5, 8, 24, 0.9));
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 15px rgba(204, 0, 0, 0.5);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            color: #cc0000;
+            text-shadow: 0 0 5px #cc0000;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .modal-buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1.5rem;
+        }
+
+        .modal-button {
+            background: linear-gradient(45deg, #800000, #cc0000);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            color: #ffffff;
+            border-radius: 0.3rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.3s;
+            box-shadow: 0 3px 8px rgba(204, 0, 0, 0.4);
+            will-change: transform, box-shadow;
+        }
+
+        .modal-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 12px rgba(204, 0, 0, 0.5);
+        }
+
+        .modal-button:active {
+            transform: scale(0.95);
+        }
+
+        .modal-button.cancel {
+            background: linear-gradient(45deg, #424242, #757575);
+        }
+
         @media (max-width: 768px) {
             #transcription {
                 width: 95%;
@@ -239,11 +447,30 @@
             #logsTableContainer {
                 width: 100%;
             }
+            .delete-button {
+                font-size: 0.8rem;
+                padding: 0.4rem 0.8rem;
+            }
+            .modal-content {
+                padding: 1.5rem;
+            }
+            .modal-button {
+                font-size: 0.9rem;
+                padding: 0.6rem 1.2rem;
+            }
+            .sci-fi-object {
+                display: none;
+            }
         }
 
         @media (max-width: 480px) {
+            body {
+                padding-top: 2rem; /* Add padding to avoid overlap with status bar */
+            }
             h1 {
                 font-size: 1.8rem;
+                margin: 1rem 1rem 1.5rem;
+                line-height: 1.2;
             }
             #transcription {
                 width: 100%;
@@ -269,10 +496,25 @@
                 font-size: 0.8rem;
                 max-height: 15vh;
             }
+            .delete-button {
+                font-size: 0.7rem;
+                padding: 0.3rem 0.6rem;
+            }
+            .modal-content {
+                padding: 1rem;
+            }
+            .modal-button {
+                font-size: 0.8rem;
+                padding: 0.5rem 1rem;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="sci-fi-object planet1"></div>
+    <div class="sci-fi-object planet2"></div>
+    <div class="sci-fi-object spaceship"></div>
+    <div class="sci-fi-object alien"></div>
     <h1>Real-Time Transcription</h1>
     <div class="button-container">
         <button id="startButton" class="control-button">Start Transcription</button>
@@ -293,10 +535,21 @@
                     <th>Text</th>
                     <th>Audio File</th>
                     <th>Timestamp</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody id="logsTableBody"></tbody>
         </table>
+    </div>
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <h2>Confirm Deletion</h2>
+            <p>Are you sure you want to delete this log?</p>
+            <div class="modal-buttons">
+                <button id="confirmDelete" class="modal-button">Yes</button>
+                <button id="cancelDelete" class="modal-button cancel">No</button>
+            </div>
+        </div>
     </div>
     <script src="/static/live_transcription.js"></script>
 </body>

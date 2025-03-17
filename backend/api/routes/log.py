@@ -12,6 +12,7 @@ import logging
 from datetime import datetime, timezone, timedelta
 import aiofiles
 import pathlib
+from backend.config import PROJECT_ROOT
 
 
 from backend.models import Log
@@ -128,3 +129,27 @@ async def upload_audio(file: UploadFile = File(...), text: str = Form(...), db: 
             logger.error(f"db is None during rollback attempt")
         logger.error(f"Error saving audio: {e}")
         raise HTTPException(status_code=500, detail=f"Error saving audio: {e}")
+
+
+@router.delete('/logs/delete/{log_id}')
+async def delete_log(log_id: int, db: AsyncSession = Depends(get_db)):
+    try:
+        # Find the log
+        log = await db.get(Log, log_id)
+        if not log:
+            raise HTTPException(status_code=404, detail="Log not found")
+
+        # Delete the associated audio file
+        audio_logs_path = os.path.join(PROJECT_ROOT, "audio_logs")
+        file_path = os.path.join(audio_logs_path, log.audio_file)
+        if os.path.exists(file_path):
+            os.remove(file_path)
+
+        # Delete the log from the database
+        await db.delete(log)
+        await db.commit()
+
+        return {"message": "Log deleted successfully"}
+    except Exception as e:
+        await db.rollback()
+        raise HTTPException(status_code=500, detail=f"Error deleting log: {e}")

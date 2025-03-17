@@ -21,6 +21,11 @@ class TranscriptionHandler {
         this.isPaused = false;
         this.fullTranscript = "";
 
+        this.deleteModal = document.getElementById("deleteModal");
+        this.confirmDeleteBtn = document.getElementById("confirmDelete");
+        this.cancelDeleteBtn = document.getElementById("cancelDelete");
+        this.logIdToDelete = null;
+
         
         // Bind event listeners
         this.startButton.addEventListener("click", () => this.toggleTranscription());
@@ -52,19 +57,25 @@ class TranscriptionHandler {
             this.logsTableBody.innerHTML = '';
             if (logs.length === 0) {
                 const row = document.createElement('tr');
-                row.innerHTML = `<td colspan="4">No logs found</td>`;
+                row.innerHTML = `<td colspan="5">No logs found</td>`;
                 this.logsTableBody.appendChild(row);
             } else {
                 logs.forEach(log => {
                     const filename = log.audio_file;
-                    const audioUrl = `/api/audio/${filename}`; // Here is where audioUrl is specified
+                    const audioUrl = `/api/audio/${filename}`;
                     const row = document.createElement('tr');
                     row.innerHTML = `
                         <td>${log.id}</td>
                         <td>${log.text}</td>
                         <td><audio controls src="${audioUrl}"></audio></td>
                         <td>${new Date(log.timestamp).toLocaleString()}</td>
+                        <td></td> <!-- Placeholder for delete button -->
                     `;
+                    const deleteButton = document.createElement('button');
+                    deleteButton.className = 'delete-button';
+                    deleteButton.textContent = 'Delete';
+                    deleteButton.addEventListener('click', () => this.showDeleteConfirmation(log.id));
+                    row.children[4].appendChild(deleteButton); // Append to the Action column
                     this.logsTableBody.appendChild(row);
                 });
             }
@@ -73,8 +84,41 @@ class TranscriptionHandler {
         } catch (error) {
             console.error("Error fetching logs:", error);
             this.updateStatus(`Error fetching logs: ${error.message}`);
-            this.logsTableBody.innerHTML = `<tr><td colspan="4">Error loading logs</td></tr>`;
+            this.logsTableBody.innerHTML = `<tr><td colspan="5">Error loading logs</td></tr>`;
         }
+    }
+
+    showDeleteConfirmation(logId) {
+        this.logIdToDelete = logId;
+        this.deleteModal.style.display = 'flex';
+    }
+
+    async confirmDelete() {
+        if (this.logIdToDelete) {
+            try {
+                this.updateStatus("Deleting log...");
+                const response = await fetch(`/api/logs/delete/${this.logIdToDelete}`, {
+                    method: 'DELETE'
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to delete log');
+                }
+
+                this.updateStatus("Log deleted successfully");
+                this.deleteModal.style.display = 'none';
+                this.showLogs(); // Refresh the logs table
+            } catch (error) {
+                console.error("Error deleting log:", error);
+                this.updateStatus(`Error deleting log: ${error.message}`);
+            }
+        }
+    }
+
+
+    cancelDelete() {
+        this.deleteModal.style.display = 'none';
+        this.logIdToDelete = null;
     }
 
 
@@ -316,4 +360,11 @@ class TranscriptionHandler {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => new TranscriptionHandler());
+window.transcriptionHandler = new TranscriptionHandler();
+
+// Add event listeners for modal buttons
+document.addEventListener('DOMContentLoaded', () => {
+    const transcriptionHandler = window.transcriptionHandler;
+    transcriptionHandler.confirmDeleteBtn.addEventListener('click', () => transcriptionHandler.confirmDelete());
+    transcriptionHandler.cancelDeleteBtn.addEventListener('click', () => transcriptionHandler.cancelDelete());
+});

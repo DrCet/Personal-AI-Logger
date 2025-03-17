@@ -1,4 +1,7 @@
 import urllib.parse
+import os
+
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 
 username = "cet"
 password = "your_password"
