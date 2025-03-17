@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Context Audio Recording</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Orbitron', 'Arial', sans-serif;
+            color: #ffffff;
+            background: linear-gradient(135deg, #050818, #0f1a4d, #1a2a5a, #00a3cc, #00d9a9);
+            background-size: 150% 150%;
+            animation: sciFiGradient 20s ease infinite;
+            position: relative;
+            overflow-x: hidden;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        @keyframes sciFiGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle at 20% 30%, rgba(0, 163, 204, 0.03) 0%, transparent 60%);
+            animation: float 25s infinite linear;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .sci-fi-object {
+            position: absolute;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .planet1 {
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, #1a2a5a 0%, #00a3cc 70%, transparent 100%);
+            top: 25%;
+            left: 75%;
+            animation: rotate 30s infinite linear;
+        }
+
+        .planet2 {
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, #2a4494 0%, #00d9a9 70%, transparent 100%);
+            top: 65%;
+            left: 20%;
+            animation: rotate 40s infinite linear reverse;
+        }
+
+        .planet2::before {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 20px;
+            background: rgba(0, 217, 169, 0.2);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(30deg);
+            border-radius: 50%;
+        }
+
+        .spaceship {
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 40px solid rgba(0, 163, 204, 0.5);
+            top: 45%;
+            left: 80%;
+            animation: fly 15s infinite ease-in-out;
+        }
+
+        .alien {
+            width: 60px;
+            height: 80px;
+            background: radial-gradient(ellipse at center, rgba(0, 217, 169, 0.3) 0%, transparent 70%);
+            top: 75%;
+            left: 55%;
+            border-radius: 50% 50% 30% 30%;
+            animation: hover 10s infinite ease-in-out;
+        }
+
+        .alien::before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #00d9a9;
+            top: 20%;
+            left: 25%;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #00d9a9, 20px 0 0 #00d9a9, 20px 0 8px #00d9a9;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fly {
+            0% { transform: translate(0, 0) rotate(45deg); }
+            50% { transform: translate(-300px, 50px) rotate(45deg); }
+            100% { transform: translate(0, 0) rotate(45deg); }
+        }
+
+        @keyframes hover {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            text-shadow: 0 0 6px #00a3cc, 0 0 10px #00d9a9, 0 0 15px #1a2a5a;
+            animation: pulse 2s infinite alternate;
+            text-align: center;
+        }
+
+        @keyframes pulse {
+            from { text-shadow: 0 0 6px #00a3cc, 0 0 10px #00d9a9, 0 0 15px #1a2a5a; }
+            to { text-shadow: 0 0 8px #00a3cc, 0 0 12px #00d9a9, 0 0 18px #1a2a5a; }
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 1vw;
+            margin: 1vh 0;
+            flex-wrap: wrap;
+            padding-bottom: 1rem;
+        }
+
+        .control-button {
+            background: linear-gradient(45deg, #0f1a4d, #00a3cc);
+            border: none;
+            padding: 1.2rem 2.5rem;
+            font-size: 1.2rem;
+            color: #ffffff;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: transform 0.2s;
+            box-shadow: 0 5px 15px rgba(0, 163, 204, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+
+        .control-button:hover {
+            transform: scale(1.05);
+        }
+
+        .control-button:active {
+            transform: scale(0.95);
+        }
+
+        .control-button:disabled {
+            background: #555;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        #sentence {
+            margin-top: 2vh;
+            font-size: 1.5rem;
+            padding: 1.5vw;
+            border: 0.2rem solid #00a3cc;
+            border-radius: 1rem;
+            background-color: rgba(5, 8, 24, 0.9);
+            width: 85%;
+            text-align: center;
+            box-shadow: 0 0 12px rgba(0, 163, 204, 0.3);
+        }
+
+        #recordingStatus {
+            margin-top: 1vh;
+            font-size: 1rem;
+            color: #00d9a9;
+            text-shadow: 0 0 4px #00d9a9;
+        }
+
+        #logsTableContainer {
+            margin-top: 2vh;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            overflow-y: auto;
+            max-height: 40vh;
+            padding-bottom: 1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1vh;
+            background: linear-gradient(to bottom, rgba(5, 8, 24, 0.9), rgba(15, 26, 77, 0.9));
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0, 163, 204, 0.2);
+        }
+
+        th {
+            background: linear-gradient(to bottom, #00a3cc, #1a2a5a);
+            color: #ffffff;
+            padding: 1.5vw;
+            text-align: left;
+            border-bottom: 0.2rem solid #00d9a9;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+
+        td {
+            padding: 1.2vw;
+            text-align: left;
+            border-bottom: 0.1rem solid #1a2a5a;
+            color: #d0d0d0;
+            font-size: 1rem;
+        }
+
+        audio {
+            width: 100%;
+            background: rgba(5, 8, 24, 0.9);
+            border-radius: 0.5rem;
+            box-shadow: inset 0 0 4px #00a3cc;
+        }
+
+        .delete-button {
+            background: linear-gradient(45deg, #800000, #cc0000);
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            color: #ffffff;
+            border-radius: 0.3rem;
+            cursor: pointer;
+            transition: transform 0.2s;
+            box-shadow: 0 3px 8px rgba(204, 0, 0, 0.4);
+        }
+
+        .delete-button:hover {
+            transform: scale(1.05);
+        }
+
+        .delete-button:active {
+            transform: scale(0.95);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(5, 8, 24, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            overflow-y: auto;
+        }
+
+        .modal-content {
+            background: linear-gradient(to bottom, rgba(15, 26, 77, 0.9), rgba(5, 8, 24, 0.9));
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 15px rgba(204, 0, 0, 0.5);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            color: #cc0000;
+            text-shadow: 0 0 5px #cc0000;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .modal-buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1.5rem;
+        }
+
+        .modal-button {
+            background: linear-gradient(45deg, #800000, #cc0000);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            color: #ffffff;
+            border-radius: 0.3rem;
+            cursor: pointer;
+            transition: transform 0.2s;
+            box-shadow: 0 3px 8px rgba(204, 0, 0, 0.4);
+        }
+
+        .modal-button:hover {
+            transform: scale(1.05);
+        }
+
+        .modal-button:active {
+            transform: scale(0.95);
+        }
+
+        .modal-button.cancel {
+            background: linear-gradient(45deg, #424242, #757575);
+        }
+
+        @media (max-width: 768px) {
+            #sentence {
+                width: 95%;
+            }
+            .control-button {
+                font-size: 1rem;
+                padding: 1rem 2rem;
+            }
+            th {
+                font-size: 1rem;
+                padding: 2vw;
+            }
+            td {
+                font-size: 0.9rem;
+                padding: 1.5vw;
+            }
+            .button-container {
+                flex-direction: column;
+                gap: 1vh;
+            }
+            #logsTableContainer {
+                width: 100%;
+            }
+            .delete-button {
+                font-size: 0.8rem;
+                padding: 0.4rem 0.8rem;
+            }
+            .modal-content {
+                padding: 1.5rem;
+            }
+            .modal-button {
+                font-size: 0.9rem;
+                padding: 0.6rem 1.2rem;
+            }
+            .sci-fi-object {
+                display: none; /* Hide on mobile to reduce lag */
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding-top: 2rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+                margin: 1rem 1rem 1.5rem;
+                line-height: 1.2;
+            }
+            #sentence {
+                width: 100%;
+                font-size: 1.2rem;
+                padding: 2.5vw;
+            }
+            .control-button {
+                font-size: 0.9rem;
+                padding: 0.8rem 1.5rem;
+            }
+            th {
+                font-size: 0.9rem;
+                padding: 2.5vw;
+            }
+            td {
+                font-size: 0.8rem;
+                padding: 2vw;
+            }
+            #recordingStatus {
+                font-size: 0.9rem;
+            }
+            .delete-button {
+                font-size: 0.7rem;
+                padding: 0.3rem 0.6rem;
+            }
+            .modal-content {
+                padding: 1rem;
+            }
+            .modal-button {
+                font-size: 0.8rem;
+                padding: 0.5rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sci-fi-object planet1"></div>
+    <div class="sci-fi-object planet2"></div>
+    <div class="sci-fi-object spaceship"></div>
+    <div class="sci-fi-object alien"></div>
+    <h1>Context Audio Recording</h1>
+    <div class="button-container">
+        <button id="generateSentence" class="control-button">Generate Sentence</button>
+        <button id="startRecording" class="control-button" disabled>Start Recording</button>
+        <button id="stopRecording" class="control-button" disabled>Stop Recording</button>
+        <button id="saveRecording" class="control-button" disabled>Save Recording</button>
+        <button id="showLogsButton" class="control-button">Show Logs</button>
+    </div>
+    <div id="sentence">Click "Generate Sentence" to start.</div>
+    <div id="recordingStatus"></div>
+    <div id="logsTableContainer">
+        <h3>Recording Logs</h3>
+        <table id="logsTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Sentence</th>
+                    <th>Audio File</th>
+                    <th>Timestamp</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="logsTableBody"></tbody>
+        </table>
+    </div>
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <h2>Confirm Deletion</h2>
+            <p>Are you sure you want to delete this recording?</p>
+            <div class="modal-buttons">
+                <button id="confirmDelete" class="modal-button">Yes</button>
+                <button id="cancelDelete" class="modal-button cancel">No</button>
+            </div>
+        </div>
+    </div>
+    <script src="/static/context_audio_recording.js"></script>
+</body>
+</html>

@@ -58,6 +58,20 @@ def live_transcription():
     except Exception as e:
         logger.error(f"Error reading index.html: {e}")
         return HTMLResponse(content="Error loading page", status_code=500)
+    
+# New context-audio-recording endpoints
+@app.get("/context-audio-recording", response_class=HTMLResponse)
+async def context_audio_recording():
+    html_file_path = os.path.join(os.path.dirname(__file__), "..", "frontend", "context_audio_recording.html")
+    try:
+        with open(html_file_path, "r") as f:
+            html_content = f.read()
+        # Replace the direct JS reference with the static path
+        html_content = html_content.replace('src="/context_audio_recording.js"', 'src="/static/context_audio_recording.js"')
+        return html_content
+    except Exception as e:
+        logger.error(f"Error reading audio_context_record.html: {e}")
+        return HTMLResponse(content="Error loading page", status_code=500)
 
 app.include_router(log.router, prefix='/api')
 app.include_router(search.router, prefix='/api')
