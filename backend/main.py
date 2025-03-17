@@ -36,16 +36,24 @@ async def startup_event():
 frontend_path = os.path.join(os.path.dirname(__file__), "..", "frontend")
 app.mount("/static", StaticFiles(directory=frontend_path), name="static")
 
-
-
 @app.get("/", response_class=HTMLResponse)
-def read_root():
+async def read_root():
     html_file_path = os.path.join(os.path.dirname(__file__), "..", "frontend", "index.html")
+    try:
+        with open(html_file_path, "r") as f:
+            return f.read()
+    except Exception as e:
+        logger.error(f"Error reading index.html: {e}")
+        return HTMLResponse(content="Error loading page", status_code=500)
+
+@app.get("/live-transcription", response_class=HTMLResponse)
+def live_transcription():
+    html_file_path = os.path.join(os.path.dirname(__file__), "..", "frontend", "live_transcription.html")
     try:
         with open(html_file_path, "r") as f:
             html_content = f.read()
         # Replace the direct scripts.js reference with the static path
-        html_content = html_content.replace('src="scripts.js"', 'src="/static/scripts.js"')
+        html_content = html_content.replace('src="live_transcription.js"', 'src="/static/live_transcription.js"')
         return html_content
     except Exception as e:
         logger.error(f"Error reading index.html: {e}")
