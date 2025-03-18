@@ -115,7 +115,6 @@ class TranscriptionHandler {
         }
     }
 
-
     cancelDelete() {
         this.deleteModal.style.display = 'none';
         this.logIdToDelete = null;

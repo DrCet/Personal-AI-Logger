@@ -33,139 +33,6 @@ class RecordingHandler {
         this.updateStatus("Click 'Generate Sentence' to start.");
         this.updateButtonStates(false);
 
-        this.SENTENCE_CORPUS = [
-            "The spaceship hovered silently above the alien planet.",
-            "A mysterious signal came from the edge of the galaxy.",
-            "The robot repaired the damaged starship in record time.",
-            "Green lights flickered in the distant nebula.",
-            "The captain ordered a course change to avoid the asteroid field.",
-            "A lone astronaut drifted through the void of space.",
-            "The AI system detected an anomaly in the star charts.",
-            "Purple storms raged on the surface of the gas giant.",
-            "The crew discovered ancient ruins on the moon's surface.",
-            "A black hole loomed ominously at the galaxy's core.",
-            "The interstellar probe sent back images of a frozen world.",
-            "A comet streaked across the sky, leaving a trail of ice.",
-            "The station orbited a planet with rings of shimmering dust.",
-            "An alien artifact emitted a strange, pulsating glow.",
-            "The engineer calibrated the warp drive for a long journey.",
-            "A supernova illuminated the night sky with brilliant light.",
-            "The colonists built a dome to survive the harsh atmosphere.",
-            "A fleet of drones scanned the asteroid belt for resources.",
-            "The scientist analyzed data from a distant exoplanet.",
-            "The space elevator connected the planet to its orbiting station."
-        ];
-    }
-
-    // Update status message
-    updateStatus(message) {
-        this.recordingStatus.textContent = message;
-        console.log("Status:", message);
-    }
-
-    updateButtonStates(isRecording) {
-        this.startRecordingBtn.disabled = isRecording || !this.currentSentence;
-        this.stopRecordingBtn.disabled = !isRecording;
-        this.saveRecordingBtn.disabled = !this.audioChunks.length || !this.currentSentence;
-        this.clearSentenceBtn.disabled = !this.currentSentence; // Disable if no sentence to clear
-    }
-
-    // Generate a sentence by fetching from the backend
-    generateSentence() {
-        try {
-            this.updateStatus("Generating sentence...");
-            this.currentSentence = this.SENTENCE_CORPUS[Math.floor(Math.random() * this.SENTENCE_CORPUS.length)];
-            this.sentenceDiv.textContent = this.currentSentence;
-            this.updateStatus("Sentence generated. Ready to record.");
-            this.updateButtonStates(false);
-        } catch (error) {
-            console.error("Error generating sentence:", error);
-            this.updateStatus(`Error generating sentence: ${error.message}`);
-        }
-    }
-
-    // Start recording audio
-    async startRecording() {
-        try {
-            if (!navigator.mediaDevices) throw new Error("MediaDevices API not available");
-
-            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-            this.mediaRecorder = new MediaRecorder(stream);
-            this.audioChunks = [];
-
-            this.mediaRecorder.ondataavailable = (event) => {
-                this.audioChunks.push(event.data);
-            };
-
-            this.mediaRecorder.onstop = () => {
-                this.updateStatus("Recording stopped. Click 'Save' to store.");
-                this.updateButtonStates(false);
-            };
-
-            this.mediaRecorder.start();
-            this.updateStatus("Recording...");
-            this.updateButtonStates(true);
-        } catch (error) {
-            console.error("Error starting recording:", error);
-            this.updateStatus(`Error accessing microphone: ${error.message}`);
-        }
-    }
-
-    // Stop recording audio
-    stopRecording() {
-        if (this.mediaRecorder && this.mediaRecorder.state === "recording") {
-            this.mediaRecorder.stop();
-            this.mediaRecorder.stream.getTracks().forEach(track => track.stop());
-            this.mediaRecorder = null;
-        }
-    }
-
-    // Save the recording to the server
-    async saveRecording() {
-        if (!this.audioChunks.length || !this.currentSentence) {
-            this.updateStatus("No recording or sentence to save.");
-            return;
-        }
-
-        try {
-            this.updateStatus("Saving recording...");
-            const wavBlob = new Blob(this.audioChunks, { type: "audio/wav" });
-            // Create unique filename with timestamp
-            const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-            // this frontend filename is just a recommended name, and isn't required for the backend to save the file
-            const filename = `recording_${timestamp}.wav`;  
-            const formData = new FormData();
-            formData.append("audio", wavBlob, filename);
-            formData.append("text", this.currentSentence);
-
-
-            const response = await fetch('/api/logs/audio', {
-                method: 'POST',
-                body: formData
-            });
-
-            if (!response.ok) {
-                throw new Error("Failed to save recording");
-            }
-
-            const result = await response.json();
-            this.updateStatus(`Saved: ${result.file_name} - Transcript cleared`);
-            this.clearCurrentSentence();
-            this.showLogs();
-            this.updateButtonStates(false);
-        } catch (error) {
-            console.error("Error saving recording:", error);
-            this.updateStatus(`Error saving recording: ${error.message}`);
-        }
-    }
-
-    // Clear the current display sentence
-    clearCurrentSentence() {
-        this.currentSentence = "";
-        this.audioChunks = [];
-        this.sentenceDiv.textContent = "Click 'Generate Sentence' to start.";
-        this.updateStatus("Sentence cleared.");
-        this.updateButtonStates(false);
     }
 
     // Fetch and display logs
@@ -252,6 +119,129 @@ class RecordingHandler {
         this.deleteModal.style.display = 'none';
         this.logIdToDelete = null;
     }
+
+    // Start recording audio
+    async startRecording() {
+        try {
+            if (!navigator.mediaDevices) throw new Error("MediaDevices API not available");
+            const constraints = { 
+                audio: { 
+                    sampleRate: 16000, 
+                    channelCount: 1, 
+                    echoCancellation: true, 
+                    noiseSuppression: true 
+                } 
+            };
+            
+            const stream = await navigator.mediaDevices.getUserMedia(constraints);
+            this.updateStatus("Microphone access granted");
+
+            this.mediaRecorder = new MediaRecorder(stream);
+            this.audioChunks = [];
+
+            this.mediaRecorder.ondataavailable = (event) => {
+                this.audioChunks.push(event.data);
+            };
+
+            this.mediaRecorder.onstop = () => {
+                this.updateStatus("Recording stopped. Click 'Save' to store.");
+                this.updateButtonStates(false);
+            };
+
+            this.mediaRecorder.start();
+            this.updateStatus("Recording...");
+            this.updateButtonStates(true);
+        } catch (error) {
+            console.error("Error starting recording:", error);
+            this.updateStatus(`Error accessing microphone: ${error.message}`);
+        }
+    }
+    
+    
+
+    updateButtonStates(isRecording) {
+        this.startRecordingBtn.disabled = isRecording || !this.currentSentence;
+        this.stopRecordingBtn.disabled = !isRecording;
+        this.saveRecordingBtn.disabled = !this.audioChunks.length || !this.currentSentence;
+        this.clearSentenceBtn.disabled = !this.currentSentence; // Disable if no sentence to clear
+    }
+
+    // Update status message
+    updateStatus(message) {
+        this.recordingStatus.textContent = message;
+        console.log("Status:", message);
+    }
+    // Generate a sentence by fetching from the backend
+    async generateSentence() {
+        try {
+            this.currentSentence = "Hello it's me";
+            this.sentenceDiv.textContent = this.currentSentence;
+            this.updateStatus("Sentence generated. Ready to record.");
+            this.updateButtonStates(false);
+        } catch (error) {
+            console.error("Error generating sentence:", error);
+            this.updateStatus(`Error generating sentence: ${error.message}`);
+        }
+    }
+
+
+    // Stop recording audio
+    async stopRecording() {
+        if (this.mediaRecorder && this.mediaRecorder.state === "recording") {
+            this.mediaRecorder.stop();
+            this.mediaRecorder.stream.getTracks().forEach(track => track.stop());
+            this.mediaRecorder = null;
+        }
+    }
+
+    // Save the recording to the server
+    async saveRecording() {
+        if (!this.audioChunks.length || !this.currentSentence) {
+            this.updateStatus("No recording or sentence to save.");
+            return;
+        }
+
+        try {
+            this.updateStatus("Saving recording...");
+            const wavBlob = new Blob(this.audioChunks, { type: "audio/wav" });
+            // Create unique filename with timestamp
+            const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+            // this frontend filename is just a recommended name, and isn't required for the backend to save the file
+            const filename = `recording_${timestamp}.wav`;  
+            const formData = new FormData();
+            formData.append("file", wavBlob, filename);
+            formData.append("text", this.currentSentence.trim());
+
+
+            const response = await fetch('/api/logs/audio', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (!response.ok) {
+                throw new Error("Failed to save recording");
+            }
+
+            const result = await response.json();
+            this.updateStatus(`Saved: ${result.file_name} - Transcript cleared`);
+            this.clearCurrentSentence();
+            this.showLogs();
+            this.updateButtonStates(false);
+        } catch (error) {
+            console.error("Error saving recording:", error);
+            this.updateStatus(`Error saving recording: ${error.message}`);
+        }
+    }
+
+    // Clear the current display sentence
+    clearCurrentSentence() {
+        this.currentSentence = "";
+        this.audioChunks = [];
+        this.sentenceDiv.textContent = "Click 'Generate Sentence' to start.";
+        this.updateStatus("Sentence cleared.");
+        this.updateButtonStates(false);
+    }
+
 }
 
 // Instantiate the handler
