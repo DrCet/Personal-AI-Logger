@@ -19,6 +19,7 @@ class RecordingHandler {
         this.audioChunks = [];
         this.currentSentence = "";
         this.logIdToDelete = null;
+        this.sentenceCache = [];
 
         // Bind event listeners
         this.generateSentenceBtn.addEventListener("click", () => this.generateSentence());
@@ -174,13 +175,50 @@ class RecordingHandler {
     // Generate a sentence by fetching from the backend
     async generateSentence() {
         try {
-            this.currentSentence = "Hello it's me";
-            this.sentenceDiv.textContent = this.currentSentence;
+            this.updateStatus("Generating sentence...");
+
+            // Fetch sentences from backend endpoint if not already cached
+            if (this.sentenceCache.length === 0) {
+                const response = await fetch('/api/context-audio-recording/sentences'); // Fetch from private endpoint
+                console.log("Fetch response status:", response.status);
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    console.error("Fetch error:", errorText);
+                    throw new Error(`Failed to load sentences: ${response.status} - ${errorText}`);
+                }
+                const data = await response.json();
+                if (data.error) {
+                    throw new Error(data.error);
+                }
+                this.sentenceCache = data.sentences || [];
+                console.log("Loaded sentences:", this.sentenceCache);
+                if (this.sentenceCache.length === 0) {
+                    throw new Error('No valid sentences found in file');
+                }
+            }
+
+            // Randomly select a sentence
+            if (this.sentenceCache.length > 0) {
+                this.currentSentence = this.sentenceCache[Math.floor(Math.random() * this.sentenceCache.length)].trim();
+            } else {
+                throw new Error('Sentence cache is empty');
+            }
+
+            if (this.sentenceDiv) {
+                this.sentenceDiv.textContent = this.currentSentence;
+            } else {
+                console.error("sentenceDiv element not found");
+            }
             this.updateStatus("Sentence generated. Ready to record.");
             this.updateButtonStates(false);
         } catch (error) {
             console.error("Error generating sentence:", error);
-            this.updateStatus(`Error generating sentence: ${error.message}`);
+            this.currentSentence = "Hello it's me"; // Fallback sentence
+            if (this.sentenceDiv) {
+                this.sentenceDiv.textContent = this.currentSentence;
+            }
+            this.updateStatus(`Error generating sentence: ${error.message}. Using fallback.`);
+            this.updateButtonStates(false);
         }
     }
 

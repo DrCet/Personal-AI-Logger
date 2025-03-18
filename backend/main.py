@@ -5,7 +5,7 @@ from fastapi.staticfiles import StaticFiles
 from backend.database import AsyncSessionLocal
 
 import os
-from backend.api.routes import log, search, transcribe
+from backend.api.routes import log, search, transcribe, record
 import uvicorn
 import logging
 from backend.database import check_permissions
@@ -76,6 +76,7 @@ async def context_audio_recording():
 app.include_router(log.router, prefix='/api')
 app.include_router(search.router, prefix='/api')
 app.include_router(transcribe.router, prefix='/api')
+app.include_router(record.router, prefix='/api')
 
 if __name__ == "__main__":
     uvicorn.run("backend.main:app", 
