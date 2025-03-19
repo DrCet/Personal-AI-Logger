@@ -9,3 +9,5 @@ __pycache__/
 vosk_model/
 
 audio_logs/
+
+prompts/
