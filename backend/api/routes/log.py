@@ -140,10 +140,9 @@ async def delete_log(log_id: int, db: AsyncSession = Depends(get_db)):
             raise HTTPException(status_code=404, detail="Log not found")
 
         # Delete the associated audio file
-        audio_logs_path = os.path.join(PROJECT_ROOT, "audio_logs")
+        audio_logs_path = os.path.join(os.path.dirname(__file__), "..", "..", '..', "audio_logs")
         file_path = os.path.join(audio_logs_path, log.audio_file)
-        if os.path.exists(file_path):
-            os.remove(file_path)
+        os.remove(file_path)
 
         # Delete the log from the database
         await db.delete(log)
