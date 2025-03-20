@@ -2,7 +2,7 @@
 #this module defines the API endpoints for the logs table
 from unittest import result
 from fastapi import APIRouter, Depends, UploadFile, File, Form, HTTPException, Query
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, JSONResponse
 
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
@@ -152,3 +152,32 @@ async def delete_log(log_id: int, db: AsyncSession = Depends(get_db)):
     except Exception as e:
         await db.rollback()
         raise HTTPException(status_code=500, detail=f"Error deleting log: {e}")
+
+@router.get('/logs/download')
+async def download_logs(db: AsyncSession = Depends(get_db)):
+    try:
+        # Fetch all logs from the database
+        result = await db.execute(select(Log))
+        logs = result.scalars().all()
+
+        # Convert logs to a list of dictionaries
+        logs_list = [
+            {
+                "id": log.id,
+                "text": log.text,
+                "audio_file": log.audio_file,
+                "timestamp": log.timestamp.isoformat() if log.timestamp else None
+            }
+            for log in logs
+        ]
+
+        # Return as JSON with a Content-Disposition header for download
+        return JSONResponse(
+            content=logs_list,
+            headers={
+                "Content-Disposition": "attachment; filename=logs.json",
+                "Content-Type": "application/json"
+            }
+        )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error fetching logs: {str(e)}")
