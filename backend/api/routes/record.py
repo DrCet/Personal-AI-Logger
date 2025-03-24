@@ -21,7 +21,7 @@ async def get_audio_context_record(request: Request):
 @router.get('/context-audio-recording/sentences')
 async def get_sentences(db: AsyncSession = Depends(get_db)):
     # Path to the private sentences file (adjust based on your project structure)
-    file_path = os.path.join(os.path.dirname(__file__), '..','..','integrations/sentences.txt')
+    file_path = os.path.join(os.path.dirname(__file__), '..','..','integrations/sentences_3.txt')
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             sentences = f.read().splitlines()  # Split by lines, remove empty lines
