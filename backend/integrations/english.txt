@@ -1,0 +1,150 @@
+Artificial Intelligence can solve complex problems faster than humans.
+Can you explain what a neural network is in AI?
+A deep learning model requires at least 10,000 data points to perform well.
+Machine learning is not the same as traditional programming.
+Why is backpropagation essential in training neural networks?
+A convolutional neural network (CNN) cannot process text data effectively.
+You can train an AI model using only 100 samples, right?
+Reinforcement learning relies on a reward system to optimize decisions.
+AI does not need data preprocessing to achieve high accuracy.
+How does gradient descent optimize a machine learning model?
+A generative adversarial network (GAN) consists of two competing models.
+Supervised learning does not require labeled data to function.
+Can unsupervised learning identify patterns in unstructured data?
+Transfer learning saves time by reusing pre-trained models.
+AI cannot perform well without a large computational budget.
+Why is overfitting a common issue in deep learning models?
+A recurrent neural network (RNN) is ideal for time-series data.
+You’ve heard of the Turing Test in AI, haven’t you?
+Natural language processing (NLP) enables machines to understand human speech.
+A decision tree cannot handle continuous variables effectively.
+How does feature engineering improve AI model performance?
+An AI model trained on 1 GB of data is sufficient for image recognition.
+Supervised learning always outperforms unsupervised learning.
+Can reinforcement learning be applied to robotics?
+A perceptron is the simplest form of a neural network.
+AI does not rely on algorithms to make predictions.
+Why is regularization used in machine learning models?
+A transformer model revolutionized NLP with its attention mechanism.
+You can build an AI system without understanding data distributions, can’t you?
+Clustering is a key technique in unsupervised learning.
+An AI system cannot learn from real-time data streams.
+How does a support vector machine (SVM) classify data?
+A random forest consists of multiple decision trees working together.
+Deep learning models do not need GPUs to train efficiently.
+Can AI predict stock prices with 95% accuracy?
+Hyperparameter tuning is critical for optimizing AI models.
+A linear regression model cannot handle non-linear relationships.
+Why does AI need big data to achieve high performance?
+An autoencoder is used for dimensionality reduction in AI.
+You’ve implemented a k-means clustering algorithm before, haven’t you?
+Reinforcement learning does not use a policy to guide actions.
+How does a Long Short-Term Memory (LSTM) unit prevent vanishing gradients?
+A generative model can create new data similar to its training set.
+AI cannot be used for real-time fraud detection.
+Why is cross-validation important in machine learning?
+A fully connected layer in a neural network processes all input features.
+You can train a model with 90% accuracy using only 50 samples, right?
+Transfer learning does not work with small datasets.
+Can a Bayesian network model uncertainty in AI?
+An activation function introduces non-linearity into neural networks.
+AI does not require ethical guidelines to operate safely.
+How does dropout prevent overfitting in deep learning?
+A Q-learning algorithm is a type of reinforcement learning.
+Neural networks with 10 layers always outperform those with 5 layers.
+Why is data normalization crucial before training an AI model?
+A softmax function converts raw scores into probabilities.
+You’ve used TensorFlow to build an AI model, haven’t you?
+Unsupervised learning cannot classify data into categories.
+Can AI understand emotions through sentiment analysis?
+A loss function measures the error in an AI model’s predictions.
+Gradient boosting does not rely on weak learners to improve accuracy.
+How does an attention mechanism improve transformer models?
+A variational autoencoder (VAE) generates data with latent variables.
+AI cannot optimize energy consumption in smart grids.
+Why is batch normalization used in deep learning?
+A Markov decision process (MDP) underpins reinforcement learning.
+You can deploy an AI model without testing its performance, can’t you?
+Principal component analysis (PCA) reduces data dimensions in AI.
+An AI system does not need continuous updates to stay relevant.
+How does a decision boundary separate classes in machine learning?
+A gated recurrent unit (GRU) is a simplified version of an LSTM.
+Deep learning models with 100 layers are always better than shallow ones.
+Can AI detect anomalies in network traffic?
+A cost function guides the optimization of an AI model.
+AI does not use heuristics to solve problems efficiently.
+Why is the ReLU activation function popular in deep learning?
+A hidden layer in a neural network processes intermediate features.
+You’ve experimented with PyTorch for AI development, haven’t you?
+Supervised learning cannot handle missing data effectively.
+How does a genetic algorithm optimize AI solutions?
+A Boltzmann machine is a type of unsupervised learning model.
+AI cannot improve medical diagnoses with predictive models.
+Why is early stopping used in training neural networks?
+A sigmoid function outputs values between 0 and 1.
+You can build an AI model without splitting data into train and test sets, right?
+K-nearest neighbors (KNN) is a simple classification algorithm.
+An AI system does not need cloud computing to scale.
+How does a policy gradient method work in reinforcement learning?
+A residual network (ResNet) reduces training errors in deep learning.
+Deep learning models with 1 million parameters are easy to train.
+Can AI generate realistic images using GANs?
+A confusion matrix evaluates the performance of a classification model.
+AI does not require domain knowledge to solve specific problems.
+Why is the Adam optimizer widely used in deep learning?
+A feedforward neural network processes data in one direction.
+You’ve heard of the bias-variance tradeoff in machine learning, haven’t you?
+Reinforcement learning cannot handle continuous action spaces.
+How does word embedding improve NLP tasks?
+A bagging technique reduces overfitting in ensemble models.
+AI cannot automate customer service with chatbots.
+Why is the learning rate a critical hyperparameter in AI?
+A capsule network improves upon traditional CNNs for image recognition.
+You can train an AI model with 99% accuracy using noisy data, can’t you?
+Transfer learning does not apply to reinforcement learning.
+Can AI optimize supply chain logistics?
+A stochastic gradient descent (SGD) updates weights incrementally.
+AI does not need interpretability to be trusted in healthcare.
+How does a Monte Carlo method estimate outcomes in AI?
+A self-organizing map (SOM) is used for clustering in AI.
+Deep learning models with 50 layers always overfit small datasets.
+Why is data augmentation used in image-based AI models?
+A max-pooling layer reduces spatial dimensions in CNNs.
+You’ve implemented a reinforcement learning agent before, haven’t you?
+Unsupervised learning cannot detect fraud without labeled data.
+Can AI predict weather patterns with high precision?
+A precision-recall curve evaluates binary classification models.
+AI does not use probabilistic models to handle uncertainty.
+How does a transformer encoder process sequential data?
+A deep Q-network (DQN) combines reinforcement learning with deep learning.
+Neural networks with 5 hidden layers are always sufficient for NLP.
+Why is feature selection important in machine learning?
+A leaky ReLU function prevents the dying neuron problem.
+You can deploy an AI model without validating its accuracy, right?
+Supervised learning does not work with imbalanced datasets.
+Can AI improve autonomous driving with sensor fusion?
+A kernel trick enhances SVM performance in non-linear data.
+AI cannot simulate human creativity effectively.
+How does an expectation-maximization (EM) algorithm work in AI?
+A multi-layer perceptron (MLP) handles complex pattern recognition.
+Deep learning models with 200 epochs always converge faster.
+Why is the F1-score used in imbalanced classification tasks?
+A batch size of 32 is optimal for training most AI models.
+You’ve used scikit-learn to build a machine learning model, haven’t you?
+Reinforcement learning cannot optimize long-term rewards.
+Can AI analyze genomic data for personalized medicine?
+A ROC curve measures the tradeoff between sensitivity and specificity.
+AI does not need regularization to generalize well.
+How does a graph neural network (GNN) process structured data?
+A boosting algorithm improves weak learners sequentially.
+Neural networks with 1 layer can solve any problem efficiently.
+Why is the attention mechanism key to transformer success?
+A tanh activation function outputs values between -1 and 1.
+You can train an AI model without tuning hyperparameters, can’t you?
+Unsupervised learning does not require computational power.
+Can AI detect cybersecurity threats in real time?
+A learning curve shows how model performance improves with data.
+AI does not use simulation to test algorithms.
+How does a heuristic function guide AI search algorithms?
+A conditional random field (CRF) models dependencies in NLP.
+Deep learning cannot handle small datasets without overfitting.
