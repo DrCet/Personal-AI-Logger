@@ -1348,3 +1348,912 @@ The autophagic flux’s enhancement by rapamycin mitigates proteinopathy, a targ
 Point-of-care biosensors detect troponin levels, enabling rapid diagnosis of myocardial infarction in emergency settings.
 The biomechanical torsion of aortic grafts optimizes hemodynamic flow, reducing aneurysm risk in vascular surgery.
 Immunotherapy via oncolytic viruses lyses tumor cells, stimulating systemic immunity in metastatic melanoma treatment.
+The first three chapters of this book discuss, in broad and arguably existential terms, the fundamental role of mortality in shaping how societies are structured and how cultures define their priorities.
+In contrast, the last two chapters recognize that the ways societies deal with death change over time and differ between cultures.
+These changing strategies for dealing with mortality have deep effects on society—affecting even areas that don’t obviously seem related to death.
+The book then examines two main life strategies, both of which modern societies attempt to use at the same time—though they contradict each other.
+Modern strategy: This approach tries to "deconstruct" death.
+Instead of facing death as a final, abstract event, it breaks it down into manageable problems—like diseases and health risks.
+In doing so, modern culture places death into daily life, not as a looming mystery but as a collection of specific, solvable issues (like heart disease, cancer, etc.).
+Postmodern strategy: Here, the focus shifts to "deconstructing" immortality.
+Instead of remembering people through history and legacy, postmodern culture emphasizes fame and visibility.
+The fear is no longer dying, but disappearing without a trace.
+Everything becomes temporary, and the line between what is lasting and what is fleeting starts to blur.
+Life becomes a constant rehearsal of things passing away.
+This book is an example of sociological hermeneutics—an approach that seeks to understand the meaning of social institutions and shared behaviors by interpreting them as part of larger life strategies.
+These strategies are not chosen at random.
+Instead, they are made possible (or thinkable) within specific social contexts—what the author calls social figurations (patterns of interdependent relationships in society).
+Sociological hermeneutics in this case requires a dual analysis:
+Backward: Understand how life strategies arise from the social structures they operate within.
+Forward: See how those strategies shape the routines of everyday life.
+However, when interpreting human behavior, there’s a common risk: we tend to over-simplify.
+Real social life is messy, contradictory, and confusing.
+But in the act of interpreting it, we often make it seem more logical and coherent than it really is.
+The author is cautious of this risk and tries not to present these strategies as neat, tidy systems.
+Still, in order to analyze them, he must give them clear identities—even though in real life, these identities are never that stable or separate.
+A warning, then, to readers: these categories (pre-modern, modern, postmodern) are ideal types—theoretical constructs, not separate worlds we live in one after another
+In reality, we live in one complex, inconsistent world.
+These “worlds” are simply mental tools we use to make sense of it.
+They are not realities, but sediments (accumulated abstractions) of our efforts to impose order on social life.
+Unlike animals, humans possess self-awareness: we not only know, but we know that we know.
+Our thoughts can be examined just like we examine objects outside our bodies.
+This means our consciousness becomes something we can reflect upon—it is not just a tool we use, but also an object we perceive.
+This kind of knowledge is persistent and uncontrollable.
+It doesn’t disappear just because we wish it would.
+Even if we are not thinking about something consciously, we know it’s still “there,” ready to resurface when we turn our attention to it.
+If we can’t access it in the moment, we call it a "lapse of memory," much like misplacing an object.
+We assume it still exists—we just can’t find it right now.
+When this kind of self-knowledge becomes disturbing or painful—especially thoughts we don’t want to confront—our instinct is to hide it or push it away, much like we might dispose of a bad-smelling item.
+We try to suppress these thoughts or disguise them to make them bearable.
+But just like unpleasant objects in the room, they’re hard to eliminate completely.
+They require constant vigilance.
+Among all offensive thoughts, none is more disturbing than death—not just the event itself, but the knowledge of its inevitability.
+Death is terrifying because it confronts us with a truth that no intellectual process can grasp: our absolute end.
+Philosophers and psychologists alike argue that death is unthinkable in the literal sense—we can imagine others dying, but when we try to imagine our own death, we’re always somehow still there, watching.
+We cannot mentally simulate our own disappearance from existence.
+Therefore, the thought of death becomes the ultimate trauma: a confrontation with nothingness, an absence that reason cannot make sense of.
+The trauma of knowing we will die stems from a fundamental conflict between thought and what death represents.
+Thought, by nature, is not bound by space or time.
+It can leap across history, imagine futures, and visualize unreachable places.
+But all these acts of imagination depend on thought itself being present.
+There is no idea, no vision, no image, without the thinker still being there to create or observe it.
+Here lies the paradox: thought cannot conceive of its own absence.
+It cannot imagine a world in which it—thought, consciousness, awareness—no longer exists.
+Even Descartes based the certainty of existence on this very incapacity: "I think, therefore I am."
+In other words, the very act of thinking proves one exists—but not because that existence is immune to ending, rather because we cannot grasp the concept of it ending.
+This leads to a deceptive sense of security.
+Since we cannot think non-thinking, we rarely face that possibility directly.
+But death shatters this illusion.
+Death is exactly that: the cessation of thought.
+It is real, and we know it is real, even if we cannot fully understand or imagine it.
+In this way, death is both the ultimate truth and the ultimate absurdity—a state that is undeniable and yet unimaginable.
+We struggle with this because we always imagine death as something we observe, as if we were still there.
+Even in our most serious attempts to contemplate our own end, we see ourselves in the picture—as thinkers, as witnesses.
+But true death means no more witnessing, no more imagination.
+That is why death is not merely hard to imagine—it is a contradiction in terms.
+It is the thought of unthinking, which is impossible.
+To think of death is to already deny it, because the act of thinking presumes presence.
+As La Rochefoucauld aptly noted: “One cannot stare directly at the sun—or at death.”
+Both blind us, not because they are invisible, but because they expose the limits of our vision.
+In this regard, society functions both as the originator and the mitigator of existential trauma.
+The consciousness of death—so jarring, so foundationally disruptive—is not merely an individual psychological condition but a socially mediated and sustained epistemic reality.
+It is society that endows individuals with language, through which the abstraction of death becomes possible; it is also society that constructs the semantic veils—ritual, myth, euphemism—that obscure the nakedness of death’s truth.
+We may call this dual role thanatological dialectic—a process wherein society creates the very awareness it must thereafter contain.
+It is not the brute fact of death that haunts the human condition, but rather the paradox of conscious mortality: the knowledge that one’s subjective center of experience is destined for obliteration.
+In this, humanity differs categorically from other animals—not in mortality itself, which is shared, but in the reflexive recognition of its inevitability.
+And herein lies the unbearable contradiction: the capacity to imagine endlessly is met with the certainty of a cessation that imagination cannot truly grasp.
+To live within the bounds of such knowledge is intolerable without the protective myths that culture provides.
+Heroic narratives, transcendental promises, and systems of ultimate meaning are not arbitrary constructions—they are, in a fundamental sense, psychic necessities.
+They are social technologies designed to transform the unmanageable certainty of death into something symbolically survivable.
+As Becker proposed, these systems operate as “immortality projects,” enabling individuals to tether their identities to something perceived as enduring, whether that be lineage, nation, legacy, or deity.
+Yet even these cultural edifices must remain only partially believed, lest their artificiality become too conspicuous.
+Their efficacy depends on a tacit collusion between the individual and society—a shared agreement not to press too hard, not to inquire too deeply, not to strip away the symbolic armor that shields against the existential void.
+As long as disbelief in death remains unspoken, uninvestigated, it can fulfill its function: the preservation of psychic continuity and social stability.
+In conclusion, the knowledge of death constitutes a profound rupture in the project of reason and culture alike.
+It exposes the foundational absurdity upon which consciousness precariously rests.
+That we can continue to function in light of this awareness is not a testament to the power of reason, but to the elaborate—and often unconscious—labors of denial in which both individuals and societies are perpetually engaged.
+Reason, for all its triumphs, remains haunted by the one thing it cannot rationalize: the certainty of its own disappearance
+As individuals, we know that our individual bodies are mortal, though—as we have seen above—the fact of possessing such knowledge suggests that our minds are not, not in the same way at any rate: the thought can slight time and reach beyond the confines of bodily mortality.
+But thanks to this uncanny ‘extemporality’ of thought we also know that the opposite is true: while my own, individual thinking will in all probability grind to a halt at the moment of my death, with the demise of my individual body bodily existence will not really end.
+It will continue, much as it started before the appearance of my body and before the beginning of my own thinking, before my ‘entering the world’.
+It will continue in the form of the bodily presence of other people.
+My personal existence is surrounded on both sides by the existence of predecessors and successors.
+Surrounded, yet not anchored, not rooted, not bound: why has my personal existence been squeezed in this particular place and not in any of the countless others I know of or am able to imagine?
+No one perhaps expressed more fully that fundamental puzzle of personal existence, that mind-boggling accidentality, contingency of being, than Pascal (Pensée 205):
+When I consider the short duration of my life, swallowed up in eternity past and to come, the little space that I fill, and even can see, engulfed in the infinite immensity of spaces of which I am ignorant and which know me not, I am terrified, and am astonished at being here rather than there; for there is no reason why here rather than there, why now rather than then.
+Neither the beginning nor the end are absolute.
+Not just the spirit, but the body as well are, so to speak, irreparably torn between mortality and immortality: doomed to cessation in one respect, each is destined to last in another.
+Neither is straightforward, both are ambivalent where they are most vulnerable: in reasons, or the absence of reason, of being where they are.
+It is this ambivalence with which societies play.
+Ambivalence of being is a waste-product of society; but at the same time the ineradicable ambivalence of existence supplies the raw material from which social organizations are woven and cultures are sculpted.
+According to Freud, to be exact, that ambivalence precedes society: it is in place before society starts its work.
+In humans, that unique species in which the capacity and the necessity to learn has almost totally displaced and replaced the natural equipment for life, Freud recognized just two instincts: that of life and that of death.
+All instincts, Freud insists, are conservative: in-built drives pressing to return to equilibrium, urging ‘towards the restoration of an earlier state of things’.
+But the ‘earlier state of things’, ‘the initial state’ from which they once departed and to which instincts prompt them to return, is for all living organisms the same: the state of inorganic matter.
+It is for this reason that ‘the aim of all life is death’.
+Death, the return to the inanimate state of inorganic matter, is the goal to which all life tends and to which it eventually arrives on its own and in its own time, unless disturbed by outside pressures.
+And yet the status quo ante entailed not only the non-existence of the organism.
+It entailed as well the existence of the species.
+For the conservative function to be duly performed, the death instinct must be supplemented by the instinct of life: thanatos by libido, death-drive by the sex-drive.
+Between themselves, the two in-born instincts meet and satisfy, so to speak, nature’s requirements.
+In some non-humanly ‘objective’ nature’s perspective, they collaborate closely in bringing about a joint yet cohesive accomplishment—which can be thought of as the preservation and continuation of the species.
+Not so in human, all-too-human perspective of individual existence: here they are at odds with each other, send contradictory signals and press in opposite directions.
+What was elsewhere complementarity turns here into conflict.
+The functional cohesion of nature rebounds as ambivalence of human life.
+The instinct of life, as defined by nature, is aimed at the least reliable, the most ephemeral, the most evidently mortal side of the human individual—the physical body.
+It is through human bodies that the species perpetuates itself, invariably at the expense of non-perpetuation of each single body that contributes to the collective effect of reproduction.
+So it is the body that, in order to perform its creative/self-annihilating role, becomes the object of libido, of sexual desire; yet it does so while never ceasing to be but a temporary suspension of nothingness, a ‘detour’ from the ‘normal’, inorganic state of matter.
+Its other, non-sexual activities (its physiological dependency on an inanimate environment, its constant engagement in metabolism) are a reminder of its transience, of senescence as the natural product of youth, of the raw meat barely concealed under just a few millimetres of the epidermis.
+(That beauty that allures libido and excites imagination of its poetic troubadours is, indeed, no more than ‘skin deep’, a veneer of appearance that hides the repulsive truth of mortal flesh.)
+The same body that is the inexhaustible source of libidinal joy cannot cease being the ultimate embodiment of death’s terror: ‘nature mocks us, and poets live in torture’.
+In ‘Beyond the Pleasure Principle’, the acclaimed, breakthrough study published in 1920, Freud noted (not without a dose of bewilderment) that the opposition between life and death instincts seems to penetrate the inside of relationships that ‘logically’ should stand apart, each one fully guided and structured by one (and one only) of the two great instinctual adversaries.
+Amazingly, object-love seems to be shot through with attitudinal ambivalence.
+Most astonishingly of all, it includes, alongside the expected love (affection), also hate (aggressiveness)—an attitude ‘evidently’ out of place, a posture that inside the context of love may be seen only as logically incongruous.
+‘If only we could succeed in relating these two polarities to each other and in deriving one from the other!’—Freud muses wistfully on his discovery.
+The attempt to do just that follows the orthodox line of thought: the aggressive posture and hateful aversion found in object-love are phenomena which—once pushed to the extreme—turn into a sadistic perversion; in a less condensed, attenuated form however, they are necessary, fully functional tools of Eros: ‘During the oral stage of organization of the libido, the act of obtaining erotic mastery over an object coincides with that object’s destruction;... at the stage of genital primacy, it takes on, for the purposes of reproduction, the function of overpowering the sexual object to the extent necessary for carrying out the sexual act’.
+Three years later, in ‘The Ego and the Id’, an essay which in the opinion of many commentators was the last, most comprehensive and conclusive of Freud’s numerous restatements of psychoanalytical theory, interpretation undergoes a subtle shift: functionality of the otherwise incongruous mixture is no more postulated.
+Instead, we read that ambivalence is ‘a fundamental phenomenon’, probably representing ‘an instinctual fusion that has not been completed’; the reader is left to surmise, quite legitimately, that the fusion cannot be completed: the permanent co-presence of Eros and Thanatos casts a gigantic shadow of ambivalence on all human existence.
+‘Continuance of life’ and ‘the striving towards death’ are inseparably linked; ‘life itself would be a conflict and compromise between these two trends’.
+Note that this is not a conflict resolved, but a compromise—always short of full satisfaction, forever provisional, fragile and ‘until further notice’...
+Others—Freud’s disciples and successors—spelled out what the life in that shadow is like.
+(Let us repeat: what is at stake is conscious life, life with the knowledge of the ‘package deal’ that once and for all made death the ultimate destination of all and any life-supporting and life-promoting acts).
+Having done that, many came to the conclusion that it is not so much ‘nature’s decree’, however incongruous, that bears direct responsibility for the torments of ambivalence (as Freud, in his obsessive search for ‘scientific’ grounds for his theory, more than once and more than tentatively implied).
+Nature’s way of pursuing collective perpetuity of the species through individual mortality of its members appears incongruous only when known; incongruity, after all, is not a feature of unthinking ‘reality’, but of its conscious, logic-seeking models.
+Incongruity is ‘just’ the defeat of the mind’s own Thanatos-like drive towards that stable tranquillity which only the cohesion, the absence of contradiction, can bring.
+It is this conscious presence of man in the unthinking world that exposes ‘the ways of nature’ as incongruous.
+The awareness of incongruity rebounds as irreparable ambivalence of contingent existence.
+‘Man’s nature’, Erich Fromm insists, ‘cannot be defined in terms of a specific quality, such as love, hate, reason, good or evil, but only in terms of fundamental contradictions that characterize human existence.’
+Self-awareness, reason, and imagination have disrupted the ‘harmony’ that characterizes animal existence.  
+Their emergence has made man into an anomaly, the freak of the universe.  
+He is part of nature, subject to her physical laws and unable to change them, yet he transcends nature.  
+He is set apart while being a part.  
+He is homeless, yet chained to the home he shares with all creatures.  
+Cast into this world as an accidental place and time, he is forced out of it accidentally and against his will.  
+Being aware of himself, he realizes his powerlessness and the limitations of his existence.  
+He is never free from the dichotomy of his existence: he cannot rid himself of his mind, even if he would want to.  
+He cannot rid himself of his body as long as he is alive—and his body makes him want to be alive.  
+These contradictions are truly existential (the French would say anthropological).  
+The socially sustained awareness only laid them bare and reforged into the painful knowledge of ambivalence or subconscious anguish.  
+They had been decreed by nature before human culture would have a chance to discover them and thus become obliged to interfere.  
+It was left to culture to improvise what nature failed to supply—but whatever tunes culture would compose, it had to patch them together out of the sounds nature had already supplied.  
+Nature, so to speak, determined the indetermination of man.  
+It was the task of culture—a task in no way freely chosen—to solidify the contingent, to entrench the rootless, to give the powerless an impression of power, to hide uncontrived absurdity behind contrived meanings.  
+And culture did what it had to do—with such dedication and self-abandon, and with so spectacular (though far from satisfactory) effects, that Hegel could in good conscience sum up history as a record of ‘what man does with death’.  
+And W. B. Yeats could inform his readers that it was man who ‘created death’.  
+The effort to conceal or, short of concealing, to temper and defuse the pivotal absurdity of human predicament, occupied such a strategic place in the work of culture that a growing amount of historians follow Hegel’s insight.  
+They assert that one could grasp the essence of history’s drama through recording the consecutive changes in the imagery of death and in the ways humans cope with death and dying.  
+The transformations of attitudes to death and connected practices cannot be conclusively explained causally (after all, each one is just a palliative, a pseudo-solution to a lasting need, which sooner or later must be disavowed as it inexorably runs out of credible normative potential).  
+But they may in their turn serve as an explanation of wider shifts—those affecting total cultures, saturated as they are with the evasive yet mighty substance of ‘sensibilities’.  
+Ideas and rites of death would therefore occupy the status of ‘prime facts’, reflecting the primacy of individual mortality among the constituents of the human predicament.  
+Accepted (particularly by French historians) a few decades ago, this view continues to represent hopes and methodological postulates rather than an empirically confirmed truth.  
+As far as the handling of mortality goes, ‘total cultures’ appear curiously and uncharacteristically tolerant to quite heterogenous attitudes (though each seems to have an attitudinal complex favoured, extolled and practised with greater or lesser vigour by its spiritual elite).  
+Human reactions to death are ostensibly too complex and perhaps also too stubborn to be successfully channelled by any culture in a universally acceptable fashion.  
+Culture would never be permitted to stop trying to achieve just that, but all attempts seem to have arrived thus far fairly short of convincing success.  
+According to Joachim Whaley’s summary of historians’ unnerving experience with their coveted, yet elusive goal, ‘attitudes to death in all ages are characterized by the most diverse emotions—fear, sorrow, anger, despair, resentment, resignation, defiance, pity, avarice, triumph, helplessness’.  
+A mixed bunch, indeed, of affects that must make any effort of ‘standardization’—a very tall order.  
+In view of the enormity of the task, socially managed efforts to resolve the inherent ambivalence of the mortal/immortal existence of the individual/species (a uniquely human ambivalence for the uniquely human quality of self-awareness) were but a series of just partly successful, yet ultimately unsatisfactory expedients.  
+The most universally and continuously practised expedient has been the spatial separation between life and death through the exclusion of the dead—making the dead ‘cease to exist’.  
+Cemeteries, Baudrillard suggests, were the first ghettos.  
+The archetypal ghettos, the patterns for all ghettos to come.  
+However they differ in ritual, all funerals are acts of exclusion.  
+They proclaim the dead abnormal, dangerous, those to be shunned.  
+They expel the dead from the company of the normal, the innocuous—those to be associated with.  
+But they do more than that.  
+Through applying to the dead the same technique of separation as they do to the carriers of infectious diseases or contagious malpractices, they cast the dead among the manageable threats that lose their potency if kept at a distance.  
+Thus they try hard to keep them at a distance: forcing them to remain there, begging and bribing them to do so, or currying their favours if the banishment cannot be fully trusted.  
+Better still, the dead, like the ill, insane or the criminal, are put in trust, into ‘the care of licensed professionals’.  
+And thus are supposed to disappear not only from sight, but from mind.  
+The self-deceit is all too visible, though.  
+The dead cannot be buried in the past, as their lot is the future of all those living in the present.  
+As sites of confinement, cemeteries are not half as secure as leprosaria, lunatic asylums or prisons.  
+Haunted houses and haunted lives testify to the porousness of cemetery walls.  
+Another common expedient is to deny the substance of death—its finality.  
+One can do it in many ways, but two essential patterns have emerged over the centuries.  
+The first can be interpreted as a sort of metaphorical permutation of natural order: the finitude of the individual earthly presence does not count for much, as it is not the proper criterion of longevity, indeed the immortality, of being.  
+Being as such does not come to a stop with the disappearance of individuals.  
+As a matter of fact, the change-over of individuals, each with his contribution to make, is exactly what guarantees the permanence of existence.  
+A most critical example of such a pattern (one that went furthest towards dissolving the identity of each given individual sojourn on earth, having effaced the gravity and significance of the individual life’s end by redefining it as a stage in continuity, rather than a radical rupture) was the Hinduist privatization of death, lavishly compensated for by the collectivization of immortality: the acceptance of the permanence of being (‘that which is can never cease to be’).  
+Made life and death into exchangeable forms of eternal being, into stages whose duration does not matter in view of the perpetuity of existence.  
+The Judaist stratagem has been, in a sense, a somewhat humbler, less radical variety of the same strategy—different in trying to bring closer home that ‘being’ which is eternal.  
+In this case, the perpetuity has been ascribed to the special relationship—the covenant—between Jewish people and God.  
+Personal death does not matter much as long as the conversation of God with His people—God’s revelation to the Jews and the Jews’ service to God—goes on.  
+At the other end of the spectrum remain the strategies that insist, against the odds, on the chance of individual continuous existence beyond the point of biological death.  
+One will survive the death of the body through the immortality of the soul, whose reward or punishment that starts with the moment of bodily death will retrospectively render meaning to the life that ended; this was the Christian solution.  
+As the decay of the physical body of the dead were too evident and unexceptional to be refuted, the preservation of the body could not be entertained in any but a miraculous form (the idea is entertained again in our time, in the form of the miraculously potent science and technology—as ‘cryonics’—the artificially induced hibernation ‘until such time when the medicine for the now terminal disease will have been found’).  
+But the preservation of the soul could be postulated without fear of empirical refutation, and one would never know for sure whether the postulate is truthful or not.  
+The care of the soul’s unending future would then take precedence over the worry about the flesh destined for putrefaction.  
+Hopefully, the experts attending to the soul’s future would also take precedence over the specialists caring for the body’s present.  
+One can think of the Hellenic tradition, articulated in the Platonian rendition of Socrates’ teachings, as of an earlier, secular version of the same, though a rather aristocratic version, not meant nor fit for a popular consumption and thus unusable as a foundation for a universal Church.  
+Franz Borkenau laid bare the contrast between the two essential strategies taking the Jewish and the Hellenic stratagems as their prototypical specimens (and thus considering it as another aspect of the Athens/Jerusalem controversy).  
+The particular Jewish solution of the problem ... was the transference of immortality from the individual to the community.  
+The parallel Hellenic solution was the extolling of the individual’s undying glory, the hero surviving death through fame.  
+Of modern totalitarianisms, in their nationalistic, class or racist forms, one can think as of attempts to bring together the most promising aspects of both strategies: to combine the assumption of the collectivized immortality of the folk with the promise of perpetual presence of individual heroes in folk memory.  
+The battle-cries of modern versions of tribalism—‘For the Homeland’, ‘For the glory of our Nation’, ‘For our beloved Leader’—are but thinly disguised metaphors for the species’ way of securing survival through the extinction of its members.  
+Yet they attempt to render meaningful (indeed, noble and desirable) what unless culturally processed would appear an unalloyed absurdity.  
+These battle-cries call for the surrender of individual life, suggesting that personal death would somehow enhance and revitalize the life collectively and thus in a round-about way would secure the perpetual existence of the dead through the nation, the race, or a party which, having gratefully absorbed the sacrifice, will be the victims’ lasting accomplishment.  
+From other forms of ‘collectivized immortality’ the tribal/totalitarian ideologies differ in one important respect: they actively demand sacrifice of life and glorify death ‘for the cause’.  
+Only apparently they are descriptive.  
+The ostensible description contains a prescription as its pivotal ingredient.  
+The narrative disguised as a story of necessity is in fact an invocation of a duty.  
+From an apparently neutral statement—‘I learnt that life is a cruel struggle, and has no other object but the preservation of the species. The individual can disappear, provided there are other men to replace him.’—there is but a step (all too often taken) to the declaration that ‘If I can accept a divine Commandment, it’s this one: “Thou shalt preserve the species”. The life of the individual must not be set at too high a price. If the individual were important in the eyes of nature, nature would take care to preserve him. Amongst the millions of eggs a fly lays, very few are hatched out—and yet the race of flies thrives’.  
+What if religious and tribal versions of transcendence fail, lose popularity, miss earthly powers willing and capable of promoting practices that lend those versions credibility and at least an appearance of realism?  
+The love relationship seems to be transcendence’s last shelter.  
+According to Otto Rank, the modern person’s dependency on the love partner ‘is the result of the loss of spiritual ideologies’.  
+Bereaved by God and His secular emulators, the modern person ‘needs somebody, some “individual ideology of justification”, to replace the declining collective ideologies’.  
+Love takes over at the point where God and the Despot-with-a-Mission left.  
+Not that love is born of modern bereavement.  
+But it is the modern predicament, one which emerged in the wake of the bankruptcy of tested old policies of survival, that has burdened love with new load which it was never before called to carry.  
+It is now the partner in love that is expected to offer the space for transcendence, to be the transcendence.  
+He or she must be a mirror in which my fantasy looks real.  
+My fantasy is to become real by the very fact of being reflected.  
+My own self, confined as it is by the mortality of its own bodily carapace, is to acquire a vicarious immortality by sundering its private bond and being set free.  
+It has to gain a new, unbound and more credible existence within the trans-individual ‘universe of two’.  
+I may dream that, in the process, mortality of the self is defeated by the sheer feat of abandoning the hopelessly mortal individual body.  
+But the new anchorage of survival is another body and another self, entangled much as my own in the mutual conflict from which only subterfuges pretend to offer an exit.  
+Itself afloat, it can hardly hold the anchor fast.  
+‘We want an object that reflects a truly ideal image of ourselves. But no human object can do this ... No human relationship can bear the burden of godhood’—so sums up Ernest Becker the fate of love.  
+Hence the anguish particularly acute in our own times: just when all other hopes of transcendence have lost much of their lustre, and the functional importance of love has accordingly risen to unprecedented heights, its carrying capacity seems to have fallen drastically.  
+The heightened expectations have multiplied the likelihood of failure.  
+Defeats do not necessarily expose the lie ensconced at the bottom of the love strategy.  
+They only gestate—in the partners—impatience and restlessness, the breathless search for the ‘true partner’ who must, just must, be waiting round the corner.  
+The consequence is the endemic brittleness of the ‘universes of two’: the couples break at the first hurdle, as the partners prefer a brand new, yet unexplored and not discredited track to the chores of negotiating the already revealed obstacles of the old one.  
+Terminal dangers surround the love relationship on both sides.  
+My bid for the confirmation of the self my partner may reject—or accept with such reservations to which I am not prepared to consent.  
+But even if my bid has been assented to in full, the acceptance may fail to bring the expected satisfaction.  
+It may not carry the degree of reassurance I sought.  
+After all, my stakes in immortality have been invested in another mortal creature, and this latter fact cannot be concealed for long by even the most passionate deification of the partner.  
+Unlike God or anointed despot, my partner in love has a distinct disadvantage of being constantly within the field of my vision, of being watched by me at close quarters also in situations which make brutally obvious the truth of his or her bodily mortality.  
+The despot fails as an object of survival policy once he publicly reveals the absence of supra-human potency—showing cowardice or indecision, being outmanoeuvred or losing a battle.  
+For a partner in love, it is enough to be human in humanity’s endemic, irreparable duality.  
+And since it is precisely the partner’s human duality that makes him or her fit to be an object of love, it cannot be reduced or left outside.  
+It cannot but be drawn into the love relationship in its terrifying totality.  
+These inner contradictions of love as a policy of survival are nowhere as protruding as in the case of erotic relationship, where spiritual and sexual intimacy feed and reinforce each other (or are presumed to).  
+In its natural function, sexual procreation is a method through which the species preserves its immortality at the expense of the mortality of its individual members.  
+The cunning of the species leaves its indelible stamp, and for this reason erotic partnership is, deep down, unfit for the role of the vehicle of individual transcendence of death.  
+Sexual intimacy can bear exaggerated hopes only at the cost of extreme inner tension.  
+In modern practice, the disappointment (or the subconscious desire to ward it off) leads to the playing down or even total rejection of ‘spiritual investment’ in sexual relationship, and a pronounced tendency to divest sexual intercourse of the last vestiges of spiritual union.  
+The absolute and the transcendent are no longer sought in the sexual partner.  
+What is expected from the partner is at best the willingness and ability to arouse and stimulate the ‘perfect performance’—and thus reconfirm the value of the self in a roundabout fashion, by allowing it to stretch to the fantasized about limits (which, in fantasy, always transcend the genuine limits in a symbolic rehearsal of the transcendence as such).  
+The love relationship turns then to be another form of self-assertion, that obsessive (because never satisfied) urge to make the notoriously incredible—the personal power to overpower death—credible.  
+Or, at least, to evict from consciousness the knowledge of its futility.  
+A transcendence strategy falling upon itself, aiming back at its point of emergence, is a logical next step.  
+The recoiling of the urge to transcendence back onto the effort of personal survival is both the cause and the outcome of dashed sexual hopes: of the sexual prowess of the ego drifting into the centre of expectation, and sexual intimacy reduced to the role of an occasion for its release and display.  
+But the weight ascribed to the display of sexual prowess can be seen also from another perspective.  
+As if replicating the contrast between extemporal mind and transient body, the centre of gravity moves from transcendence as an achieved (and once achieved, constant) state to the transcendence as a momentary event—a performance.  
+When seen in such a way, erotic love reduced to sexual self-assertion appears to be a specimen of a new type of mortality-effacing strategy: one that differs sharply from the policies considered so far, and (perhaps due to this difference) shows an amazing capacity for expansion.  
+What is involved here is an attempt not just to find compensation for the temporal fragility of bodily existence, but arrogantly belie the ultimate limits of the body by breaking, successively, its currently encountered, specific limitations (personally or vicariously).  
+Here lies the secret of the fascination carried by the record-breaking performance of sportspersons, admired for their symbolic significance as victories over the natural constraints and experienced as acts committed on behalf of the species as a whole.  
+The task of escaping the mortality of the body, which would immediately reveal its futility if faced point-blank, as a consciously articulated purpose, is never allowed to be encountered in its awesome totality.  
+It is split instead into a never-ending series of concrete challenges, reduced to a manageable size, that is to situations which allow for credibility of success.  
+The time dimension of transcendence is turning here into a spatial issue: stretching the span of life is turned into the effort to stretch the capacity to live.  
+Time all but disappears: it has been reduced and flattened out of existence, subjected to a process that ‘narrows the present down to a chaos of evanescent events’.  
+What matters amidst such chaos is that the body, the only stable point of reference, lives permanently in the current moment and the current moment only, carefully avoiding to look beyond the present.  
+What draws all attention, leaving no room for other concerns, is not what the body is bent on accomplishing in the future, but ‘bodily fitness’, body as multi-purpose instrument.  
+Ready for all challenge, and indifferent to the nature of any task it may confront.
+There would probably be no culture were humans unaware of their mortality.  
+Culture is an elaborate counter-mnemotechnic device to forget what they are aware of.  
+Culture would be useless if not for the devouring need of forgetting.  
+There would be no transcending were there nothing to be transcended.  
+In the light of mortality, all meanings of life look pallid, wan, insubstantial.  
+This light must be extinguished, if only for a time and an occasion, for life meanings to appear solid and reliable.  
+Thus the constant risk of death—the risk always knowable even if flushed down into the murky depths of the subconscious—is, arguably, the very foundation of culture.  
+As Simmel argued, the knowledge of death is the very force that prises apart life and its contents.  
+It is thus the selfsame force that permits the ‘objectification’ of life contents, rendering them immune to the vagaries of life, stronger than life—indeed, as immortal as life is mortal.  
+By proxy, that force may give life itself an extemporal flavour: a meaning that cancels out the absurdity of its transience.  
+A temporal life acquires an extemporal value, and so the cumulative accomplishment of culture can be born.  
+In Edgar Morin’s words, the unavoidable continuity of the death risk has acquired in the course of history also a total cultural and anthropological meaning: the risk of death is human adventure as such.  
+Without the risk, everything would be too facile, therefore useless, therefore impossible.  
+Life, action, success, not only individual but collective as well, would be no more than limp jokes.  
+Culture has no meaning outside the life-and-death struggle against nature, bestiality and barbarity, waged simultaneously outside and inside the human person.  
+In the City of the Immortals, Jorge Luis Borges tells us, ‘a hundred or so irregular niches ... furrowed the mountain and the valley.’  
+In the sand there were shallow pits; from these miserable holes (and from the niches) naked, grey-skinned, scraggly bearded men emerged.  
+I thought I recognized them: they belonged to the bestial breed of the troglodytes ...  
+The troglodytes, apparently, knew not the art of writing; neither would they speak.  
+Only after prolonged (and vain) effort to usher a troglodyte into the mysteries of human language did the visitor discover that his reluctant disciple was Homer.  
+Homer who has been admitted to the City of the Immortals and came to know that he would never die.  
+Once he learned of his immortality, it became clear to him that ‘if we postulate an infinite period of time, with infinite circumstances and changes, the impossible thing is not to compose the Odyssey, at least once’.  
+Thus the composition of the Odyssey that cannot not be loses its lustre.  
+The composition is no more a unique event, and thus not an act of heroism.  
+It is useless as a vehicle of self-assertion.  
+‘Everything among the mortals has the value of the irretrievable and the perilous.’  
+Among the Immortals, on the other hand, every act (and every thought) is the echo of others that preceded it in the past, with no visible beginning, or the faithful passage of others that in the future will repeat it to a vertiginous degree ...  
+Nothing can happen only once, nothing is preciously precarious.  
+Let us observe that the Immortals conjured up by the power of Borges’ imagination all had a mortal past.  
+They came to disdain struggle for the unique (and that disdain had a beginning; that beginning was an event, and as such had already organized the infinity as a time flow) because they ceased to be mortals for whom such a struggle was the content of life.  
+Borges’s Immortals construed themselves out of the negation (defeat, annulment) of mortality.  
+Even the reason they offered for the contempt they felt for all action or mental effort (namely, that neither of them can be unique, and therefore none is worthy of trouble) was a tribute to their mortal past.  
+In all probability, the contempt itself, let alone the effort to legitimize it, would stay beyond their reach, were they not to experience once the risk of death.  
+Were they not made aware of the possibility of mortality, were they immortals (and aware of being immortal, if that was at all logically possible) ‘from the beginning’ (would there be a beginning then?).  
+Whatever contents the visitor found in their existence, came from the suppression, repeal, invalidation or rejection of the substance moulded of the past fear of mortality.  
+They derived their substance from that ancient fear which they had left behind (and could now speak about only negatively, in terms of ‘no more is’, ‘no more does’, ‘no more has’) ...  
+The conception that if circumstances are infinite, deeds and thoughts are worthless—is itself a product of finite existence, of life injected with the known inevitability of death.  
+It could make sense only to those who remembered that their circumstances were once finite and thereby precious.  
+To those capable to grasp the significance of values, once born of finitude.  
+The genuine immortals would not be aware that they are not mortal.  
+For this very reason they elude our imagination, however much we strain it and however large the pool of allegorical skills we summon to our assistance.  
+Their experience (that is, if there was an experience) could not be narrated in our language, which was itself begotten of the premonition of finitude and accommodated itself to the service of finite experience.  
+As to human mortals, they are aware that they are not immortal.  
+This is what gives measure to time, makes every moment both fearful and precious, transforms being into action and existence into a purpose and a task.  
+We can only imagine the absolute as a denial of the local and temporal we know—and we can only work for the absolute since we wish to escape the locality and temporality of our predicament.  
+Inescapably, as Elias Canetti wrote, man is a survivor: ‘the most elementary and obvious form of success is to remain alive’.  
+We are not just alive; at every moment we are still alive.  
+Success is always an ‘until further notice’ success; it is never final.  
+It must be repeated over and over again.  
+The effort can never grind to a halt.  
+Survival is a lifelong task.  
+Its energizing, creative potential is never exhausted.  
+Whatever is left of it will be just locked up, in one fell swoop, at the moment of death.  
+Canetti insists that survival is not identical with the old and trivial notion of ‘self-preservation’.  
+The idea of self-preservation, sometimes conceived of as an instinct, sometimes as a rational choice, hides or beautifies the gruesome truth of survival.  
+Survival is targeted on others, not on the self.  
+Though we never live through our own death, we do live through the deaths of the others, and their death gives meaning to our success: we have not died, we are still alive.  
+Thus ‘the desire for a long life which plays such a large part in most cultures really means that most people want to survive their contemporaries.’  
+They know that many die early and they want a different fate for themselves.  
+I would not conceive of my own performance as a success if it were not for the fact that performances of others proved unsuccessful.  
+I can only measure my own performance against those other performances.  
+I want to know what I should do to escape or to postpone the others’ lot—to outlive others.  
+Others die of smoking; perhaps if I don’t smoke, I’d survive them?  
+At the radical extreme of survival, says Canetti, looms murder: ‘He wants to kill so that he can survive others; he wants to stay alive so as not to have others surviving him.’  
+This wish can be silenced, even denied, indignantly, by consciousness—but it cannot be really effaced: ‘Only survival at a distance in time is wholly innocent.’  
+The cynicism with which the wish of survival is inevitably, though self-ashamedly, infused, comes blatantly into the open during war—that socially sanctioned, legitimate murder.  
+The declared purpose is then ‘to limit our casualties’, and anyone knows, even if refrains from spelling it out, that the price of that limiting is multiplying the dead on the other side of the battleline.  
+‘Kill, so that you and your beloved shalt not be killed.’  
+Declaration of war means suspension of the guilt and shame that the wish of survival spawns at ‘normal’ times.  
+That normally carefully concealed wish now emerges from hiding, dressed as the noble mission of fighting evil empires or disarming the enemies of mankind, be they carriers of disease that saps the civilized life or spoilers of harmonious world order.  
+It shapes itself up as liberation, restoration of order, or crusade; it ends up as genocide.  
+The survivor’s ‘most fantastic triumphs have taken place in our own time, among people who set great store by the idea of humanity ...’  
+The survivor is mankind’s worst evil, its curse and perhaps its doom.  
+War is, admittedly, an extreme case—but, Canetti insists, it shows in a spectacular way what is always there, though hidden.  
+Survival is never wholly innocent when re-forged into action.  
+This is a dramatic, tragic vision of the inner tendency of survival.  
+One wonders to what extent this tendency is truly inner (or innate).  
+One is entitled to suspect that the destructive edge of survival is sharpened (and even more probably directed) by the socially organized setting in which the activity of survival takes place.  
+It is this setting that may (or may not) arrange the survival as a zero-sum game, and then split the habitat into a part that is threatening and has to be subdued or better still annihilated, and another part whose well-being enhances the chance of my own survival.  
+This is what most societies have been doing all along, and continue to do.  
+Like other in-built qualities of the human predicament, the impulse of survival is the stuff of which societies are patched together.  
+Even though this impulse is not the society’s creation, it is keenly, skilfully and on the whole effectively manipulated by society.  
+It is, as a rule, socially managed—in a way that for one reason or another is deemed useful.  
+It is deployed to build and preserve boundaries of states, nations, races, classes.  
+It is invoked, explicitly or tacitly, whenever hostility is to be directed, but also whenever loyalty to the cause and group solidarity are called for.  
+It is not just, and not necessarily destructive in its application.  
+But if it can be put effectively to non-destructive uses, it is because of its destructive potential.  
+One of such uses can be traced back to what Norman O. Brown dubbed the Oedipal project: ‘The project of becoming God—in Spinoza’s terms, causa sui.’  
+The Oedipal project is a flight from infantile dependency, a wish to become ‘the father of himself’.  
+This stage in development always arrives, and once it arrives it is invariably directed against the parents, the true embodiment of dependency—and this whatever the parents do and however they behave.  
+The Oedipal project is a drive to emancipation that cannot be achieved unless the bond of dependency is broken.  
+However, the deepest, the ultimate dependency is that on one’s own mortal body—that ultimate limit of autonomy.  
+For this reason the battle cannot be won.  
+Oedipal project is just a first ‘trial skirmish’ in a long series of battles doomed to defeat (though the hubbub of successive skirmishes silences for a while, perhaps a long while, the thought of the final debacle).  
+The causa sui project stays unfulfilled, and as long as it is unfulfilled it generates the energy needed to wage ever new battles.  
+It also needs ever new battlefields and war strategies, so that the struggle may continue while each successive engagement is lost.  
+The tragic paradox is that the undeclared purpose of the struggle is gaining exclusive mastery over one’s own body (and thus, by proxy, surviving its unsurvivable mortality).  
+The dream of survival constitutes the body as the most important of targets, as own body is the mortal side of the self, and—with its procreative function—is also the instrument through which individual immortality has been expropriated by the species.  
+The body is the ‘natural enemy’ of survival, and the only uncontrived enemy.  
+A paradox indeed—and the seat of perhaps the deepest and most hopeless of ambivalences: in the struggle aimed at the survival of the body, the would-be survivors meet the selfsame body as the arch-enemy.  
+But let us note that even in the ‘struggle of liberation’ targeted against one’s own body it is always the socially set framework of dependence that injects meaning into the experience of the lack of mastery.  
+These battlefronts are, like all others, socially drawn.  
+And it is the selfsame society which has articulated the aims of the struggle and drawn the battlelines, that also supplies the weapons and the strategies with which the battles can be fought.  
+It is therefore on this interface that the survival impulse of the developing individual meets and merges with the self-perpetuating processes of sociality.  
+Society, in other respects the hostile field of competitors against which one’s own survival can be measured and hopefully asserted, appears simultaneously as the armoury of survival’s weapons, trusty ally, source of succour, encouragement, and hope.  
+Society fares no better than the body: it also emerges from the existential predicament as a monster of ambivalence: half-friend, half-enemy—the object and the means of the struggle.  
+The impulse of survival renders both the body and society ambivalent.
+Yet all ambivalence it spawns seem to pale into insignificance when compared to its own.  
+Survival is torn apart by a contradiction no amount of lies may assuage.  
+An inner split resulting in a constant outpouring of guilt which can be no more placated than its source can be drained.  
+Philippe Ariès suggested that the spectres of ‘la mort de Moi’ (self-death) and ‘la mort de Toi’ (Thou-death) were crystallization points of two successive (respectively, eighteenth-century, Enlightenment, and nineteenth-century Romanticism), and to an extent mutually exclusive, attitudes towards death.  
+We may surmise instead that the two terrors are just twin aspects of the hopelessly ambivalent sentiment gestated and sustained by the impulse of survival at all ages of human existence.  
+My own survival, as we have seen before, cannot be savoured otherwise than as a macabre privilege over the others, less fortunate.  
+Yet these others may be, and more often than not are, the very meaning of my existence—the uppermost value which makes my life worth living.  
+The very sense of being alive: life is communicating with others, being with others, acting for others and being addressed, wanted, lifted into importance by the need of others and by the bid they make for my attention and sympathy.  
+The death of others may be a benchmark for my own survival success, but it is the life of others which made that success desirable in the first place, as well as is making it now worthy of effort.  
+After all, I want to survive mostly because the thought of all that communication, intercourse, loving, being loved—all that grinding suddenly to a halt is so unbearable.  
+My desire to survive is all the stronger the richer and more satisfying is that experience of being with others.  
+The world without my seeing it or fantasizing it is unimaginable.  
+But the image of a world emptied of others, a world that testifies to my ultimate triumph as a survivor, is unbearable.  
+(The ‘sole survivor’s’ plight is no less a nightmare than death; after all, it shows what death is about, it is a mirror-image of death; moreover, only if reflected in that imaginary mirror can death be visualized in all its brutal truth.)  
+More immediately, the exit of every person that inhabits my life and stands between sense and senselessness, fullness and void, impoverishes that life of mine which feeds and in turn feeds on the drive to survival.  
+Is not survival, therefore, a self-destructive and self-defeating impulse?  
+Is not it the case that it can fulfil itself only in its defeat?  
+The core of all callousness, cruelty and brutality, the survival impulse seems also to be the fount of sociability.  
+It is neither selfish nor selfless; or perhaps it is both, and cannot but be both at the same time.  
+In a tormented, self-immolating and painful way it implements the order of nature: it seals the bond between individual self-preservation effort and the survival of the species.  
+By mobilizing the emotional and rational faculties of individuals, its practice fulfils and reinforces the logical and pragmatic interdependence between perpetuity of the species and the temporal existence of its members.  
+Its innate ambivalence has itself a survival value.  
+It is an ambivalence all the same, and an acute one with that.  
+One would expect therefore a drive to separate the inseparable—a favourite point of entry for all societal managerial skills and ambitions.  
+A stuff from which all man-made, ‘cultured’, contrived social order is made.  
+Making distinctions, discriminating, setting apart, classifying, is culture’s foremost mark, craft and tour de force.  
+In its intentions (though hardly ever in its practical accomplishments) culture is a war of attrition declared on ambivalence.  
+Its promise is to separate the grain from the chaff in all their incarnations—be they called truth and falsehood, beauty and ugliness, friends and enemies, or good and evil.  
+Its job is to see that the world is well mapped and well marked, so that confusion will have little chance to arise.  
+Its ambition is to make the world hospitable by eliminating the torments of choice where no fully satisfying choice seems available.  
+Its struggle—futile yet unstoppable—is to cut the ambivalent human predicament into a multitude of logically and pragmatically unequivocal situations.  
+Obviously, the poignantly ambivalent survival impulse is the prime candidate for such treatment.  
+Individual survival makes no sense and offers no allurement without survival of others.  
+But then such others as are needed for survival to remain attractive and to make sense may be—should be—separated from the rest of the others who are not.  
+This is exactly what society, through its ‘culturing’ effort, achieves—or at least tries hard to achieve.  
+‘The others’ are divided into those who support, and those who threaten survival.  
+The uncompromising, overwhelming self-assertion of the species is split into more palatable and easier-to-manage tribal interests.  
+The ‘inside’ and the ‘outside’ are thereby created and carefully demarcated.  
+Inside—unity, cooperation and mutual love.  
+Outside—wilderness, vigilance and fight.  
+My tribe is to be spared all casualties at all costs.  
+Among the costs (or are they costs at all? Are they not, to be frank, gains?), the most indispensable of all is ‘collateral damage’ inflicted on the enemy tribe once it has been appointed ‘the target’ and, as targets are meant to be, is ‘hit’ and ‘neutralized’.  
+My tribe’s survival has been offered what it demands: a measure of callous self-love and a measure of loving co-operation with others.  
+Only such others as are earmarked for love, and the others selected for callous treatment, are no more the same others.  
+In Reinhold Niebuhr’s words, tribal patriotism ‘transmutes individual unselfishness into national egoism’.  
+Murders which the survival impulse clamours for are no more clouded with the sorrow with which la mort de Toi tends to inject the survivor.  
+The killed is not Tu, and so the murder is not a murder.  
+The haunting contradiction of human survival has been resolved.  
+The resolution is greatly helped by the ingenious game of universality and particularity: by the uncanny talent of particularity to dress up as universality.  
+Most instances of collectivized survival succeeded in what Régis Debray described as ‘melting the meanness of chauvinism with the generosity of messianism’.  
+Universality, the code-name for unbound inclusion, is deployed as a tool of exclusion.  
+Once the cause in the service of which the survival impulse is mobilized (the cause that ennobles survival exertions, legitimizes them, cleans them of the gnawing suspicion of selfishness, immorality, asociality) has been proclaimed universal, nothing is left outside.  
+Or, rather, whatever has been left outside is now non-entity: it does not count, it has no value left, its destruction is not counted among the costs of survival.  
+At best, the leftovers are waste to be disposed of for the sake of the health and sanity of that which has been marked for survival.  
+If the leftovers had feelings and gumption, they would, surely, rejoice in their destruction, which has been sealed as a necessary and universally beneficent event the moment the boundaries of universality closed outside their abode.  
+They would sing merrily on the way to the sewage gutters.  
+With leftovers safely out of the way, what remains is the world composed of an inner circle: those special, important Others who constitute my identity.  
+The we-group, the life environment that is life itself.  
+If, as Merleau-Ponty observed, I can grasp myself only as ‘already born’ or ‘still living’, it is mostly because I know of life only as of being with others, communicating with others, connecting with others.  
+When I strive to imagine the end of my being, the first thing that comes to my mind (as a notion, not a picture) is, as Robert Jay Lifton found out, the ‘severance of the sense of connection’.  
+Connection is more than mere co-presence.  
+Connection is what fills the connected with content—perhaps all the content there is.  
+Connection makes the connected meaningful.  
+One may say it makes the connected human, if the humans are distinguished by the meaningfulness of their being.  
+But connections achieve all that only in so far as they make the existence of the connected into being for each other, not merely being with each other.  
+My continuing being ‘makes sense’ only in as far as there are others who go on needing me.  
+Beckoning to me, making me attentive to their plight, filling me with the feeling of responsibility for them, they make me unique, irreplaceable, indispensable individual that I am: that entity whose disappearance would make a hole in the universe, create that void which is the source of my terror.  
+Unless ‘I am for’, I am not.  
+The human being is a being with meaning.  
+And being for others is the only meaning present in the human condition ‘naturally’, from the start, ‘matter-of-factly’, with the degree of obviousness that borders on invisibility.  
+It is only this kind of ‘being for others’ which stands between me and the absurd emptiness of contingent existence.  
+Not the interested concern, zestful or reluctant readiness to serve for the sake of future rewards or gains in self-respect, but a concern with the Other for the Other’s benefit, as in Aristotle’s description of friendship as ‘wishing another’s good for his sake, not for yours’.  
+Of commiseration: ‘to be sorry at another person’s sorrow, as being his’.  
+The corollary of such openness for the other’s plight (disinterested—or Max Scheler’s account openness) is an imperative character of the concern in question, i.e., its independence from the qualities of the Other.  
+Thus, by this definition, the kind of friendship dictated, as Plato suggested in Lysis, by the usefulness of the object to the subject of affection, by the subject’s hope that the befriended object will supply something which the subject lacks and misses does not belong here.  
+(And so neither does Niklas Luhmann’s love fall into this category, if it is considered as a credit extended in anticipation of coveted certification of self-identity, or any other ‘transactional’, exchange-conscious varieties or conceptions of love relationship.)  
+Gregory Vlastos summed up Plato as a champion of ‘spiritualized egocentrism’.  
+By his reading of Plato’s discourse of friendship and love, Plato is ‘scarcely aware of kindness, tenderness, compassion, concern for the freedom, respect for the integrity of the beloved’.  
+Only such concern with the Other fills the emptiness of contingent existence which is, simultaneously, an unconcern with the subject’s own comfort, pleasure or welfare.  
+And one that does not call on the Other to justify his right to concern.  
+There is nothing the Other must do, or nothing in particular he should become, to trigger off the concern of the subject.  
+We can find perhaps the fullest description of such concern in the investigations of the greatest moral philosopher of this century, Emmanuel Levinas.  
+In his first great book, Existence and Existents (1947) Levinas finds ‘there is’ a void, a hollowness, a featureless ‘neither being nor nothingness’—something akin to the eery sound coming from an empty shell pressed to the ear.  
+Or to indecipherable noise from behind the wall in a strange hotel room.  
+Or to insomnia, that intrusion of objective impossibility into being, that depersonalization of consciousness.  
+Prising ‘there is’ apart and making its parts into objects, existents, present or potential objects of possession, makes no breach in the bottomless infinity of ‘there is’.  
+Nor does it detract from its meaninglessness.  
+Instead, it fastens the self to the existents it craves to dominate, and through them to the non-sense of ‘there is’.  
+It does not break the ‘rumbling silence’ of ‘there is’.  
+It does not offer solace for the horror and panic of discovery of the nothingness as the contents, the hard core of being.  
+In the end of the day, as throughout the day, everything remains as it was.  
+If there is an escape from ‘there is’, it leads not through ‘position’, but through ‘deposition’ of the self.  
+Only abdication of sovereignty in the face of the Other, responsibility for the Other, stops the meaningless, rumbling clamour of the ‘there is’.  
+Being reduced to the ‘is’, being without the ‘ought’, equals solitude.  
+This was the theme of the companion book, Time and the Other.  
+Existence is intransitive, without intention and without meaning.  
+It is mine and mine alone.  
+Knowledge and communication would not deliver the self from loneliness.  
+One can tell about one’s existence, but one cannot share it.  
+‘Being with’ does not relieve existential solitude.  
+If ‘being with’ means exchanging and sharing, one can exchange and share everything but the being itself.  
+Thus ‘being with’, like all other modes or facets of existence, cannot establish true togetherness, true sharing.  
+It cannot sustain a moral relationship.  
+It is solely ‘being for’ which can do this.  
+The last of Levinas’ books, Otherwise than Being, or Beyond Essence (1974), concludes the search.  
+Moral relationship is irreducible, it is not a derivative or artefact or effect of anything else.  
+It is neither deducible from being nor provable in knowledge.  
+It is grounded instead in a pre-ontological and pre-intellectual relationship which already contains the ‘for’: I being for the Other, I bearing responsibility for the Other.  
+That ‘for’ would not be inserted, by whatever effort, into it were it not there from the start.  
+The responsibility for the other cannot have begun in my commitment, in my decision.  
+The unlimited responsibility in which I find myself comes from the other side of my freedom, from a ‘prior to every memory’, an ‘ulterior to every accomplishment’, from the non-present par excellence, the non-original, anarchical, prior to or beyond essence ...  
+It is as though the first movement of responsibility could not consist in awaiting nor even in welcoming the order (which would still be a quasi-activity), but consists in obeying this order before it is formulated.  
+Responsibility for the Other appears uninvited.  
+It is not let in knowingly—it has been neither deliberately conceived, nor accepted with a sigh of resignation.  
+It is there whether I know of it or not.  
+It does not hang on my resolve to take it.  
+Neither does it vanish with my refusal to bear it.  
+‘I am responsible without having taken on responsibility.’  
+I am responsible because of the proximity of the Other.  
+Proximity means, indeed, my responsibility.  
+Proximity pregnant with responsibility ‘in nowise resembles the intentional relation which in knowledge attaches us to the object—to no matter what object, be it a human object.’  
+Proximity does not revert to this intentionality.  
+In particular it does not revert to the fact that the Other is known to me.  
+Proximity does not follow from anything else and has not been heaved into the face-to-face with a levers of enforced coexistence or calculated commonality of interest.  
+In fact, ‘the tie with the Other is knotted only of responsibility’.  
+No second bottom, no hidden cause.  
+Particularly, no foundation.  
+Responsibility is ‘the essential, primary, and fundamental structure of subjectivity’.  
+Ethics does not follow subjectivity: it is subjectivity that is ethical.  
+In Levinas’s description, ethics ‘does not supplement a preceding existential base; the very node of the subjective is knotted in ethics understood as responsibility’.  
+Levinas disqualifies existence and subjectivity as sources of morality—the ‘face to face’, the seat of moral relationship, of the ‘being for’, is placed outside the hunting grounds of both.  
+Ethics, insists Levinas, is ‘first philosophy’.  
+Morality is prior to being.  
+(Let us note that since morality is prior to being—the ‘ought’ precedes the ‘is’—priority itself is ethical, not ontological; priority of morality means that morality is better than being, not that morality ‘exists’ before being and constitutes its determining cause.)  
+In Levinas’ own words: The proximity of one to the other is here conceived outside of ontological categories in which, in different ways, the notion of the other also figures, whether as an obstacle to freedom, intelligibility, or perfection, or as a term that confirms a finite being, mortal and uncertain of itself, by recognizing it, or a slave, collaborator or God able to succour.  
+In all these categories, which between themselves exhaust the alternatives offered by the extant philosophical tradition, ‘proximity is conceived ontologically’, i.e. it ‘remains a distance diminished, an exteriority conjured’.  
+In opposition to this shared view, Levinas ‘sets out to not conceive proximity in function of being’.  
+Proximity, exposure to the Other, responsibility for the other are all ‘chosen without assuming the choice’.  
+As such, they ‘must have the meaning of a “goodness despite itself”, a goodness always older than the choice’.  
+(One invests that ‘older’, again, with ethical sense; ‘older’ means ‘better’—ethical impulse is before the choice has begun, and it is therefore autonomous toward, and immune to all cognitive, calculable criteria, like utility, rationality, agreement with the ‘facts of the matter’, by which the subsequent choice can, or may claim to, evaluate itself.)  
+Not the knowledge of the Other, not the shame of being looked at by Him (as Sartre would say), not even my effort to reach Him, to console Him or placate, to disarm or overpower, makes me that unique and irreplaceable being that I am—but the call of responsibility, preconscious obsession, trauma of command which is heard unspoken, which comes pure, bodiless, free of representation, demands submission without authority, consent without argument, duty without law.  
+My uniqueness, my selfness is grounded in my being called upon, and hence being someone no one else can replace.  
+Responsibility is mine, I have been singled out, there is no one else to share my obsession or relieve its burden by taking it upon himself.  
+And since my calling can be none else but mine, my responsibility bears no relief and bars all escape: ‘The face of a neighbour signifies for me an unexceptionable responsibility, preceding every free consent, every pact, every contract.’  
+Humanity, to which proximity properly so called refers, must ... not be first understood as consciousness ...  
+Proximity does not resolve into the consciousness a being would have of another being that it would judge to be near inasmuch as the other would be under one’s eyes or within one’s reach, and inasmuch as it would be possible for one to take hold of that being, hold on to it or converse with it, in the reciprocity of handshakes, caresses, struggle, collaboration, commerce, conversation.  
+Consciousness ... would then have already lost proximity properly so called, now surveyed and thematized.  
+Consciousness of the Other is already a break in proximity.  
+Once known and cognized, the Other turns into an object.  
+My consciousness of him begets my mastery over him and his impotence.  
+My responsibility dissolves in his duty to apologize for his presence and argue his case.  
+Now I start asking questions.  
+I am interrogating him and demanding explanations, justifications and ‘good reasons’: ‘What is it to me?’ or, ‘What is in it for me?’ or, ‘Where does he get his right to command?’ or, ‘What have I done to be in debt to him?’  
+I demand legitimation for the command and evidence of my duty.  
+At the end of all this, I may—just may—accept the legitimation and consider the duty justified and proven.  
+And yet the original proximity has been now lost.  
+There is now a distance between us, never to be bridged again.  
+At worst a war, at best a contract and a compromise are now where my responsibility was.  
+This is, however, not only his loss.  
+That responsibility which had made me before the unique being that I was, the one and only, the being at the same time irreplaceable, indisposable and indispensable, is now gone.  
+I have lost my obsession, I am free from that shuddering which overwhelmed me in the face-to-face with the Other, but I have also lost my uniqueness, my calling, my meaningfulness.  
+Once more I am alone with the ‘there is’, that rumbling silence which can neither be quashed nor made to speak, that terrifying emptiness of contingency that will never be filled, however earnestly—through mastery, possession or knowledge—I try.  
+Responsibility is mine in the strongest of conceivable senses: it ‘forgets reciprocity, as in a love that does not expect to be shared’.  
+The knot of subjectivity consists in going to the other without concerning oneself with his movement toward me.  
+Or, more exactly, it consists in approaching in such a way that, over and beyond all the reciprocal relations that do not fail to get set up between me and the neighbour, I have always taken one step more toward him—which is possible only if this step is responsibility.  
+In the responsibility which we have for one another, I have always one response more to give, I have to answer for his very responsibility.  
+Responsibility is my affair, reciprocity is his.  
+My responsibility is unexceptional and unconditional.  
+The Other does not need to ‘prove’ anything to ‘deserve’ it.  
+Neither do I bear my responsibility ‘in order’ to ‘earn’ his response in kind.  
+There is no aforethought, no anticipation of reward and no calculation of gain in my responsibility.  
+I am responsible for the Other whatever the Other does, I am responsible before he does anything at all and before I am aware of his doing anything—indeed, of his very capacity for doing something.  
+And it is precisely the otherness of the Other which burdens me with responsibility.  
+Recognition of community, rationalization of similarity or commonality of interest—all this, if it does come, comes later.  
+I am responsible before my responsibility is justified or vindicated.  
+The neighbour concerns me before all assumption, all contract consented to or refused ...  
+Here is a relation of kinship outside all biology, ‘against all logic’.  
+It is not because the neighbour would be recognized as belonging to the same genus as me that he concerns me.  
+He is precisely other.  
+The community with him begins in my obligation to him.  
+Everything else begins after that obligation.  
+Also the questioning of the obligation: the call for responsibility to show its reasons, for the Other to supply evidence of his entitlement to my concern.  
+Let us repeat: once the questioning starts, proximity has been already replaced with a distance, and responsibility has lost its unconditionality.  
+The obsession has been replaced by calculation.  
+No effort will restore the pristine unexceptionality of my responsibility.  
+All responsibility grounded in being (unlike one rooted in the otherwise-than-being, in the face-to-face which is the creation, simultaneously, of my uniqueness, my humanity, and our community) will forever remain fragile, negotiable, until further notice—ultimately, like the rest of the ‘there is’, meaningless.  
+Once the innocence of responsibility has been lost and a distance opens where once proximity was, questions may be and are asked.  
+Why does the other concern me? ...  
+Am I my brother’s keeper?  
+These questions have meaning only if one has already supposed that the ego is concerned only with itself, is only a concern for itself.  
+In this hypothesis it indeed remains incomprehensible that the absolute outside-of-me, the other, would concern me.  
+But how come that the self-concern of the self has been supposed?  
+How come that this hypothesis carries credibility which allowed it to hide its hypothetical character so successfully?  
+Unless we are prepared to say that it was simply the matter of the philosophers’ collective blindness or folly (that, while busy ‘writing footnotes to Plato’, we have been, boldly yet hopelessly, smarting under the blow delivered by his false, yet so cogent argument) we can only suppose that the self-concern is more than a mere illusion which can be dispersed through exposing the philosophers’ blunder.  
+We must concede that the all-too-evident calculability of togetherness and conditionality of responsibility are more than a figment of philosophical fantasy.  
+We must allow the possibility that in the cold climate of being the pristine proximity does wilt and crumble.  
+It either dies out, or—if resilient—is stored away into that huge warehouse of infamy named ‘irrationality’ or ‘mysticism’.  
+(Civilization, as Hans Peter Duerr pointed out, equates the boundaries drawn ‘between itself and the wilderness with a dividing line between reality and illusion’.)  
+In the constructed order of being, nothing is tolerated unless it is able to show itself to be a construct.  
+Something must have happened or must be constantly happening to the groundless, reasonless obsession of proximity in the socially constructed world of human existence.  
+Something fatal.  
+Perhaps also irrevocable.
+In our world, Levinas insists, proximity (this of the otherwise-than-being kind, not the one laboriously construed in the fragile (because exclusive and contractual) love relationship, conjured up ‘until further notice’ in tribal gatherings, or imagined in the countless variants of group therapy) is not completely extinct.  
+It cannot be.  
+However few offshoots show through the thick concrete of social order, the roots must be there somewhere beneath for any life to be sustainable on the top of the lifeless base.  
+It is through the condition of being hostage that there can be in the world pity, compassion, pardon and proximity—even the little there is, even the simple ‘After you, sir’.  
+The unconditionality of being hostage is not the limit case of solidarity, but the condition of all solidarity.  
+This may well be the case, yet the ‘After you, sir’ courtesy cannot but strike us as falling far short of the unconditional self-abandonment, that ‘deposition of sovereignty’, which the original proximity implied.  
+In the strainer of social order little has remained of that inter-human responsibility, which is still allowed to retain spontaneity and to be followed without rhyme or reason.  
+Indeed, so little that it does not feel right to wonder over the blindness of philosophers.  
+The strainer must have done its job well, as it is excruciatingly difficult to guess the noble origin of the humble leftovers one can see.  
+This job holds the secret of the vanishing act of that ethics which preceded sociality as, simultaneously, its condition and its better alterity.  
+It is the absence or paucity, not the presence or possibility, of morality in social life which is to be explored and explained if the secret is to be revealed.  
+This is the practical lesson from Levinas’ argument: It is extremely important to know if society in the current sense of the term is the result of a limitation of the principle that men are predators of one another, or if to the contrary it results from the limitation of the principle that men are for one another.  
+Does the social, with its institutions, universal forms and laws, result from limiting the consequences of the war between men, or from limiting the infinity which opens in the ethical relationship of man to man?  
+The subtlety of Levinas’ argument notwithstanding, the quotidianity of social existence has been set at a considerable distance from that pristine space he has postulated—a space occupied solely by ethical responsibility.  
+The proximity of the face-to-face has been broken and not allowed to heal, if healed it can be.  
+That face-to-face we know (empirically, from experience) is but a hapless though frantic attempt to conjure up what has been lost and is missed.  
+This mock, substitute ‘face-to-face’ may be ‘cool’: calculated and circumspectly constructed, and thus stubbornly reminding us of its merely artificial and contingent status.  
+Or it may be ‘hot’: intense, emotional, yet elusive and ephemeral, never exuding the air of finality, never really certain—and thus awakening us to the inconclusivity and ‘cancellability’ of all roots-replacing engagements.  
+Indeed, for all we know, ‘the social’ results ‘from limiting the infinity which opens in the ethical relationship of man to man’ (though always and everywhere it claims to result from ‘limiting the consequences of the war between men’).  
+That infinity has been foreclosed.  
+Instead, it is the void it once filled that has been reopened.  
+The ‘rumbling silence’ of the hollowness of ‘there is’ is the only sound heard—and it is this sound that life bustle strives to stifle, with little or no success.  
+‘Existents’, however plentiful and however shiny and fragrant, cannot fill the hole that is the existence which is not ‘being for’.  
+The hole is bottomless, and the lifelong exertion can do nothing to fathom its depth.  
+The reopening of the void is what brings the terror of death right into the centre of life.  
+The ‘limiting of infinity which opens in the ethical relationship’ lets in another, frightening infinity—that of the emptiness of existence in which life is sunk.  
+The less there is left of the first, the more salient, obtrusive and arrogant is the second.  
+We have come to see as ‘progress’ the relentless ‘emancipation’ of man from ‘constraints’.  
+We have learnt (and have been taught) to view the primal human bonds, that domaine de l’à-peu-près, the fidelities that claimed ‘naturalness’ and priority over all wilful action, as oppression.  
+Throughout the modern era political legislators, warriors of free trade and philosophers joined forces in order to free man from that oppression.  
+Bonds were now to be freely chosen, freely entered into and abandoned, drawing all the limiting power they may legitimately claim merely from the contract freely signed by both sides—each one guided in its decisions solely by its understanding of what serves its happiness best.  
+Bonds were now to pass the test of that happiness; or, rather, of the promise of happiness they carry.  
+Most certainly, this was liberation from the many petty slaveries of life.  
+But the liberated have been ushered into new, no less awesome slavery.  
+Life had now little else to define itself by as the movement toward death.  
+With everything that fills it with contents reduced to ephemerality, to the status of ‘until further notice’, it turns into a long dress rehearsal of non-being.  
+Life is now a lonely pursuit.  
+Whatever company may be gained must be earned.  
+But even when gained it is not there to stay.  
+It may go much as it has come—tomorrow if not tonight.  
+It is my self, I alone that lasts through life; it is only my self on which the sense of that life can be founded.  
+Once the feat has been accomplished, man has been freed ‘from all those historical influences and diversions that ravage his deepest essence’ (which is his uncompromising freedom, also freedom from that responsibility that arose from ‘being for’).  
+‘The quest of the individual is for his self, for a fixed and unambiguous point of reference’.  
+Simmel commented: All relations with others are thus ultimately mere stations along the road by which the ego arrives at its self.  
+This is true whether the ego feels itself to be basically identical to these others because it still needs this supporting conviction as it stands alone upon itself and its own powers, or whether it is strong enough to bear the loneliness of its own quality, the multitude being there only so that each individual can use the others as a measure of his incomparability and the individuality of his world.  
+Once life has been emancipated from all pre-arranged, inalienable responsibility, once this life is not ‘for’ anybody and anything in particular, once all that there might ever be to it will be there only if laboriously fudged together by my own undetermined and indeterminate labour—everything will abruptly come to a stop the moment that only power behind life, ‘the ego’, my own self, ceases to be.  
+Loneliness of life results in the loneliness of death (itself being its result).  
+It is because life lost the only sense given to it ‘of right’—that of being for—that death lost its meaning as well.  
+Its terror cannot be shared.  
+It is, after all, my thoroughly private, self-centred and (in its intention) self-sustained world that will disappear.  
+The most terrifying of the thoughts of that void which would open once I die is that in the end no gaping hole will be left in the universe where once I was.  
+That void will be also private, like my life was.  
+My death will be a non-event.  
+Unless I do something to change all this: to force others to be for me as staunchly as I refused to be for them, and to be as steadfastly affirmative as I have been dismissive...  
+It is the loneliness of terror that wants to be assuaged in the ego’s bid for private immortality.
+**Note 27:**  
+Cf. Norman O. Brown, *Life against Death: The Psychoanalytical Meaning of History* (New York: Viking Books, 1959), pp. 118ff.  
+Brown undertook to correct Freud’s concept of Oedipal complex, purifying it of the narrowly sexual content; or, rather, reversing the order of interpretation and representing the sexual aspects of the Oedipal crisis as derivatives, or manifestations, of an actively embraced project, aimed in the first place at mastery and control.  
+
+**Note 28:**  
+Cf. Philippe Ariès, *Western Attitudes toward Death: From the Middle Ages to the Present*, trans. Patricia M. Ranum (Baltimore, Johns Hopkins University Press, 1974); Philippe Ariès, *L’Homme devant la mort* (Paris: Seuil, 1977); also Vovelle, *La Mort et l’Occident*.  
+
+**Note 29:**  
+Reinhold Niebuhr, *Moral Man and Immoral Society: A Study in Ethics and Politics* (New York: Scribner & Sons, 1948), p. 91.  
+Niebuhr considers that nation—the most conspicuous and effective among the ‘collectivizers’—as a ‘final vent for the expression of individual egoism’ (p. 95).  
+One recalls Canetti’s observation: ‘If you had to face one another naked, you would have a hard time slaughtering. The murderous uniforms.’ (*The Human Province*, p. 12.)  
+
+**Note 30:**  
+Régis Debray, *Le Scribe: genèse du politique* (Paris: Grasset, 1980), p. 127.  
+Debray concentrates on a most vivid example of post-revolutionary France. There, much like many years later in the Communist ‘homeland of mankind’ or American ‘world capital of freedom’, group egoism never appeared under its own name. Instead, it paraded as the torch-carrier, avant-garde, spokesman for, benefactor of all those waiting to be lifted to its own heights. ‘Le Français a le privilège de représenter un peuple qui incarne le Peuple.’  
+
+**Note 31:**  
+Robert Jay Lifton, ‘On Death and Death Symbolism: The Hiroshima Disaster’, in *The Phenomenon of Death: Faces of Mortality*, ed. Edith Wyschogrod (New York: Harper & Row, 1973), p. 103.  
+
+**Note 32:**  
+*Nichomachean Ethics*, 9.4.1166 A2-4.  
+
+**Note 33:**  
+Max Scheler, *The Nature of Sympathy*, trans. Peter Heath (London: Routledge, 1954), p. 37.  
+
+**Note 34:**  
+Cf. A. W. Price, *Love and Friendship in Plato and Aristotle* (Oxford: Clarendon Press, 1989), pp. 2ff.  
+
+**Note 35:**  
+Gregory Vlastos, *Platonic Studies* (Princeton: Princeton University Press, 1981), pp. 30-1.  
+
+**Note 36:**  
+Emmanuel Levinas, *Otherwise than Being, or Beyond Essence*, trans. Alphonso Lingis (The Hague: Martinus Nijhoff, 1981), pp. 10, 13.  
+
+**Note 37:**  
+Levinas, *Ethics and Infinity*, pp. 97, 95.  
+
+**Note 38:**  
+Levinas, *Otherwise than Being*, p. 16.  
+
+**Note 39:**  
+Levinas, *Otherwise than Being*, pp. 56-7.  
+The absolute primacy of the ethical, its stubborn, arrogant, obstreperous nature, disrespectful of all existential, cognitive, calculated reasons, is of course Søren Kierkegaard’s idea: the ethical ‘rests immanently in itself, has nothing outside itself that is its telos but is itself the telos of everything outside’. (*Fear and Trembling*, trans. Alastair Hannay (Harmondsworth: Penguin Books, 1985), p. 83.)  
+
+**Note 40:**  
+Levinas, *Otherwise than Being*, pp. 88, 83.  
+In Jacques Derrida’s brilliant summary: ‘Beneath solidarity, beneath companionship, before Mitsein, which would be only a derivative and modified form of the originary relation with the other, Levinas already aims for the face-to-face, the encounter with the face. “Face-to-face without intermediary” and without “communion”...’  
+The ‘being together’ in Levinas’ sense, Derrida concludes, ‘precedes or exceeds society, collectivity, community’.  
+But it is such a being together only in as far as it does precede or exceed society or any structured communion.  
+‘The visage is a face only in the face-to-face.’  
+For this reason, the other of the face-to-face is alone in being able to order ‘thou shalt not kill’—‘and thus absolutely limits my power’. (Jacques Derrida, *Writing and Difference*, trans. Alan Bass (London: Routledge, 1978), pp. 90-104.)  
+
+**Note 41:**  
+Levinas, *Otherwise than Being*, pp. 82, 84.  
+
+**Note 42:**  
+Levinas, *Otherwise than Being*, p. 87.  
+One may note a more than contingent similarity between this radical altruism of Levinas’s ethic and the unilateral responsibility for the ‘dialogical’ relationship between I and Thou in Martin Buber (*I and Thou* (New York: Charles Scribner, 1958).)  
+A dialogue, for Buber, is, however, something to be established and sustained, which may not come to pass at all, which peters out in monologue unless made into a focus of concern and effort.  
+Community between I and Thou, for Buber, originates in dialogue; it stands and falls by the quality of the dialogue; it has to be called into being and sustained; it may be withdrawn from.  
+(Compare, for instance, the profound study of Buber’s concept in Maurice Friedman, *Martin Buber: Life and Work, The Early Years, 1878—1923* (London: Search Press, 1982).)  
+For Levinas, on the other hand, community precedes the dialogue and conditions its very possibility.  
+In the dialogue, proximity of the face-to-face has been already compromised.  
+
+**Note 43:**  
+Levinas, *Otherwise than Being*, p. 117.  
+
+**Note 44:**  
+Hans Peter Duerr, *Dreamtime: Concerning the Boundary between Wilderness and Civilization*, trans. Felicitas Goodman (Oxford: Basil Blackwell, 1985), p. 89.  
+
+**Note 45:**  
+Levinas, *Otherwise than Being*, p. 117.  
+
+**Note 46:**  
+Levinas, *Ethics and Infinity*, p. 80.  
+
+**Note 47:**  
+Why this has been (must have been?) the case, and universally so, I tried to explain in ‘The Social Manipulation of Morality: Moralizing Actors, Adiaphorizing Action’, in *Theory, Culture & Society*, vol. 8 (1991).  
+
+**Note 48:**  
+‘Freedom and the Individual’, in Georg Simmel, *On Individuality and Social Forms*, ed. Donald N. Levine (Chicago: University of Chicago Press, 1971), pp. 220, 223.  
+
+---
+
+### 2: Bidding for Immortality
+
+Admittedly, death means descent into a depersonalized nothingness.  
+This nothingness is utterly private; depersonalization is personal.  
+With the ego’s demise, life as such will not grind to a halt—and it is from the imagined perspective of that continuing life that my own future nothingness (again as a social relation) can be, and is, grasped and conceived.  
+Those about to survive me will be spectators of the impending revelation of my nothingness.  
+It is their gaze that will constitute my nothingness.  
+And it is in relation to them that the nothingness ought to be (if this is at all possible) denied.  
+Were it indeed denied, freedom of judgement of those who go on living ‘after’ would be constrained.  
+Their announcement of the ego’s descent into nothingness would be prevented, or at least made less credible or final.  
+In their conduct, in their thoughts, in their existence the ego’s presence-in-the-world may find its extension.  
+Individual demise may be collectively annulled.  
+Posterity (which, after all, is by definition more lasting than the ego’s own life), is that site where the hope, if not certainty, of the ego’s immortality, or at least the ego’s longer-than-life existence, can be invested.  
+It is in that site and through its occupants that the ‘depersonalized nothingness’ will be clinched.  
+Alternatively, it is there and there only that it may—just may—be suspended or declared null and void.  
+The universal, supra-historical and supra-cultural presence of funeral rites and ritualized commemoration of the dead has been one of the earliest and most striking discoveries of comparative ethnography.  
+No form of human life, however simple, has been found that failed to pattern the treatment of the deceased bodies and their posthumous presence in the memory of the descendants.  
+Indeed, the patterning has been found so universal that discovery of graves and cemeteries is generally accepted by the explorers of prehistory as the proof that a humanoid strain whose life was never observed directly had passed the threshold of humanhood.  
+Drawing from ample ethnographic and historiographic evidence, Effie Bendann’s classic cross-cultural study offers a bewildering array of death customs—burial ceremonies, mourning rites, funeral feasts, as well as behavioural displays of explicit or latent beliefs in the posthumous existence of the dead.  
+In many societies the dead are offered food either as a hoard deposited in the grave, or at regular intervals for months or years after their burial.  
+For instance, in pre-Christian Rome *dies parentales* were celebrated annually (between 13 and 21 February), during which the dead were brought fresh supplies of water, milk, honey and oil.  
+Faithful to the intuitions prevalent at his time, Bendann explained the rites by the fears of living, rather than the dreams of the future dead: the offerings, he suggested, were motivated mostly by the desire of the living to prevent the ghosts from haunting their lives, to keep the dead away, to placate their malice and stave off the damage they may inflict if unappeased (‘the propitiation of the spirit of the departed’).  
+It seems, however, that this explanation does not square well with the litany of profuse commemorative ceremonies that follows.  
+All explored societies induce their members to engage periodically, if not daily, in acts of collective remembrance—which seem to be aimed at the living rather than at the dead whose memory they kept alive.  
+Ritualization of memory might have had spiritual comfort to the living, rather than the imaginary material comfort of the dead, as its main purpose and achievement.  
+The practising of commemorative rites has an reassuring effect on those who practise them and watch everybody around practising them as well: what they do now to their predecessors will be done to them by their own successors.  
+The remembering of today will themselves, come their time, be remembered.  
+Collective memory will in the future, as it does now, outlast individual life, and the future dead will then, as they do now, go on living in the spirits of those who are not dead yet.  
+What we do unto others will be done unto us.  
+The intense and meticulous attention devoted to institutionalizing the collective memory of the dead seems to service in no small measure the search of the living for some anchorage of their desire of immortality, and an address for possible efforts to fulfil that desire.  
+Commemorative rites rehearse the non-finality of death.  
+They also represent the continuing existence of community as the pledge to overcome, come, at least for a time, the individual transience.  
+They separate the moment of bodily death from that of social death, making the second independent of the other and endowing only the second, social, death with the status of finality.  
+While giving form to the dream of immortality, they deploy the dread of mortality in the service of communal cohesion.  
+Immortality: the great de-equalizer  
+There is another fascinating insight which can be gleaned from Bendann’s study.  
+Societies tried hard to convince their members of social guarantees of immortality.  
+Since these were social guarantees, however, they could in principle be socially managed and socially distributed.  
+(And so they were).  
+The promise of immortality turned into a most powerful disciplining effort in the hands of society.  
+Like other socially allocated rewards, immortality could be awarded in larger or smaller quantities, depending on the dead’s assumed possession of values whose dominance society wished to secure or perpetuate.  
+The amount of public mourning and the intensity of public manifestations of memory became symbolic expressions of relative social placement at the same time as they were major stakes at the game of domination.  
+Thanks to social rituals, all members were immortal, yet some were clearly more immortal than others.  
+Society promised immortality: but it promised immortality as an interest on mortal life properly lived.  
+Society encourages individual bids for immortality.  
+Political economy of immortality, under closer scrutiny, proves to be just another policy of stratification; perhaps the most effective of such policies.  
+At Saa, the burial of common people is extremely simple; an inferior person is buried immediately; an ordinary man is buried the day after his death.  
+However, men of rank are not buried for two days.  
+Women sit around the corpse and wail and gather to get a last glimpse at the deceased and to partake of the funeral feast...  
+For a man who has no significant position his friends throw yams and other food upon the roof of the dead man’s house in his memory; whereas if a chief dies, they ... fence round a plot of ground, and place his canoe, his bowls, and weapons there; his friends add their own tributes in honour, and decorate the fence with leaves and flowers.  
+In Savo the bodies of commoners are thrown into the sea, while those of chiefs are interred.  
+The pattern is repeated everywhere and at all times, in that exuberant variety of forms which is a tribute, simultaneously, to boundless human ingenuity and the constancy of human fears.  
+Commoners die leaving little trace on the surface of earth and but a momentary scar on the minds and hearts of survivors.  
+The hole left by their departure is expected to be filled rapidly; no need to alert the world to the event that is destined to efface itself from memory like a footprint in the sand.  
+Funeral rites and commemorative ceremonies show themselves to be another code in which human inequality is recorded and programmed.  
+The more elaborate, impressive (and, indeed, costly) they are—the more power they have to bind collective attention and coerce it into underwriting and sustaining individual immortality.  
+Struggling to secure selective treatment to his own corpse and life record, the individual may translate his present—mortal only—privilege into the future (hopefully, immortal) one.  
+At the price of conformity to its model of order, society offers the means which individuals may deploy to bind the future they will not be around to supervise and control in person.  
+Giddens’s structuration capacity extends thereby beyond the actor’s death.  
+Thanks to such means, some people may hope to be ‘less mortal’ than others.  
+Some people would succeed in bending future judgements so that they would deny their demise; the rest will sink into oblivion precisely because they lack or miss the survival entitlements of the first.  
+With all that, colonization of the future is bound to remain forever disconcertingly provisional and non-definite; the future is, after all, the site of the selfsame uncertainty which has prompted the colonizing thrust in the first place.  
+Denial of nothingness lacks all solidity if anchored in the future; even if addressed to future survivors and prompted by the wish to bind their judgements, it could derive its apparent substantiality (indeed, its capacity to comfort and reassure those living at present) only from the roots struck firmly in the ‘site of certainty’—the past.  
+Paradoxically, the hope of transcending the present and stretching it into the future can be rooted only in making the past last.  
+That hope lies behind the constant temptation to retrieve the past, never to let it out of living memory—as if to demonstrate in such a roundabout way the non-transience of things; more precisely, the non-transience of certain things, relevant to certain people, and thus by proxy also the non-transience of the people to whom non-transient things are relevant.  
+The thrust toward differential immortality rebounds as a partisan, necessarily selective, retrieval of history.  
+Obversely, the struggle against inequality of immortality chances (against unequal hopes to bind the future) chooses history writing and rewriting as its major battlefield (a struggle essentially akin to that for a more equal distribution of posthumous attention, as in the drive to ‘democratize’ the use of elaborate graveyard sculptures or the introduction of the cult of fallen soldiers).  
+The war to colonize the imagined future is fought on the territory of imagined past.  
+Let us sharpen the point still further: immortality is ultimately a social relation.  
+Binding history may be hoped to be effective as a warrant for the binding of future only because, and in as far as, other people cannot demonstrate the lasting visibility of their own past (better still: ‘have no past of their own’).  
+Differentiality of posthumous fate requires a differential deprivation of history.  
+Long and carefully recorded pedigrees are significant through setting the scions of long and known lineages apart from the commoners who cannot trace their ancestors beyond a second or a third generation.  
+Aristocracies, with their long survival record, stand out in a world populated by people without a past.  
+The existence of people with long pedigrees has been deeply rooted and solidly entrenched—the fact they find easy to argue in view of the shallow and evanescent presence of all others.  
+The past success in survival augurs well for the cause of immortality.  
+For similar reasons, the splendour of old, inherited riches can be never matched by the glitter of brand-new fortune; the latter exudes the pungent odour of mortality which the former claimed to have dissipated, exorcised and washed away during its long march through past ages.
+### Private Roads to Immortality
+
+The difference, the decisive difference, a difference—literally—between life and death, is one between durability and transience of things that can be possessed or performed.  
+Durable things are not meant for consumption.  
+They are explicitly exempt from consumption; their ‘use’ for any purpose other than display and a surrogate, symbolic only enjoyment, is perceived as destruction and, unlike the annihilation of other objects, is decreed to be a crime.  
+In his remarkable and eye-opening study of rubbish-production and manipulation, Michael Thompson informs us that ‘durable objects ideally last for ever’—they are, indeed, as close as things can come to be immortal; they stand for immortality.  
+The point is, however, that those people near the top have the power to make things durable and to make things transient, so they can ensure that their own objects are always durable and that those of others are always transient.  
+They are like a football team whose centre-forward also happens to be the referee; they cannot lose.  
+However durable they are and however firmly and ‘bindingly’ they have been established in their privileged status of durability, certain things are irreparably movable; they exist separately from their owners and may be detached from them and appropriated by others.  
+This is, as it were, a prime achievement of the market game.  
+New fortunes may be used to rob the holders of inherited ones of the tokens of their immortality: their castles and their adornments.  
+The adornments now carry immortality by proxy: their acquisition bestows vicarious immortality on the new owners.  
+They are ascribed an immortal beauty (or is it the beauty of immortality?).  
+And unlike the pedigrees, they are movable—so that they can service a flexible stratification, a hierarchy with mobility: a game of musical chairs which gives everybody a chance to win a battle in which most must lose.  
+Of the precious ore of time-defying ancestry, charms and mascots of immortality are minted, fit for marketing and available for private acquisition.  
+Aristocracy may have lost the monopoly for immortality; but the scramble for the trappings of its past glory is a posthumous tribute to the astounding success of its formula of transcendence.  
+One way or the other—with the preferential access to immortality founded in the past which ‘no living in the present can change’, or in the present power of wealth which makes even the past into a commodity—future chances depend ultimately on present hegemony: that is, on the management of public attention.  
+The stakes on which the hope of immortality is founded must be assured a central place in the way the living universe is charted—a prominent, not-to-be-missed place, a place that attracts acute (‘undying’!) interest and is widely accepted as a proper site for public celebration.  
+To be of significance as a tool of the bid for immortality, antiquities must be first made venerable.  
+To assure princes and generals and prime ministers of their immortality, history must be first written in terms of dynasties, battles and legislative acts.  
+Future immortality will grow of today’s recordings.  
+Tomorrow’s immortals must first get hold of today’s archives.  
+It is ultimately the current socially approved division of things and qualities into durable and transient which charts the possible roads to immortality (that is, which selects the fashions in which individual thirst for differential immortality may be satiated).  
+One needs to know of one’s posthumous presence in the world when still alive—and for this one needs the reassurance of one’s contemporaries, a credible, trustworthy assurance.  
+Assurances bear these traits when—and only when—they are backed with authority of one of the two essential types.  
+It may be a promise coming from sources socially defined as experts in ‘seeing into the future’ or, more generally, in ‘knowing how history works’.  
+In most cases, these are history-tellers and history-writers; history (as a narrative with an audience, as a text with a readership) is, after all, the very place in which the posthumous life, if there is to be such a life, will have been conducted.  
+Alternatively (in the age of mass democracy in particular) the authority of numbers may be trusted—the power of great numbers to leave an imprint on future events, to force history to reckon and to take note.  
+The more massive today’s notoriety, the less likely it seems that it will disappear without trace, and the ‘trivial pursuit’ type of information populism helps considerably to make such an expectation credible.  
+Whichever of the two authorities is in operation, the purpose is fulfilled: the promise of immortality (though always provisional and until further notice) is granted when it matters—that is, during the lifetime of the mortals.  
+Thus, we hear repeatedly that one or another of our contemporaries ‘has made history’.  
+Some ‘make history’ automatically, by gaining a position whose incumbents are written down in the ‘official records’ that make the stuff of which historical narratives are composed.  
+Every prime minister or war commander ‘makes history’ in this sense, though of course the question of the solidity of historical survival, the splendour of posthumous existence—the size of the accommodation to be allotted in future historical narratives—remains open.  
+The latter depends on the incumbent’s pursuits while in the office.  
+A prime minister may hope to enter history in a more impressive fashion than is the case with most prime ministers if, for instance, he becomes a ‘longest serving’ head of government, or presides over times of particularly high prosperity or particularly disastrous economic collapse.  
+In a different way, but according to the same rules, ‘history is made’ by footballers, tennis-players, pop-singers, murderers, painters, wine-growers, inventors, film actors, scientists.  
+In all these, as in so many other cases when the socially warranted promise of individual immortality is granted, the same pattern is followed.  
+First, the activity itself must have been assigned a durable significance and thus a ‘place in history’.  
+Second, to make the case of immortality stronger and posthumous existence more prominent, a particular excellence must be reached in the fashion in which the activity in question is performed.  
+The evaluation of excellence tends to be formalized or semi-formalized, as in the case of the Académie Française, which grants its members the title of Immortals, or the periodic chess championship competitions, Olympic Games, or institutions of records and record-breaking.  
+
+### Immortal Thoughts, Immortal Thinkers
+
+We learned from Marx that the ideas of the ruling class are ruling ideas.  
+Yet the ruling class does not rest satisfied with the rule of ideas contemporaneous with its class rule: it also tries (perhaps harder than anything else) to make sure that the rule of its ideas survives its own earthly rule so that the latter may be recorded as immortal and sustained in its immortality for a long time to come.  
+The reasonable degree of certainty that this will indeed be the case when the unknown and essentially uncertain not-yet finally arrives, is grounded in the hope of eternality of values which the rule struggles to promote and preserve.  
+As it serves the eternal values, life of the rulers ‘transcends mere quotidianity’.  
+The rulers’ biographies become history.  
+Unlike the lives of ordinary mortals, who enter history, if at all, as statistics—depersonalized and ‘demographized’, they will be considered worthy to be carefully recorded, studied, written and taught about, interpreted and reinterpreted.  
+They will escape the lot of transient objects—which, once consumed and used up, disappear from view (and thus from the existence that counts) and dissolve, perhaps forever, in anonymous formlessness of obscurity.  
+This chance of immortality depends totally on whether the significance of deeds and virtues displayed by the ruling class as the entitlement to rule will be acknowledged by future generations.  
+Promoting such chances amounts once more to the effort of binding the future—and, as in other cases, it must, by nature, be a collective enterprise.  
+For the members of the ruling class to be able to make their individual bids for immortality with any hope of success, the possibility to use the stakes at their disposal in the bidding game must be assured by the future-binding dominance of the class.  
+Errant knights may vie with each other for a more prominent place among the immortals by excelling in individual prowess and courage; but the chance of securing a place in the immortal memory of posterity is not of their making.  
+The link between their individual deeds and their immortality is not achieved individually, but collectively.  
+The link will hold as long as the ideas of the warrior class remain ruling ideas; as long as history and poetry and music consider the exertions on the battlefield to be the most suitable topics for epic or lyrical oeuvres.  
+There is one category of humans which is as if ‘made for immortality’, since it mediates between individual accomplishments and their public memory, so that no one can fulfil his dream of immortality without its assistance.  
+This is the category of professional immortality brokers; those who mint the coins of lasting value, administer their hoards and attach value tags of immortality to the lives destined to last.  
+As Régis Debray put it,  
+*il y a les mémorables et il y a les préposés à la mémoire. L’éphémère de la domination et son immémorial. Ceux qui laissent leurs noms sur le livre d’or et ceux qui couchent sur papier, argile ou papyrus les noms des premiers. Les héros et les artisans de la puissance. Les premiers figurent, les seconds structurent. C’est ce petit sphinx discret—qui s’est appelé tour à tour scribe, aède, sophiste, clerc, lettré, intellectuel...*  
+A discreet sphinx, says Debray.  
+One may say: an invisible one.  
+At the beginning, anonymous and faceless.  
+A mere tool, to be discarded once the job has been done; no match for the durable glitter of the finished product.  
+The product will be put proudly on display for everyone to admire.  
+It will be preserved for posterity in museums and art galleries.  
+But who will remember the tools?  
+To put a tool among their products (say, a clay-spattered potter wheel and a potter’s knife among the exquisitely sculpted and delicately encrusted vases) is the surest way to evoke the dirt effect, the shock of a thing ‘out of place’ (a stratagem used with relish by all artists wishing to *épater le bourgeois*; the only thing they had to do was to remind the viewer of the artisan behind the art).  
+Yet the ‘dirt’ of the case happens to be powerful and endowed with truly magic power.  
+It must be, as it has created the durable out of the transient, made the passing into the lasting.  
+Like artisans, who through their artwork allocate immortality of form to the transient raw matter they process—the scribe allocates immortality to mortal lives, endows the events and the deeds with the lasting quality of memorable and remembered tradition.  
+The dirt effect is, therefore, but an outcome of the domination game and a reversal of the genuine hierarchy of power.  
+It is only a matter of time before the truth will out and the real managers of immortality emerge from the oblivion in which the disdain of their powerful clients cast them.  
+It will take a little more time for the scribes to turn into intellectuals (one is tempted to say: into scribes *für sich*), for the managers of the immortality of the great and mighty to claim immortality for their own accomplishments, their own work, the work only they can do—and thus for themselves.  
+It is the thoughts that are immortal, and it is the text that makes them so, and it is the writers of texts that transform the transient into the durable.  
+Thus, from behind the timelessness of all other things—heroic deeds, long pedigrees, exploits of power—emerges that one power that has the capacity to make them timeless and to preserve them in that state: the extemporal mind, the precondition and the true abode of timeless tradition and continuity of being.  
+From Plato’s immortal ideas to Husserl’s dehistoricised subjectivity, philosophers struggled to forge the on-going conversation of those who converse into an entity longer lasting than the lives of the conversationalists—so that the other conversationalists who will come later, after their death, will have to feel addressed by them, as they themselves had been addressed by their predecessors, and obliged to address them back in their own conversations; in this way the eternity of conversation, the immortality of texts in which it has been recorded, will have become reality.  
+It is through the durability of the texts that the future is bound by the present, itself filled with the preserved past; it is through that binding that the texts are durable—immortal.  
+Having tamed the time, so that it can ride securely on its back instead of being trampled under its feet, the ongoing discourse spans distances impassable for ‘ordinary’ men and women.  
+It sets its participants apart from ordinary—illiterate or numb, historically speaking—mortals; it sets testing conditions of entry into immortality which only the chosen (or self-chosen) few can hope to meet.  
+It plays impeccably the role which all viable policies of immortality are expected to play: it establishes immortality as social relation, as a stratifying vehicle, as the principle of inclusion that draws its potency from its practice of exclusion.  
+The ‘made up’ nature of immortality, the fact that its roots are firmly set in the present, did not escape the penetrating insight of Plato:  
+*The past and the future are created species of time, which we unconsciously but wrongly transfer to the eternal essence; for we say that [the eternal being] ‘was’, it ‘is’, it ‘will be’, but the truth is that ‘is’ alone is properly attributed to it, and that ‘was’ and ‘will be’ are only to be spoken of becoming in time* (Timaeus 37e-38a).  
+‘Essences’ (Plato uses the terms *eidos*, *ousia*, *genos*, *fysis*, variously translated into English as ‘idea’, ‘form’, ‘essence’) are eternal, durable (durability is the ‘empirical’, tangible, not-so-bewildering form in which ‘eternity’ may be grasped by reason): they are exempted from the time flow, they cancel the distinction between past and future (that distinction which is a mental extrapolation of ageing, decease, new birth), they make eternity an infinitely stretched present.  
+Essence is ‘in’ things, so that it cannot be dismissed as irrelevant to all that fills life and attracts its concerns.  
+Essence is the most important, creative, causal, determining ‘inside’ of things.  
+But at the same time the essence is separate, independent and self-sufficing—not merely ‘an element’ of things, sharing equally in their transience and temporality.  
+Because of the cancellation of time, the way in which ideas (essences, forms) ‘are’ is thoroughly distinct from the way in which things are.  
+The essence ‘is absolutely and perfectly what it is, independent of all else, changeless, divine’—and thanks to that quality ‘more real than the changing animals and things around us’.  
+The senses cannot, obviously, grasp something that is absolute, perfect and above all changeless: whatever senses perceive is protean and transient.  
+Ideas can therefore be grasped solely by thought as distinct from senses.  
+Whatever the senses produce shares the fate of the objects of sensual perception: it is bound to be unreliable and temporary, it is no more than an opinion.  
+Thought, on the other hand, basks in the sun (sun is the metaphor Plato uses, to great effect, in his metaphor of the cave: the brilliance of the sunlight is too dazzling for ordinary eyes to gaze upon) of durability, permanence, ‘reality stronger than existence’ of ideas, forms, essences; it produces knowledge.  
+‘Opinion is changeable, fallible, irrational, and the result of persuasion; knowledge is enduring, infallible, rational, exact, clear.’  
+Unlike opinions, immersed in the flow of quotidianity and forever shackled to the cave, where they can eye only the dance of fickle and transient shadows—thoughts are about ideas; thoughts are the documents of encounter with immortality; ideas are eternal—and so are the thoughts, and so are the thinkers.  
+Knowledge that comes from immersion in timeless ideas is a glimpse of eternity.  
+It washes off the pollution that quotidianity which wears off and condemns to dissolution everything durable.  
+No other human activity can achieve this, each being branded with indelible mark of transience.  
+Care of the body, gymnastics ‘is devoted to what becomes and perishes, for it presides over bodily growth and decay’, while ‘all the arts and crafts’ are ‘vulgar’.  
+Only ‘the turning of a soul round from a day which is like night to a true day—this is the ascent into real being, which we shall say is true philosophy’.  
+Only ‘through reason and without any help from the senses’, on condition that he ‘will not desist until he grasps by thought alone the real nature of good itself, the philosopher may arrive ‘at the very end of the world of thought’, while all the others, ordinary mortals end up at the opposite pole—‘at the end of the world of sight’.  
+At that end the ‘common beliefs of the multitude’ reside.  
+‘Sound-fanciers and sight-fanciers, delight in beautiful voices and colours and shapes and all which craftsmen have made from such; but their mind is incapable of seeing and delighting in the beautiful itself.’  
+‘Very few’ ‘are able to approach the beautiful itself and to see it by itself’.  
+These ‘very few’ are the philosophers.  
+These are not merely epistemological propositions.  
+These are also statements in political science and, above all, in practical politics.  
+At the time of Plato immortality was the lot of the rulers, and rulers alone.  
+Now the rulers face a challenge.  
+To justify their immortality, they have to show credentials: they have to prove that they have visited the land of the durable, that they stood face to face with the ideas as they truly and forever are.  
+They must justify their entitlement to immortality in terms in which only philosophers are past masters.  
+They stand little chance in this game.  
+In as far as the rulers set the archetype of immortality (and made it into their sole property), in as far as rule and immortality had been rendered synonymous, it is the sages, these few who converse with the eternal, who ought to be rulers.  
+*Since philosophers alone are able to lay hold of the ever same and unchangeable, and those who cannot do so, but keep wandering amid the changeable and manifold are not philosophers,—which ought to be leaders of a city?...  
+The philosophers must become kings in our cities ...  
+It is the proper nature of these to keep hold of true wisdom and to lead in the city, but of others to leave philosophy alone and follow their leader ...  
+The city shall make public monuments and sacrifices in their honour, as holy spirits, if the Pythian oracle concurs, or else as men happy and divine.*  
+The subsequent, two-and-a-half millennium, history of *les scribes*, and their relentless ascent to the stature of intellectuals, may indeed be seen as a vast footnote to Plato’s *Republic*.  
+The libraries written through centuries in support of the right of the intellect to, simultaneously, personal immortality and leadership of the mortals, kept on wrapping Plato’s original bid in ever new and updated vocabulary, but added virtually nothing to its substance.  
+It is the intellectuals who have been writing history, thus shaping it into tradition and ‘our heritage’.  
+Plato’s bequest is the most important collective tradition and heritage of the writers.  
+No wonder we have learned to consider the Athenian philosophical revolution as the true beginning of ‘our civilization’, as our—European, Western—common (and foundational) legacy.  
+Men of intellect (and only such men are heard in public, are the public) cling fast to it much as the Roman Church held tight to the Edict of Constantine, and for much the same reasons.
